@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOARD&BREW-CONTACT</title>
+    <link rel="icon" href="/images/board&brew.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <section class="contact-hero-section">
+      <div class="contact-hero-overlay"></div>
+
+      <div class="contact-hero-content reveal reveal-up">
+        <span class="contact-hero-label">Contact Us</span>
+        <h1>Let's Plan Your Next Game Night</h1>
+        <p>
+          Whether you're booking a table, planning a celebration, or just
+          looking for the perfect spot for coffee and board games, we’d love to
+          hear from you.
+        </p>
+
+        <div class="contact-hero-buttons">
+          <a href="#reservation" class="hero-btn hero-btn-primary"
+            >Reserve a Table</a
+          >
+          <a href="#map" class="hero-btn hero-btn-secondary">Get Directions</a>
+        </div>
+      </div>
+    </section>
+    <section class="contact-info-section">
+      <div class="contact-info-container">
+        <div class="contact-info-left reveal reveal-left">
+          <span class="section-label">Visit & Connect</span>
+          <h2>Contact Information & Opening Hours</h2>
+          <p>
+            Whether you're planning a casual coffee date, a game night with
+            friends, or a private gathering, here’s everything you need to reach
+            us quickly and plan your visit with ease.
+          </p>
+
+          <div class="contact-details-grid">
+            <div class="info-card reveal reveal-up">
+              <div class="info-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h3>Address</h3>
+                <p>123 Boardwalk Street, Downtown Avenue, Your City</p>
+              </div>
+            </div>
+
+            <div class="info-card reveal reveal-up">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h3>Phone Number</h3>
+                <p><a href="tel:+911234567890">+91 12345 67890</a></p>
+              </div>
+            </div>
+
+            <div class="info-card reveal reveal-up">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h3>Email</h3>
+                <p>
+                  <a href="mailto:hello@cafename.com">hello@cafename.com</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="info-card reveal reveal-up">
+              <div class="info-icon"><i class="fa-solid fa-car"></i></div>
+              <div>
+                <h3>Parking Availability</h3>
+                <p>
+                  Free parking available nearby for guests and evening visitors.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-right reveal reveal-right">
+          <div class="hours-card">
+            <span class="hours-label">Opening Hours</span>
+            <h3>We’re open all week for coffee, games, and good company.</h3>
+
+            <div class="hours-list">
+              <div class="hours-row">
+                <span>Monday - Thursday</span>
+                <strong>10:00 AM - 10:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Friday</span>
+                <strong>10:00 AM - 11:30 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Saturday</span>
+                <strong>9:00 AM - 11:30 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Sunday</span>
+                <strong>9:00 AM - 10:30 PM</strong>
+              </div>
+            </div>
+
+            <div class="hours-note">
+              <i class="fa-solid fa-circle-info"></i>
+              <p>
+                For same-day reservations after 7 PM, please call us directly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reservation-section" id="reservation">
+      <div class="reservation-container">
+        <div class="reservation-left reveal reveal-left">
+          <span class="section-label">Reserve Your Spot</span>
+          <h2>Book Your Table for Coffee, Conversation & Competition</h2>
+          <p>
+            Planning a casual meetup, a cozy date, or a full game night with
+            friends? Reserve your table in advance and let us set the scene for
+            a relaxed, memorable visit.
+          </p>
+
+          <div class="reservation-points">
+            <div class="reservation-point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Simple and quick reservation process</span>
+            </div>
+            <div class="reservation-point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Ideal for game nights, meetups, and celebrations</span>
+            </div>
+            <div class="reservation-point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Special requests can be added in advance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reservation-right reveal reveal-right">
+          <form class="reservation-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <select id="guests">
+                  <option>Select guests</option>
+                  <option>1 Guest</option>
+                  <option>2 Guests</option>
+                  <option>3 Guests</option>
+                  <option>4 Guests</option>
+                  <option>5 Guests</option>
+                  <option>6+ Guests</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" />
+              </div>
+
+              <div class="form-group">
+                <label for="time">Time</label>
+                <input type="time" id="time" />
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="requests">Special Requests</label>
+                <textarea
+                  id="requests"
+                  rows="5"
+                  placeholder="Tell us if you’re celebrating something special, need extra seating, or have any preferences."
+                ></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="reservation-btn">
+              Reserve Your Table
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="find-us-section" id="map">
+      <div class="find-us-container">
+        <div class="find-us-left reveal reveal-left">
+          <span class="section-label">Find Us</span>
+          <h2>Come Visit Our Café & Board Game Corner</h2>
+          <p>
+            Located in the heart of the city, our space is easy to find and even
+            easier to love. Drop by for handcrafted coffee, comfort food, and an
+            unforgettable board game experience.
+          </p>
+
+          <div class="location-info-list">
+            <div class="location-info-card reveal reveal-up">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h3>Address</h3>
+                <p>123 Boardwalk Street, Downtown Avenue, Your City</p>
+              </div>
+            </div>
+
+            <div class="location-info-card reveal reveal-up">
+              <i class="fa-solid fa-route"></i>
+              <div>
+                <h3>Landmark</h3>
+                <p>
+                  Just opposite Central Plaza, next to the old city bookstore.
+                </p>
+              </div>
+            </div>
+
+            <div class="location-info-card reveal reveal-up">
+              <i class="fa-solid fa-car-side"></i>
+              <div>
+                <h3>Parking</h3>
+                <p>
+                  Street parking and paid parking available within 2 minutes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="directions-btn"
+          >
+            Get Directions
+          </a>
+        </div>
+
+        <div class="find-us-right reveal reveal-right">
+          <div class="map-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60904.52916516775!2d78.33763202941475!3d17.4341817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e491d141e1%3A0x3df70c5e8eda5c88!2sCafe%20Niloufer%20Hitech%20City!5e0!3m2!1sen!2sin!4v1784184732796!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq-cta-section">
+      <div class="faq-cta-container">
+        <div class="faq-left reveal reveal-left">
+          <span class="section-label">Need to Know More?</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Here are some of the most common questions guests ask before
+            visiting, booking a table, or planning a game night with us.
+          </p>
+
+          <div class="faq-list">
+            <details class="faq-item reveal reveal-up">
+              <summary>Do I need a reservation to visit?</summary>
+              <p>
+                Walk-ins are always welcome, but we recommend booking in advance
+                for weekends, special events, and larger groups.
+              </p>
+            </details>
+
+            <details class="faq-item reveal reveal-up">
+              <summary>Do you charge separately for board games?</summary>
+              <p>
+                Some games are freely available with your visit, while premium
+                game experiences or event nights may include a small table
+                charge.
+              </p>
+            </details>
+
+            <details class="faq-item reveal reveal-up">
+              <summary>
+                Can I host a birthday or private gathering here?
+              </summary>
+              <p>
+                Yes, absolutely. We host birthdays, team evenings, and private
+                gatherings with custom seating and food arrangements.
+              </p>
+            </details>
+
+            <details class="faq-item reveal reveal-up">
+              <summary>
+                Is the café suitable for beginners who are new to board games?
+              </summary>
+              <p>
+                Yes. Our team is happy to recommend games based on group size,
+                mood, and experience level, so everyone can join in comfortably.
+              </p>
+            </details>
+
+            <details class="faq-item reveal reveal-up">
+              <summary>
+                Do you offer vegetarian or special menu options?
+              </summary>
+              <p>
+                Yes, we offer vegetarian choices and selected menu options for
+                different preferences. Ask our team when you visit or reserve.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <div class="faq-right reveal reveal-right">
+          <div class="final-cta-card">
+            <span class="cta-badge">Reserve Today</span>
+            <h3>Your table is waiting.</h3>
+            <p>
+              Join us for specialty coffee, comforting bites, and shelves full
+              of games that turn casual visits into memorable evenings.
+            </p>
+
+            <div class="cta-highlights">
+              <div class="cta-highlight">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span>Fresh brews & cozy bites</span>
+              </div>
+              <div class="cta-highlight">
+                <i class="fa-solid fa-chess-board"></i>
+                <span>Curated board game collection</span>
+              </div>
+              <div class="cta-highlight">
+                <i class="fa-solid fa-users"></i>
+                <span>Perfect for dates, friends & events</span>
+              </div>
+            </div>
+
+            <div class="final-cta-buttons">
+              <a href="#reservation" class="final-btn final-btn-primary"
+                >Book a Table</a
+              >
+              <a href="#map" class="final-btn final-btn-secondary">Find Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="footer"></div>
+    <script src="/component.js" defer></script>
+  </body>
+</html>

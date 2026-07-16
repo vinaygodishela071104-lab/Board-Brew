@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board & Brew — Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <aside class="sidebar" id="sidebar" aria-label="Admin navigation">
+      <div class="logo">
+        <img src="/images/board&brew.png" alt="Board & Brew Logo" />
+
+        <a href="/homepages/index.html">
+          <div class="logo-content">
+            <h1 class="logo-text">
+              <span class="board">Board</span>
+              <span class="amp">&</span>
+              <span class="brew">Brew</span>
+            </h1>
+
+            <div class="tagline">
+              <span class="line"></span>
+              <p>WHERE EVERY MOVE</p>
+              <span class="line"></span>
+            </div>
+
+            <h5 class="sub-tagline">COMES WITH A BREW.</h5>
+          </div>
+        </a>
+      </div>
+
+      <div class="profile-card">
+        <img src="/images/rm3.avif" alt="Admin profile photo" />
+        <div>
+          <strong>Arjun Rao</strong><br />
+          <span>Store Manager</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-link active" data-panel="overview">
+          <i data-lucide="layout-dashboard"></i><span>Overview</span>
+        </button>
+        <button class="nav-link" data-panel="orders">
+          <i data-lucide="shopping-bag"></i><span>Orders</span
+          ><span class="badge">12</span>
+        </button>
+        <button class="nav-link" data-panel="kitchen">
+          <i data-lucide="chef-hat"></i><span>Kitchen Queue</span
+          ><span class="badge">6</span>
+        </button>
+        <button class="nav-link" data-panel="menu">
+          <i data-lucide="book-open"></i><span>Menu</span>
+        </button>
+        <button class="nav-link" data-panel="reservations">
+          <i data-lucide="calendar-days"></i><span>Reservations</span>
+        </button>
+        <button class="nav-link" data-panel="inventory">
+          <i data-lucide="package"></i><span>Inventory</span>
+        </button>
+        <button class="nav-link" data-panel="reports">
+          <i data-lucide="bar-chart-3"></i><span>Reports</span>
+        </button>
+      </nav>
+
+      <a class="view-site" href="/homepages/index.html">
+        <i data-lucide="external-link"></i>
+        <span>View Cafe Website</span>
+      </a>
+    </aside>
+
+    <div class="app">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button
+            id="sidebarToggle"
+            class="icon-btn"
+            aria-label="Toggle sidebar"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+          <div>
+            <h2 id="pageTitle">Overview</h2>
+            <p id="pageSubtitle">Today’s cafe operations at a glance</p>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <label class="search">
+            <i data-lucide="search"></i>
+            <input
+              type="search"
+              id="globalSearch"
+              placeholder="Search orders, items, customers…"
+              aria-label="Search dashboard"
+            />
+          </label>
+
+          <button
+            id="themeToggle"
+            class="icon-btn"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+          >
+            <i data-lucide="moon" class="theme-icon-moon"></i>
+            <i data-lucide="sun" class="theme-icon-sun"></i>
+          </button>
+          <div class="wrap2">
+            <div class="dropdown-wrap">
+              <button
+                id="notifBtn"
+                class="icon-btn"
+                aria-label="Open notifications"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="notifPanel"
+              >
+                <i data-lucide="bell"></i>
+                <span class="dotes"></span>
+              </button>
+              <div
+                id="notifPanel"
+                class="dropdown-panel"
+                role="dialog"
+                aria-label="Notifications"
+                aria-modal="false"
+              >
+                <div class="dropdown-header">
+                  <strong>Notifications</strong>
+                  <button
+                    class="close-btn"
+                    data-close="notifPanel"
+                    aria-label="Close notifications"
+                  >
+                    <i data-lucide="x"></i>
+                  </button>
+                </div>
+                <div class="notif-list" id="notifList"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wrap">
+            <div class="dropdown-wrap">
+              <button
+                id="profileBtn"
+                class="profile-btn"
+                aria-label="Open profile menu"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="profilePanel"
+              >
+                <img src="/images/rm3.avif" alt="Admin avatar" />
+                <span>Arjun</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div
+                id="profilePanel"
+                class="dropdown-panel profile-panel"
+                role="menu"
+                aria-label="Profile menu"
+              >
+                <button role="menuitem" onclick="switchPanel('reports')">
+                  <i data-lucide="bar-chart-3"></i> Reports
+                </button>
+                <button role="menuitem" onclick="switchPanel('overview')">
+                  <i data-lucide="layout-dashboard"></i> Dashboard
+                </button>
+                <button role="menuitem" id="logoutBtn">
+                  <i data-lucide="log-out"></i> Sign Out
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content reveal reveal-up">
+        <section class="panel active" id="panel-overview">
+          <div class="hero">
+            <div>
+              <h1>Good morning, Arjun ☕</h1>
+              <p>Here’s the live snapshot for Board & Brew.</p>
+            </div>
+            <div class="hero-actions">
+              <button class="btn primary" onclick="switchPanel('orders')">
+                <i data-lucide="plus"></i> New Order
+              </button>
+              <button
+                class="btn secondary"
+                onclick="switchPanel('reservations')"
+              >
+                Take Reservation
+              </button>
+            </div>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi-card">
+              <i data-lucide="indian-rupee"></i>
+              <div>
+                <span>Revenue Today</span>
+                <strong class="counter" data-target="48620" data-prefix="₹"
+                  >0</strong
+                >
+                <small>+14.2% from yesterday</small>
+              </div>
+            </article>
+            <article class="kpi-card">
+              <i data-lucide="shopping-bag"></i>
+              <div>
+                <span>Orders Today</span>
+                <strong class="counter" data-target="132">0</strong>
+                <small>Breakfast rush is strong</small>
+              </div>
+            </article>
+            <article class="kpi-card">
+              <i data-lucide="calendar-heart"></i>
+              <div>
+                <span>Reservations</span>
+                <strong class="counter" data-target="24">0</strong>
+                <small>8 peak-hour tables booked</small>
+              </div>
+            </article>
+            <article class="kpi-card">
+              <i data-lucide="cup-soda"></i>
+              <div>
+                <span>Avg Order Value</span>
+                <strong class="counter" data-target="379" data-prefix="₹"
+                  >0</strong
+                >
+                <small>Up from ₹342 last week</small>
+              </div>
+            </article>
+          </div>
+
+          <div class="layout-2">
+            <section class="panel-card">
+              <div class="panel-head">
+                <div>
+                  <h3>Sales by Hour</h3>
+                  <p id="salesMeta">Today’s hourly sales trend</p>
+                </div>
+                <div class="segmented">
+                  <button class="seg-btn active" data-range="today">
+                    Today
+                  </button>
+                  <button class="seg-btn" data-range="week">Week</button>
+                  <button class="seg-btn" data-range="month">Month</button>
+                </div>
+              </div>
+              <div class="chart-wrap"><canvas id="salesChart"></canvas></div>
+            </section>
+
+            <section class="panel-card">
+              <div class="panel-head">
+                <div>
+                  <h3>Popular Items</h3>
+                  <p>Best-selling drinks and snacks</p>
+                </div>
+              </div>
+              <div class="chart-wrap small">
+                <canvas id="itemsChart"></canvas>
+              </div>
+              <ul class="legend">
+                <li>
+                  <span><span class="dot"></span>Cappuccino</span
+                  ><strong>28%</strong>
+                </li>
+                <li>
+                  <span><span class="dot"></span>Grilled Sandwich</span
+                  ><strong>21%</strong>
+                </li>
+                <li>
+                  <span><span class="dot"></span>Chocolate Croissant</span
+                  ><strong>18%</strong>
+                </li>
+                <li>
+                  <span><span class="dot"></span>Masala Tea</span
+                  ><strong>16%</strong>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="layout-3">
+            <section class="panel-card table-card">
+              <div class="panel-head">
+                <div>
+                  <h3>Recent Orders</h3>
+                  <p>Latest live activity from the cafe floor</p>
+                </div>
+                <button class="text-btn" onclick="switchPanel('orders')">
+                  View all →
+                </button>
+              </div>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Customer</th>
+                      <th>Order</th>
+                      <th>Type</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ordersTableBody"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="stack">
+              <article class="panel-card mini premium-block">
+                <div class="panel-head">
+                  <div>
+                    <h3>Peak Hours</h3>
+                    <p>Morning and evening traffic trend</p>
+                  </div>
+                </div>
+                <div class="bars">
+                  <div>
+                    <span>8-10 AM</span>
+                    <div class="bar"><i style="width: 92%"></i></div>
+                  </div>
+                  <div>
+                    <span>12-2 PM</span>
+                    <div class="bar"><i style="width: 78%"></i></div>
+                  </div>
+                  <div>
+                    <span>5-8 PM</span>
+                    <div class="bar"><i style="width: 96%"></i></div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="panel-card mini premium-block">
+                <div class="panel-head">
+                  <div>
+                    <h3>Low Stock Alerts</h3>
+                    <p>Items to restock soon</p>
+                  </div>
+                </div>
+                <ul class="simple-list">
+                  <li>Espresso beans — 12 kg left</li>
+                  <li>Oat milk — 8 cartons left</li>
+                  <li>Chocolate syrup — 5 bottles left</li>
+                </ul>
+              </article>
+            </section>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-orders">
+          <div class="panel-head page-hero">
+            <div>
+              <h2>Orders</h2>
+              <p>Track dine-in, takeaway, delivery, and pre-orders.</p>
+            </div>
+            <button class="btn primary">
+              <i data-lucide="plus"></i> New Order
+            </button>
+          </div>
+
+          <div class="filters">
+            <label class="field"
+              ><span>Search</span
+              ><input type="search" placeholder="Search orders"
+            /></label>
+            <label class="field select-wrap"
+              ><span>Status</span>
+              <select>
+                <option>All Status</option>
+                <option>Preparing</option>
+                <option>Ready</option>
+                <option>Completed</option>
+                <option>Cancelled</option>
+              </select>
+            </label>
+            <label class="field select-wrap"
+              ><span>Type</span>
+              <select>
+                <option>All Types</option>
+                <option>Dine-in</option>
+                <option>Takeaway</option>
+                <option>Delivery</option>
+              </select>
+            </label>
+          </div>
+
+          <section class="panel-card table-card">
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Items</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="ordersDetailBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel" id="panel-kitchen">
+          <div class="kitchen-hero panel-card">
+            <div>
+              <h2>Kitchen Queue</h2>
+              <p>Monitor what is being prepared, plated, and served.</p>
+            </div>
+            <div class="kitchen-stats">
+              <div><strong>14</strong><span>Active tickets</span></div>
+              <div><strong>6</strong><span>Ready to serve</span></div>
+              <div><strong>3</strong><span>Delayed items</span></div>
+            </div>
+          </div>
+
+          <div class="kanban">
+            <article class="kanban-col">
+              <div class="kanban-head">
+                <h3>Preparing</h3>
+                <p>In progress orders</p>
+              </div>
+              <div id="kitchenPreparing" class="ticket-list"></div>
+            </article>
+            <article class="kanban-col">
+              <div class="kanban-head">
+                <h3>Ready to Serve</h3>
+                <p>Pickup and dispatch</p>
+              </div>
+              <div id="kitchenReady" class="ticket-list"></div>
+            </article>
+            <article class="kanban-col">
+              <div class="kanban-head">
+                <h3>Completed</h3>
+                <p>Served successfully</p>
+              </div>
+              <div id="kitchenDone" class="ticket-list"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-menu">
+          <div class="panel-head page-hero">
+            <div>
+              <h2>Menu Manager</h2>
+              <p>Edit cafe items, prices, categories, and availability.</p>
+            </div>
+            <button class="btn primary">
+              <i data-lucide="plus"></i> Add Item
+            </button>
+          </div>
+
+          <div class="menu-layout">
+            <article class="panel-card menu-feature">
+              <img
+                src="/images/coffee-chocolate.png"
+                alt="Coffee and dessert on a table"
+              />
+              <div>
+                <h3>Seasonal Special</h3>
+                <p>Hazelnut latte with caramel drizzle and whipped cream.</p>
+                <strong>₹189</strong>
+              </div>
+            </article>
+
+            <article class="panel-card category-feature">
+              <div class="panel-head">
+                <div>
+                  <h3>Menu Categories</h3>
+                  <p>Premium menu groups and highlights</p>
+                </div>
+              </div>
+              <div class="category-grid">
+                <div class="category-card">
+                  <img src="/images/coffee3.png" alt="Coffee" />
+                  <div>
+                    <strong>Coffee</strong>
+                    <span>18 items · 6 hot sellers</span>
+                  </div>
+                </div>
+                <div class="category-card">
+                  <img src="/images/sandwich.avif" alt="Breakfast" />
+                  <div>
+                    <strong>Breakfast</strong>
+                    <span>12 items · Morning combo packs</span>
+                  </div>
+                </div>
+                <div class="category-card">
+                  <img src="/images/chocolate.avif" alt="Desserts" />
+                  <div>
+                    <strong>Desserts</strong>
+                    <span>9 items · Fresh bakes daily</span>
+                  </div>
+                </div>
+                <div class="category-card">
+                  <img src="/images/coffee.avif" alt="Tea" />
+                  <div>
+                    <strong>Tea</strong>
+                    <span>10 items · Classic blends</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <section class="panel-card table-card">
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Available</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="menuTableBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel" id="panel-reservations">
+          <div class="panel-head page-hero">
+            <div>
+              <h2>Reservations</h2>
+              <p>Manage table bookings, walk-ins, and waitlist entries.</p>
+            </div>
+          </div>
+
+          <div class="layout-2">
+            <section class="panel-card">
+              <div class="panel-head">
+                <div>
+                  <h3>Today’s Bookings</h3>
+                  <p>Guest details and table preferences</p>
+                </div>
+              </div>
+              <div id="reservationList" class="reservation-list"></div>
+            </section>
+
+            <section class="panel-card">
+              <div class="panel-head">
+                <div>
+                  <h3>Reservation Load</h3>
+                  <p>Weekly booking distribution</p>
+                </div>
+              </div>
+              <div class="chart-wrap">
+                <canvas id="reservationChart"></canvas>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-inventory">
+          <div class="panel-head page-hero">
+            <div>
+              <h2>Inventory</h2>
+              <p>Track ingredients, packaging, and consumables.</p>
+            </div>
+          </div>
+
+          <div class="layout-3 inventory-grid">
+            <article class="kpi-card">
+              <i data-lucide="beans"></i>
+              <div>
+                <span>Coffee Beans</span><strong>18 kg</strong
+                ><small>Reorder at 25 kg</small>
+              </div>
+            </article>
+            <article class="kpi-card">
+              <i data-lucide="milk"></i>
+              <div>
+                <span>Dairy & Milk</span><strong>24 L</strong
+                ><small>Healthy stock</small>
+              </div>
+            </article>
+            <article class="kpi-card">
+              <i data-lucide="package"></i>
+              <div>
+                <span>Packaging</span><strong>132 pcs</strong
+                ><small>Boxes, cups, lids</small>
+              </div>
+            </article>
+          </div>
+
+          <section class="panel-card table-card">
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Available</th>
+                    <th>Reorder Level</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="inventoryBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel" id="panel-reports">
+          <div class="reports-header panel-card">
+            <div>
+              <h2>Reports</h2>
+              <p>Premium business snapshots and export-ready summaries.</p>
+            </div>
+            <div class="reports-chip-row">
+              <span>Daily</span>
+              <span>Weekly</span>
+              <span>Monthly</span>
+            </div>
+          </div>
+
+          <div class="reports-grid">
+            <article class="report-card">
+              <div class="report-top">
+                <div class="report-icon"><i data-lucide="bar-chart-3"></i></div>
+                <div>
+                  <h3>Sales Report</h3>
+                  <p>Revenue by hour, day, and shift.</p>
+                </div>
+              </div>
+              <div class="report-metric">
+                <strong>₹4.86L</strong>
+                <span>This month</span>
+              </div>
+              <button class="btn secondary">Download</button>
+            </article>
+
+            <article class="report-card">
+              <div class="report-top">
+                <div class="report-icon">
+                  <i data-lucide="shopping-bag"></i>
+                </div>
+                <div>
+                  <h3>Orders Report</h3>
+                  <p>Order mix across dine-in and delivery.</p>
+                </div>
+              </div>
+              <div class="report-metric">
+                <strong>3,184</strong>
+                <span>Total orders</span>
+              </div>
+              <button class="btn secondary">Download</button>
+            </article>
+
+            <article class="report-card">
+              <div class="report-top">
+                <div class="report-icon"><i data-lucide="package"></i></div>
+                <div>
+                  <h3>Inventory Report</h3>
+                  <p>Usage, wastage, and low-stock trends.</p>
+                </div>
+              </div>
+              <div class="report-metric">
+                <strong>12</strong>
+                <span>Low items</span>
+              </div>
+              <button class="btn secondary">Download</button>
+            </article>
+
+            <article class="report-card">
+              <div class="report-top">
+                <div class="report-icon"><i data-lucide="users"></i></div>
+                <div>
+                  <h3>Customer Report</h3>
+                  <p>Loyalty, retention, and repeat behavior.</p>
+                </div>
+              </div>
+              <div class="report-metric">
+                <strong>63%</strong>
+                <span>Repeat rate</span>
+              </div>
+              <button class="btn secondary">Download</button>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="logoutModal" class="modal-backdrop" aria-hidden="true">
+      <div class="modal">
+        <h3>Sign out?</h3>
+        <p>Do you want to sign out from the Board & Brew dashboard?</p>
+        <div class="modal-actions">
+          <button class="btn secondary" data-close="logoutModal">Cancel</button>
+          <a class="btn primary" href="/loginpage/login.html">Yes, Sign Out</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

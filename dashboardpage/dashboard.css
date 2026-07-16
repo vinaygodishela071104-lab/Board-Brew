@@ -1,0 +1,2397 @@
+:root {
+  --primary: #4b2413;
+  --secondary: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  overflow: hidden;
+  font-family: Inter, sans-serif;
+  background: linear-gradient(180deg, #fbf8f3 0%, #f4eee6 100%);
+  color: #1f1f1f;
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #ffffff;
+  border-right: 1px solid rgba(75, 36, 19, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(75, 36, 19, 0.25);
+  border-radius: 999px;
+}
+
+.profile-card,
+.nav-link,
+.view-site,
+.panel-card,
+.report-card,
+.kpi-card,
+.modal,
+.dropdown-panel {
+  background: #ffffff;
+  border: 1px solid rgba(75, 36, 19, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 14px 38px rgba(75, 36, 19, 0.08);
+}
+.panel-card {
+  margin-top: 20px;
+}
+/*==========================
+        LOGO
+==========================*/
+/*==========================
+        LOGO
+==========================*/
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced gap */
+  margin-right: 30px;
+}
+
+.logo img {
+  width: 68px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.logo-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.logo-text {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.board,
+.brew {
+  color: var(--primary);
+}
+
+.amp {
+  color: var(--secondary);
+  margin: 0 2px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*==========================
+        TAGLINE
+==========================*/
+
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding-left: 0; /* Removed left padding */
+}
+
+.tagline .line {
+  width: 14px;
+  height: 2px;
+  background: var(--secondary);
+  border-radius: 50px;
+}
+
+.tagline p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.48rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #5a3a28;
+  white-space: nowrap;
+}
+
+.sub-tagline {
+  font-size: 0.42rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.logo-content h5 {
+  padding-left: 20px;
+  font-size: 0.48rem;
+  color: var(--primary);
+}
+.panel h2,
+.panel h3,
+.report-card h3 {
+  margin: 0;
+  color: var(--primary);
+  font-family: "Playfair Display", serif;
+}
+
+.brand p,
+.profile-card span,
+.topbar p,
+.panel-head p,
+.simple-list,
+.field span,
+.report-card p,
+.report-metric span {
+  margin: 0;
+  color: #666666;
+}
+
+.profile-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+}
+
+.profile-card img,
+.profile-btn img {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.nav {
+  display: grid;
+  gap: 10px;
+}
+
+.nav-link {
+  width: 100%;
+  border: none;
+  padding: 13px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: #1f1f1f;
+  text-align: left;
+  background: #ffffff;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  border-color: rgba(245, 158, 11, 0.45);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.badge {
+  margin-left: auto;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.view-site {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  text-decoration: none;
+  background: var(--primary);
+  color: #fff;
+}
+
+.app {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topbar {
+  height: 82px;
+  padding: 0 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(75, 36, 19, 0.08);
+}
+
+.topbar-left,
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topbar h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  color: var(--primary);
+}
+
+.icon-btn,
+.profile-btn,
+.close-btn,
+.text-btn,
+.seg-btn {
+  border: none;
+  background: #ffffff;
+  color: #1f1f1f;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(75, 36, 19, 0.08);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid rgba(75, 36, 19, 0.08);
+  border-radius: 16px;
+  min-width: 320px;
+}
+
+.search input,
+.field input,
+.field select,
+.form-grid input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #1f1f1f;
+  font: inherit;
+}
+
+.dropdown-wrap {
+  position: relative;
+}
+
+.dropdown-panel {
+  position: absolute;
+  right: 0;
+  top: 56px;
+  min-width: 290px;
+  padding: 12px;
+  display: none;
+  z-index: 30;
+}
+
+.dropdown-panel.open {
+  display: block;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.notif-list {
+  display: grid;
+  gap: 10px;
+}
+
+.notif-item {
+  padding: 12px;
+  border-radius: 16px;
+  background: #f8f6f2;
+}
+
+.profile-panel button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  color: #1f1f1f;
+  cursor: pointer;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-panel button:hover {
+  background: rgba(75, 36, 19, 0.08);
+}
+
+.dotes {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--secondary);
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 1px solid rgba(75, 36, 19, 0.08);
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 22px;
+  display: grid;
+  gap: 20px;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: grid;
+  gap: 20px;
+}
+
+.hero,
+.panel-head,
+.kpi-grid,
+.layout-2,
+.layout-3,
+.filters,
+.settings-grid,
+.menu-layout,
+.kanban,
+.reports-grid,
+.category-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.hero {
+  grid-template-columns: 1.4fr auto;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(245, 158, 11, 0.08) 100%
+  );
+  border: 1px solid rgba(75, 36, 19, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 22px 50px rgba(75, 36, 19, 0.14);
+}
+
+.hero h1,
+.panel h2,
+.panel h3 {
+  color: var(--primary);
+}
+
+.hero p,
+.panel p {
+  margin: 8px 0 0;
+  color: #666666;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(75, 36, 19, 0.16);
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: var(--primary);
+  border: 1px solid rgba(75, 36, 19, 0.16);
+}
+
+.kpi-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kpi-card,
+.panel-card,
+.report-card {
+  padding: 18px;
+}
+
+.kpi-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.kpi-card strong {
+  display: block;
+  font-size: 1.65rem;
+  margin: 5px 0;
+  color: var(--primary);
+}
+
+.kpi-card i {
+  color: var(--secondary);
+}
+
+.layout-2 {
+  grid-template-columns: 2fr 1fr;
+}
+
+.layout-3 {
+  grid-template-columns: 2fr 1fr;
+}
+
+.panel-card,
+.report-card {
+  min-width: 0;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.segmented {
+  display: flex;
+  background: #f8f6f2;
+  border-radius: 14px;
+  padding: 4px;
+}
+
+.seg-btn {
+  padding: 8px 12px;
+  background: transparent;
+}
+
+.seg-btn.active {
+  background: #ffffff;
+  box-shadow: 0 14px 38px rgba(75, 36, 19, 0.08);
+}
+
+.chart-wrap {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+.chart-wrap.small {
+  height: 300px;
+}
+
+.chart-wrap canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.legend {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.legend li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(75, 36, 19, 0.08);
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666666;
+}
+
+.simple-list {
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.bars {
+  display: grid;
+  gap: 12px;
+}
+
+.bars > div {
+  display: grid;
+  gap: 6px;
+}
+
+.bar {
+  height: 10px;
+  background: #f3ede4;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--secondary);
+  border-radius: 999px;
+}
+
+.filters {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span {
+  font-size: 0.82rem;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 42px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #666666 50%),
+    linear-gradient(135deg, #666666 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) 50%,
+    calc(100% - 16px) 50%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.field input,
+.field select,
+.form-grid input {
+  background: #ffffff;
+  border: 1px solid rgba(75, 36, 19, 0.08);
+  padding: 12px 14px;
+  border-radius: 14px;
+}
+
+.kitchen-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+}
+
+.kitchen-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.kitchen-stats div {
+  min-width: 110px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #f8f6f2;
+  text-align: center;
+}
+
+.kitchen-stats strong {
+  display: block;
+  font-size: 1.35rem;
+  color: var(--primary);
+}
+
+.kanban {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.kanban-col {
+  background: #ffffff;
+  border: 1px solid rgba(75, 36, 19, 0.08);
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 0 14px 38px rgba(75, 36, 19, 0.08);
+}
+
+.kanban-head {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.ticket-list,
+.reservation-list,
+.reviews-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.ticket,
+.reservation,
+.review {
+  border: 1px solid rgba(75, 36, 19, 0.08);
+  background: #f8f6f2;
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.ticket strong,
+.reservation strong,
+.review strong {
+  display: block;
+  color: var(--primary);
+}
+
+.menu-layout {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.menu-feature img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 14px;
+}
+
+.category-feature {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.category-card {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 18px;
+  background: #f8f6f2;
+  border: 1px solid rgba(75, 36, 19, 0.08);
+  box-shadow: 0 14px 38px rgba(75, 36, 19, 0.08);
+}
+
+.category-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.category-card strong {
+  color: var(--primary);
+}
+
+.category-card span {
+  color: #666666;
+  font-size: 0.92rem;
+}
+
+.inventory-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+}
+
+.reports-chip-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reports-chip-row span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #f8f6f2;
+  border: 1px solid rgba(75, 36, 19, 0.08);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.reports-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.report-card {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+}
+
+.report-top {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.report-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.report-metric {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #f8f6f2;
+}
+
+.report-metric strong {
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.page-hero {
+  padding: 22px;
+  border-radius: 24px;
+}
+
+.overlay,
+.modal-backdrop {
+  display: none;
+}
+
+.overlay.show,
+.modal-backdrop.show {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 20;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  z-index: 40;
+  place-items: center;
+}
+
+.modal {
+  width: min(420px, 92vw);
+  padding: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+@media (max-width: 1200px) {
+  body {
+    overflow: auto;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    z-index: 25;
+    transition: left 0.25s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .kpi-grid,
+  .layout-2,
+  .layout-3,
+  .settings-grid,
+  .menu-layout,
+  .reports-grid,
+  .inventory-grid,
+  .kanban {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .kpi-grid,
+  .layout-2,
+  .layout-3,
+  .settings-grid,
+  .menu-layout,
+  .reports-grid,
+  .inventory-grid,
+  .kanban,
+  .filters,
+  .kitchen-hero,
+  .reports-header {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .topbar {
+    height: auto;
+    padding: 14px 16px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .topbar-right {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    min-width: 0;
+    width: 100%;
+  }
+}
+/*==================================================
+                DARK MODE - PART 1
+      Body • Sidebar • Topbar • Hero • Buttons
+==================================================*/
+
+body.dark-mode {
+  background: #111315;
+  color: #f5f5f5;
+  transition: 0.35s ease;
+}
+
+/*-----------------------------------
+    Common Transition
+-----------------------------------*/
+
+body.dark-mode *,
+body.dark-mode *::before,
+body.dark-mode *::after {
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/*-----------------------------------
+            Sidebar
+-----------------------------------*/
+
+body.dark-mode .sidebar {
+  background: #181a1d;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .sidebar::-webkit-scrollbar-thumb {
+  background: #3b3b3b;
+}
+
+body.dark-mode .brand,
+body.dark-mode .profile-card {
+  background: #23262a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+body.dark-mode .brand h1 {
+  color: #ffffff;
+}
+
+body.dark-mode .brand p,
+body.dark-mode .profile-card span {
+  color: #bdbdbd;
+}
+
+body.dark-mode .profile-card strong {
+  color: #ffffff;
+}
+
+/*-----------------------------------
+            Navigation
+-----------------------------------*/
+
+body.dark-mode .nav-link {
+  background: #23262a;
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .nav-link:hover {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+body.dark-mode .nav-link.active {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: var(--secondary);
+  color: #ffffff;
+}
+
+body.dark-mode .nav-link i {
+  color: #d8d8d8;
+}
+
+body.dark-mode .badge {
+  color: #111;
+}
+
+/*-----------------------------------
+        View Website Button
+-----------------------------------*/
+
+body.dark-mode .view-site {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/*-----------------------------------
+            Topbar
+-----------------------------------*/
+
+body.dark-mode .topbar {
+  background: rgba(20, 20, 20, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+}
+
+body.dark-mode .topbar h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .topbar p {
+  color: #bcbcbc;
+}
+
+/*-----------------------------------
+            Search
+-----------------------------------*/
+
+body.dark-mode .search {
+  background: #23262a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .search input {
+  color: #f5f5f5;
+}
+
+body.dark-mode .search input::placeholder {
+  color: #9d9d9d;
+}
+
+body.dark-mode .search i {
+  color: #bbbbbb;
+}
+
+/*-----------------------------------
+            Icon Buttons
+-----------------------------------*/
+
+body.dark-mode .icon-btn,
+body.dark-mode .profile-btn,
+body.dark-mode .seg-btn,
+body.dark-mode .close-btn,
+body.dark-mode .text-btn {
+  background: #23262a;
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .icon-btn:hover,
+body.dark-mode .profile-btn:hover {
+  background: #2d3136;
+}
+
+/*-----------------------------------
+        Profile Button
+-----------------------------------*/
+
+body.dark-mode .profile-btn span {
+  color: #f5f5f5;
+}
+
+body.dark-mode .profile-btn i {
+  color: #cfcfcf;
+}
+
+/*-----------------------------------
+                Hero
+-----------------------------------*/
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #1b1d20 0%, #26211c 100%);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .hero h1 {
+  color: #ffffff;
+}
+
+body.dark-mode .hero p {
+  color: #bcbcbc;
+}
+
+/*-----------------------------------
+            Primary Button
+-----------------------------------*/
+
+body.dark-mode .btn.primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+body.dark-mode .btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(75, 36, 19, 0.45);
+}
+
+/*-----------------------------------
+            Secondary Button
+-----------------------------------*/
+
+body.dark-mode .btn.secondary {
+  background: #23262a;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .btn.secondary:hover {
+  background: #2f3438;
+}
+
+/*-----------------------------------
+        Page Titles
+-----------------------------------*/
+
+body.dark-mode .panel h2,
+body.dark-mode .panel h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .panel p {
+  color: #bdbdbd;
+} /*==================================================
+                DARK MODE - PART 2
+      Cards • KPI • Tables • Forms • Dropdowns
+==================================================*/
+
+/*-----------------------------------
+        Common Dashboard Cards
+-----------------------------------*/
+
+body.dark-mode .panel-card,
+body.dark-mode .report-card,
+body.dark-mode .chart-card,
+body.dark-mode .kpi-card,
+body.dark-mode .summary-card,
+body.dark-mode .info-card {
+  background: #1b1d20;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .panel-card:hover,
+body.dark-mode .report-card:hover,
+body.dark-mode .kpi-card:hover {
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+/*-----------------------------------
+        Card Typography
+-----------------------------------*/
+
+body.dark-mode .panel-card h3,
+body.dark-mode .panel-card h4,
+body.dark-mode .report-card h3,
+body.dark-mode .chart-card h3,
+body.dark-mode .kpi-card h3,
+body.dark-mode .summary-card h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .panel-card p,
+body.dark-mode .report-card p,
+body.dark-mode .chart-card p,
+body.dark-mode .summary-card p {
+  color: #bdbdbd;
+}
+
+/*-----------------------------------
+            KPI Cards
+-----------------------------------*/
+
+body.dark-mode .kpi-card {
+  background: linear-gradient(135deg, #1b1d20, #24272c);
+}
+
+body.dark-mode .kpi-card strong,
+body.dark-mode .counter {
+  color: #ffffff;
+}
+
+body.dark-mode .kpi-card span {
+  color: #bdbdbd;
+}
+
+body.dark-mode .kpi-icon {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--secondary);
+}
+
+/*-----------------------------------
+            Report Metrics
+-----------------------------------*/
+
+body.dark-mode .metric,
+body.dark-mode .metric-card {
+  background: #23262a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .metric strong {
+  color: #ffffff;
+}
+
+body.dark-mode .metric span {
+  color: #bdbdbd;
+}
+
+/*-----------------------------------
+            Segmented Buttons
+-----------------------------------*/
+
+body.dark-mode .segmented {
+  background: #23262a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .seg-btn {
+  background: transparent;
+  color: #cfcfcf;
+}
+
+body.dark-mode .seg-btn.active {
+  background: var(--secondary);
+  color: #111;
+}
+
+/*-----------------------------------
+            Tables
+-----------------------------------*/
+
+body.dark-mode table {
+  background: #1b1d20;
+}
+
+body.dark-mode thead {
+  background: #23262a;
+}
+
+body.dark-mode th {
+  color: #ffffff;
+}
+
+body.dark-mode td {
+  color: #d7d7d7;
+}
+
+body.dark-mode tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode tbody tr:hover {
+  background: #23262a;
+}
+
+/*-----------------------------------
+        Status Pills
+-----------------------------------*/
+
+body.dark-mode .status {
+  border: none;
+}
+
+body.dark-mode .status.active {
+  background: rgba(22, 163, 74, 0.18);
+}
+
+body.dark-mode .status.low {
+  background: rgba(239, 68, 68, 0.18);
+}
+
+body.dark-mode .status.pending {
+  background: rgba(245, 158, 11, 0.18);
+}
+
+/*-----------------------------------
+            Inputs
+-----------------------------------*/
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background: #23262a;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #9e9e9e;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15);
+}
+
+/*-----------------------------------
+            Form Groups
+-----------------------------------*/
+
+body.dark-mode .field label,
+body.dark-mode .form-group label {
+  color: #f5f5f5;
+}
+
+/*-----------------------------------
+        Dropdown Panels
+-----------------------------------*/
+
+body.dark-mode .dropdown-panel {
+  background: #1b1d20;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .dropdown-panel h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .dropdown-panel p {
+  color: #bdbdbd;
+}
+
+body.dark-mode .dropdown-panel hr {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/*-----------------------------------
+        Notification Items
+-----------------------------------*/
+
+body.dark-mode .notif-item {
+  background: #23262a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #dddddd;
+}
+
+body.dark-mode .notif-item:hover {
+  background: #2c3035;
+}
+
+/*-----------------------------------
+        Profile Dropdown
+-----------------------------------*/
+
+body.dark-mode .profile-menu a,
+body.dark-mode .dropdown-panel a {
+  color: #f5f5f5;
+}
+
+body.dark-mode .profile-menu a:hover,
+body.dark-mode .dropdown-panel a:hover {
+  background: #2b2f34;
+}
+
+/*-----------------------------------
+            Empty States
+-----------------------------------*/
+
+body.dark-mode .empty-state {
+  color: #9d9d9d;
+}
+
+/*-----------------------------------
+            Dividers
+-----------------------------------*/
+
+body.dark-mode hr {
+  border-color: rgba(255, 255, 255, 0.08);
+} /*==================================================
+                DARK MODE - PART 3
+     Kitchen • Reservations • Inventory • Reports
+     Modals • Scrollbars • Final Polish
+==================================================*/
+
+/*-----------------------------------
+        Kitchen Queue Cards
+-----------------------------------*/
+
+body.dark-mode .kitchen-card,
+body.dark-mode .kitchen-column {
+  background: #1b1d20;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .kitchen-card h3,
+body.dark-mode .kitchen-column h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .ticket {
+  background: #23262a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .ticket strong {
+  color: #ffffff;
+}
+
+body.dark-mode .ticket span {
+  color: #c7c7c7;
+}
+
+body.dark-mode .ticket:hover {
+  background: #2d3136;
+  transform: translateY(-3px);
+}
+
+/*-----------------------------------
+        Reservation Cards
+-----------------------------------*/
+
+body.dark-mode .reservation,
+body.dark-mode .reservation-card {
+  background: #23262a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .reservation strong {
+  color: #ffffff;
+}
+
+body.dark-mode .reservation p {
+  color: #bdbdbd;
+}
+
+body.dark-mode .reservation:hover {
+  background: #2c3136;
+}
+
+/*-----------------------------------
+            Menu Cards
+-----------------------------------*/
+
+body.dark-mode .menu-card,
+body.dark-mode .food-card,
+body.dark-mode .menu-item {
+  background: #1b1d20;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .menu-card h3,
+body.dark-mode .food-card h3,
+body.dark-mode .menu-item h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .menu-card p,
+body.dark-mode .food-card p,
+body.dark-mode .menu-item p {
+  color: #bdbdbd;
+}
+
+body.dark-mode .menu-card:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+/*-----------------------------------
+        Inventory Section
+-----------------------------------*/
+
+body.dark-mode .inventory-card {
+  background: #1b1d20;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .inventory-card h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .inventory-card p {
+  color: #bdbdbd;
+}
+
+body.dark-mode .inventory-card:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+/*-----------------------------------
+            Reports
+-----------------------------------*/
+
+body.dark-mode .report-stat,
+body.dark-mode .report-item {
+  background: #23262a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .report-stat strong,
+body.dark-mode .report-item strong {
+  color: #ffffff;
+}
+
+body.dark-mode .report-stat span,
+body.dark-mode .report-item span {
+  color: #bdbdbd;
+}
+
+/*-----------------------------------
+            Chart Containers
+-----------------------------------*/
+
+body.dark-mode canvas {
+  background: transparent;
+}
+
+body.dark-mode .chart-wrapper {
+  background: #1b1d20;
+}
+
+/*-----------------------------------
+            Modal
+-----------------------------------*/
+
+body.dark-mode .modal-backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+body.dark-mode .modal {
+  background: #1b1d20;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .modal h2,
+body.dark-mode .modal h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .modal p {
+  color: #bdbdbd;
+}
+
+/*-----------------------------------
+        Close Button
+-----------------------------------*/
+
+body.dark-mode .close-btn {
+  background: #23262a;
+}
+
+body.dark-mode .close-btn:hover {
+  background: #30353a;
+}
+
+/*-----------------------------------
+        Footer
+-----------------------------------*/
+
+body.dark-mode footer {
+  background: #181a1d;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode footer p {
+  color: #bdbdbd;
+}
+
+/*-----------------------------------
+        Scrollbars
+-----------------------------------*/
+
+body.dark-mode ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #141618;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 50px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/*-----------------------------------
+        Selection
+-----------------------------------*/
+
+body.dark-mode ::selection {
+  background: var(--secondary);
+  color: #111;
+}
+
+/*-----------------------------------
+        Focus Ring
+-----------------------------------*/
+
+body.dark-mode *:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+/*-----------------------------------
+        Hover Glow
+-----------------------------------*/
+
+body.dark-mode .panel-card:hover,
+body.dark-mode .kpi-card:hover,
+body.dark-mode .report-card:hover,
+body.dark-mode .chart-card:hover,
+body.dark-mode .kitchen-card:hover,
+body.dark-mode .inventory-card:hover {
+  box-shadow:
+    0 0 0 1px rgba(245, 158, 11, 0.15),
+    0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/*-----------------------------------
+        Active Borders
+-----------------------------------*/
+
+body.dark-mode .active,
+body.dark-mode .selected {
+  border-color: var(--secondary);
+}
+
+/*-----------------------------------
+        Lucide Icons
+-----------------------------------*/
+
+body.dark-mode svg {
+  stroke: #e7e7e7;
+}
+
+/*-----------------------------------
+        Disabled Elements
+-----------------------------------*/
+
+body.dark-mode button:disabled,
+body.dark-mode input:disabled,
+body.dark-mode select:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/*-----------------------------------
+        Smooth Animation
+-----------------------------------*/
+
+body.dark-mode .panel-card,
+body.dark-mode .kpi-card,
+body.dark-mode .ticket,
+body.dark-mode .reservation,
+body.dark-mode .menu-card,
+body.dark-mode .inventory-card {
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/*-----------------------------------
+        Premium Coffee Accent
+-----------------------------------*/
+
+body.dark-mode .panel-card::before,
+body.dark-mode .kpi-card::before,
+body.dark-mode .chart-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--secondary), transparent);
+  opacity: 0.65;
+}
+
+/*-----------------------------------
+        End of Dark Mode
+-----------------------------------*/
+.theme-icon-sun {
+  display: none;
+}
+
+body.dark-mode .theme-icon-moon {
+  display: none;
+}
+
+body.dark-mode .theme-icon-sun {
+  display: block;
+}
+/*==================================================
+        DARK MODE FIXES (ACTUAL HTML)
+==================================================*/
+
+/*==================================
+        KITCHEN PAGE
+==================================*/
+
+/* Preparing / Ready / Completed */
+
+body.dark-mode .kanban-col {
+  background: #1b1d20;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .kanban-head h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .kanban-head p {
+  color: #b8b8b8;
+}
+
+/* Active Tickets / Ready / Delayed */
+
+body.dark-mode .kitchen-stats {
+  gap: 14px;
+}
+
+body.dark-mode .kitchen-stats > div {
+  background: #23262a;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 14px;
+
+  padding: 14px 18px;
+
+  box-shadow: none;
+}
+
+body.dark-mode .kitchen-stats strong {
+  color: var(--secondary);
+}
+
+body.dark-mode .kitchen-stats span {
+  color: #d0d0d0;
+}
+
+/* Ticket Cards */
+
+body.dark-mode .ticket {
+  background: #23262a;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .ticket strong {
+  color: #ffffff;
+}
+
+body.dark-mode .ticket span {
+  color: #c8c8c8;
+}
+
+/*==================================
+            MENU PAGE
+==================================*/
+
+body.dark-mode .category-feature {
+  background: #1b1d20;
+}
+
+body.dark-mode .category-grid {
+  background: transparent;
+}
+
+body.dark-mode .category-card {
+  background: #23262a;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: none;
+}
+
+body.dark-mode .category-card:hover {
+  background: #2b2f34;
+
+  border-color: rgba(245, 158, 11, 0.4);
+
+  transform: translateY(-4px);
+}
+
+body.dark-mode .category-card strong {
+  color: #ffffff;
+}
+
+body.dark-mode .category-card span {
+  color: #bcbcbc;
+}
+
+body.dark-mode .category-card img {
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+/*==================================
+            REPORTS
+==================================*/
+
+/* This Month
+   Total Orders
+   Low Items
+   Repeat Rate
+*/
+
+body.dark-mode .report-card {
+  background: #1b1d20;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .report-card h3,
+body.dark-mode .report-card strong {
+  color: #ffffff;
+}
+
+body.dark-mode .report-card p,
+body.dark-mode .report-card span {
+  color: #bcbcbc;
+}
+
+/* Daily Weekly Monthly */
+
+body.dark-mode .segmented {
+  background: #23262a;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .seg-btn {
+  background: transparent;
+
+  color: #d6d6d6;
+}
+
+body.dark-mode .seg-btn:hover {
+  background: #2f3438;
+}
+
+body.dark-mode .seg-btn.active {
+  background: var(--secondary);
+
+  color: #111;
+}
+
+/*==================================
+        PANEL HEADS
+==================================*/
+
+body.dark-mode .panel-head {
+  background: transparent;
+}
+
+body.dark-mode .panel-head h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .panel-head p {
+  color: #bdbdbd;
+}
+/*==================================================
+        REPORT PAGE DARK MODE FIX
+==================================================*/
+
+/* Report Header */
+
+body.dark-mode .reports-header {
+  background: transparent;
+}
+
+body.dark-mode .reports-header h2,
+body.dark-mode .reports-header h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .reports-header p {
+  color: #bdbdbd;
+}
+
+/*----------------------------------
+      Daily Weekly Monthly Chips
+----------------------------------*/
+
+body.dark-mode .reports-chip-row span {
+  background: #23262a;
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .reports-chip-row span:hover {
+  background: #2d3136;
+}
+
+/*----------------------------------
+      Report Cards
+----------------------------------*/
+
+body.dark-mode .report-card {
+  background: #1b1d20;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/*----------------------------------
+      This Month
+      Total Orders
+      Low Items
+      Repeat Rate
+----------------------------------*/
+
+body.dark-mode .report-metric {
+  background: #23262a;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: none;
+}
+
+body.dark-mode .report-metric strong {
+  color: #ffffff;
+}
+
+body.dark-mode .report-metric span {
+  color: #bdbdbd;
+}
+
+/*----------------------------------
+      Report Icon
+----------------------------------*/
+
+body.dark-mode .report-icon {
+  background: rgba(245, 158, 11, 0.15);
+
+  color: var(--secondary);
+}
+
+/*----------------------------------
+      Daily Weekly Monthly Buttons
+----------------------------------*/
+
+body.dark-mode .segmented {
+  background: #23262a;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .seg-btn {
+  color: #d7d7d7;
+}
+
+body.dark-mode .seg-btn.active {
+  background: var(--secondary);
+
+  color: #111111;
+
+  box-shadow: none;
+}
+/*==================================================
+            SAMSUNG GALAXY S8+
+            360 × 740
+==================================================*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    overflow: auto;
+    flex-direction: column;
+  }
+
+  /* Sidebar */
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 280px;
+    height: 100vh;
+    z-index: 999;
+    transition: 0.35s;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Main */
+
+  .app {
+    width: 100%;
+  }
+
+  .content {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  /* Topbar */
+
+  .topbar {
+    height: auto;
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .topbar-left,
+  .topbar-right {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .topbar-right .wrap {
+    margin-left: 220px;
+  }
+  .topbar-right .wrap2 {
+    margin-left: 220px;
+  }
+
+  .search {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* Hero */
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  /* Dashboard */
+
+  .kpi-grid,
+  .layout-2,
+  .layout-3,
+  .menu-layout,
+  .reports-grid,
+  .inventory-grid,
+  .kanban,
+  .category-grid,
+  .filters,
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Kitchen */
+
+  .kitchen-hero {
+    flex-direction: column;
+  }
+
+  .kitchen-stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reports */
+
+  .reports-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Dropdown */
+
+  .dropdown-panel {
+    right: -10px;
+    width: 92vw;
+    min-width: unset;
+  }
+
+  /* Table */
+
+  .table-scroll {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 650px;
+  }
+
+  /* Charts */
+
+  .chart-wrap {
+    height: 280px;
+  }
+
+  .chart-wrap.small {
+    height: 240px;
+  }
+
+  /* Buttons */
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-btn span {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+}
+
+/*==================================================
+                iPAD MINI
+              768 × 1024
+==================================================*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    overflow: auto;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    z-index: 999;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+  .topbar-right .wrap {
+    margin-left: 100px;
+  }
+  .topbar-right .wrap2 {
+    margin-left: 300px;
+  }
+  .content {
+    padding: 20px;
+  }
+
+  .search {
+    min-width: 240px;
+  }
+
+  /* Layout */
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .layout-2,
+  .layout-3,
+  .menu-layout,
+  .inventory-grid,
+  .reports-grid,
+  .kanban {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kitchen-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .chart-wrap {
+    height: 320px;
+  }
+}
+
+/*==================================================
+                iPAD PRO
+             1024 × 1366
+==================================================*/
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .content {
+    padding: 22px;
+  }
+
+  .search {
+    min-width: 280px;
+  }
+
+  .hero {
+    grid-template-columns: 1.2fr auto;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .layout-2 {
+    grid-template-columns: 1.6fr 1fr;
+  }
+
+  .layout-3 {
+    grid-template-columns: 1.6fr 1fr;
+  }
+
+  .inventory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reports-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kanban {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart-wrap {
+    height: 340px;
+  }
+}
+
+/*==================================================
+                GOOGLE NEST HUB
+                1024 × 600
+==================================================*/
+@media screen and (min-width: 1024px) and (max-height: 600px) {
+  body {
+    overflow: hidden;
+  }
+
+  /* Sidebar */
+
+  .sidebar {
+    width: 220px;
+    padding: 15px;
+  }
+
+  .logo img {
+    width: 55px;
+  }
+
+  .logo-text {
+    font-size: 1.05rem;
+  }
+
+  /* Topbar */
+
+  .topbar {
+    height: 68px;
+    padding: 0 16px;
+  }
+
+  .search {
+    min-width: 220px;
+    height: 40px;
+  }
+
+  /* Content */
+
+  .content {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  /* Hero */
+
+  .hero {
+    padding: 18px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  /* KPI */
+
+  .kpi-card {
+    padding: 14px;
+  }
+
+  .kpi-card strong {
+    font-size: 1.35rem;
+  }
+
+  /* Charts */
+
+  .chart-wrap {
+    height: 220px;
+  }
+
+  .chart-wrap.small {
+    height: 180px;
+  }
+
+  /* Tables */
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  /* Reports */
+
+  .report-card {
+    padding: 16px;
+  }
+
+  /* Kitchen */
+
+  .ticket {
+    padding: 12px;
+  }
+}
