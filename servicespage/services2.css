@@ -105,7 +105,9 @@ a {
   margin-bottom: 24px;
   max-width: 17ch;
 }
-
+.boardgame-hero-content span {
+  color: var(--secondary);
+}
 .boardgame-hero-content p {
   font-size: 1.05rem;
   line-height: 1.95;

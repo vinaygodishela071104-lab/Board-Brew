@@ -101,7 +101,9 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-
+.group-bookings-hero-content span {
+  color: var(--secondary);
+}
 .group-bookings-hero-content p {
   font-size: 1.04rem;
   line-height: 1.92;

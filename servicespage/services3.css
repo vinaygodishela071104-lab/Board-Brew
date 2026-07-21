@@ -107,7 +107,9 @@ a {
   color: #ffffff;
   margin-bottom: 24px;
 }
-
+.cozy-spaces-hero-content span {
+  color: var(--secondary);
+}
 .cozy-spaces-hero-content p {
   font-size: 1.05rem;
   line-height: 1.95;
@@ -588,7 +590,7 @@ body.dark-mode .space-side-content p {
 }
 
 .day-flow-content h3 {
-  font-size: 1.72rem;
+  font-size: 1.52rem;
   line-height: 1.24;
   color: var(--primary);
   margin-bottom: 16px;
@@ -688,7 +690,7 @@ body.dark-mode .day-flow-visual::after {
 
 .photo-story-intro {
   position: sticky;
-  top: 110px;
+  /* top: 110px; */
   padding-top: 12px;
 }
 
@@ -705,7 +707,7 @@ body.dark-mode .day-flow-visual::after {
 
 .photo-story-intro h2 {
   font-family: "Playfair Display", serif;
-  font-size: 3.8rem;
+  font-size: 3rem;
   line-height: 1.1;
   color: var(--primary);
   margin-bottom: 20px;

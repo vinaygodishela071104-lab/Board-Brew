@@ -61,7 +61,7 @@ a {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffd27a;
+  color: var(--secondary);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -73,6 +73,9 @@ a {
   line-height: 1.1;
   color: var(--white);
   margin-bottom: 24px;
+}
+.hero-content h1 span {
+  color: var(--secondary);
 }
 
 .hero-content p {
@@ -745,7 +748,7 @@ a {
 .team-card h3 {
   position: relative;
   z-index: 1;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   color: var(--primary);
   margin-bottom: 8px;
   font-weight: 600;
@@ -936,7 +939,7 @@ a {
 .comeback-card h3 {
   position: relative;
   z-index: 1;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   color: var(--primary);
   margin-bottom: 14px;
   font-weight: 600;
@@ -986,7 +989,7 @@ body.dark-mode .hero-overlay {
 body.dark-mode .hero-tag {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #f5b335;
+  color: var(--secondary);
 }
 
 body.dark-mode .hero-content h1 {

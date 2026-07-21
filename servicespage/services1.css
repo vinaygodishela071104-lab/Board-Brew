@@ -409,7 +409,7 @@ body.dark-mode .floating-caption {
   flex-direction: column;
   justify-content: space-between;
   padding: 10px 6px 10px 8px;
-  margin-top: 160px;
+  margin-top: 16px;
 }
 
 .coffee-lead {

@@ -5,8 +5,6 @@ fetch("../components/navbar.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("navbar").innerHTML = data;
-
-    // Initialize Navbar after loading
     initializeNavbar();
   })
   .catch((error) => console.error("Navbar failed to load:", error));
@@ -31,11 +29,30 @@ function initializeNavbar() {
   const navLinks = document.querySelector(".nav-links");
   const mobileLogin = document.querySelector(".mobile-login");
 
-  // Check if navbar loaded correctly
   if (!darkToggle || !rtlToggle || !menuToggle || !navLinks) {
     console.error("Navbar elements not found.");
     return;
   }
+
+  // ==============================
+  // Active Link
+  // ==============================
+  const currentPath = window.location.pathname.replace(/\/$/, "");
+
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    const linkPath = new URL(
+      link.href,
+      window.location.origin,
+    ).pathname.replace(/\/$/, "");
+
+    if (currentPath === linkPath) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("active");
+      link.removeAttribute("aria-current");
+    }
+  });
 
   // ==============================
   // Dark Mode
@@ -44,7 +61,6 @@ function initializeNavbar() {
     document.body.classList.toggle("dark-mode");
 
     const icon = darkToggle.querySelector("i");
-
     if (document.body.classList.contains("dark-mode")) {
       icon.classList.replace("fa-moon", "fa-sun");
     } else {
@@ -66,14 +82,11 @@ function initializeNavbar() {
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 
-    // Toggle Login Button
     if (mobileLogin) {
       mobileLogin.classList.toggle("active");
     }
 
-    // Change Menu Icon
     const icon = menuToggle.querySelector("i");
-
     if (navLinks.classList.contains("active")) {
       icon.classList.replace("fa-bars", "fa-xmark");
     } else {
@@ -96,6 +109,10 @@ function initializeNavbar() {
       icon.classList.replace("fa-xmark", "fa-bars");
     }
   });
+
+  // ==============================
+  // Mobile Dropdown Toggle
+  // ==============================
   const dropdowns = document.querySelectorAll(".dropdown");
 
   dropdowns.forEach((dropdown) => {
@@ -104,16 +121,15 @@ function initializeNavbar() {
     link.addEventListener("click", (e) => {
       if (window.innerWidth <= 1024) {
         e.preventDefault();
-
         dropdown.classList.toggle("active");
       }
     });
   });
 }
+
 // ===============================
 // Reveal Animation
 // ===============================
-
 const revealElements = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(
@@ -121,17 +137,8 @@ const revealObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
-
-        // Uncomment if you want animation only once
         revealObserver.unobserve(entry.target);
       }
-
-      // Uncomment below if you want animation every time
-      /*
-      else {
-        entry.target.classList.remove("active");
-      }
-      */
     });
   },
   {

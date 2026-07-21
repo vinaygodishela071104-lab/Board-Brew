@@ -13,7 +13,9 @@ body {
   padding: 0;
   height: 100%;
 }
-
+#sidebarToggle {
+  display: none;
+}
 body {
   display: flex;
   overflow: hidden;
@@ -23,7 +25,7 @@ body {
 }
 
 .sidebar {
-  width: 280px;
+  width: 260px;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -72,8 +74,8 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 6px; /* Reduced gap */
-  margin-right: 30px;
+  gap: 1px; /* Reduced gap */
+  margin-right: 50px;
 }
 
 .logo img {
@@ -88,8 +90,8 @@ body {
 }
 
 .logo-text {
-  font-family: "Baloo 2", sans-serif;
-  font-size: 1.1rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
   font-weight: 800;
   line-height: 1;
   white-space: nowrap;
@@ -203,8 +205,9 @@ a {
 
 .nav-link:hover,
 .nav-link.active {
-  border-color: rgba(245, 158, 11, 0.45);
-  background: rgba(245, 158, 11, 0.08);
+  background: rgba(245, 158, 11, 1);
+  border-color: var(--secondary);
+  color: #ffffff;
 }
 
 .badge {
@@ -889,70 +892,6 @@ th {
   margin-top: 18px;
 }
 
-@media (max-width: 1200px) {
-  body {
-    overflow: auto;
-  }
-
-  .sidebar {
-    position: fixed;
-    left: -300px;
-    top: 0;
-    z-index: 25;
-    transition: left 0.25s ease;
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-
-  .kpi-grid,
-  .layout-2,
-  .layout-3,
-  .settings-grid,
-  .menu-layout,
-  .reports-grid,
-  .inventory-grid,
-  .kanban {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero,
-  .kpi-grid,
-  .layout-2,
-  .layout-3,
-  .settings-grid,
-  .menu-layout,
-  .reports-grid,
-  .inventory-grid,
-  .kanban,
-  .filters,
-  .kitchen-hero,
-  .reports-header {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .topbar {
-    height: auto;
-    padding: 14px 16px;
-    flex-direction: column;
-    gap: 12px;
-    align-items: stretch;
-  }
-
-  .topbar-right {
-    flex-wrap: wrap;
-  }
-
-  .search {
-    min-width: 0;
-    width: 100%;
-  }
-}
 /*==================================================
                 DARK MODE - PART 1
       Body • Sidebar • Topbar • Hero • Buttons
@@ -981,6 +920,16 @@ body.dark-mode *::after {
 /*-----------------------------------
             Sidebar
 -----------------------------------*/
+body.dark-mode .logo-text,
+body.dark-mode .board,
+body.dark-mode .brew {
+  color: #fff;
+}
+
+body.dark-mode .sub-tagline,
+body.dark-mode .tagline p {
+  color: #ddd;
+}
 
 body.dark-mode .sidebar {
   background: #181a1d;
@@ -2020,378 +1969,490 @@ body.dark-mode .seg-btn.active {
 
   box-shadow: none;
 }
-/*==================================================
-            SAMSUNG GALAXY S8+
-            360 × 740
-==================================================*/
-@media screen and (min-width: 320px) and (max-width: 480px) {
+#rtlToggle {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.rtl-text {
+  line-height: 1;
+}
+
+html[dir="rtl"] .topbar-right {
+  direction: rtl;
+} /* ==================================================
+   RESPONSIVE MEDIA QUERIES
+   Samsung Galaxy S8+ • iPad Mini • iPad Pro 11" • Nest Hub
+================================================== */
+
+/* Samsung Galaxy S8+ */
+@media screen and (max-width: 480px) {
   body {
-    overflow: auto;
-    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
-  /* Sidebar */
+  #sidebarToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .sidebar {
+    width: 280px;
+    max-width: 94vw;
     position: fixed;
     top: 0;
-    left: -300px;
-    width: 280px;
+    left: -280px;
     height: 100vh;
-    z-index: 999;
-    transition: 0.35s;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .sidebar.open {
     left: 0;
   }
 
-  /* Main */
-
   .app {
     width: 100%;
+    min-width: 0;
   }
-
-  .content {
-    padding: 16px;
-    gap: 16px;
-  }
-
-  /* Topbar */
 
   .topbar {
     height: auto;
-    padding: 15px;
+    padding: 12px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    align-items: stretch;
+    gap: 10px;
   }
 
   .topbar-left,
   .topbar-right {
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
-  .topbar-right .wrap {
-    margin-left: 220px;
-  }
-  .topbar-right .wrap2 {
-    margin-left: 220px;
+
+  .topbar p,
+  #pageSubtitle,
+  .profile-btn span {
+    display: none;
   }
 
   .search {
+    min-width: 0;
     width: 100%;
-    min-width: unset;
+    height: 42px;
   }
 
-  /* Hero */
+  .content {
+    padding: 12px;
+    gap: 16px;
+  }
 
-  .hero {
+  .hero,
+  .kpi-grid,
+  .layout-2,
+  .layout-3,
+  .settings-grid,
+  .menu-layout,
+  .reports-grid,
+  .inventory-grid,
+  .kanban,
+  .filters,
+  .category-grid,
+  .kitchen-stats,
+  .kitchen-hero,
+  .reports-header {
     grid-template-columns: 1fr;
-    text-align: center;
-    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero,
+  .page-hero,
+  .kitchen-hero,
+  .reports-header,
+  .panel-card,
+  .report-card,
+  .kpi-card {
+    padding: 16px;
   }
 
   .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn,
+  .modal-actions .btn {
+    width: 100%;
     justify-content: center;
   }
 
-  /* Dashboard */
+  .chart-wrap {
+    height: 260px;
+  }
 
-  .kpi-grid,
+  .chart-wrap.small {
+    height: 220px;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 640px;
+  }
+
+  .dropdown-wrap {
+    position: relative;
+  }
+
+  .dropdown-panel,
+  #notifPanel,
+  #profilePanel {
+    position: fixed;
+    top: 190px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    max-height: 75vh;
+    overflow-y: auto;
+    z-index: 1200;
+    border-radius: 18px;
+  }
+
+  .modal {
+    width: min(92vw, 360px);
+    padding: 16px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* iPad Mini */
+@media screen and (min-width: 768px) and (max-width: 820px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #sidebarToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar {
+    width: 300px;
+    max-width: 90vw;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .topbar {
+    height: auto;
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .topbar-left,
+  .topbar-right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .topbar-right {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .search {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .content {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .hero,
   .layout-2,
   .layout-3,
   .menu-layout,
   .reports-grid,
   .inventory-grid,
   .kanban,
-  .category-grid,
-  .filters,
-  .settings-grid {
+  .filters {
     grid-template-columns: 1fr;
   }
 
-  /* Kitchen */
-
-  .kitchen-hero {
-    flex-direction: column;
+  .kpi-grid,
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .kitchen-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Reports */
-
+  .kitchen-hero,
   .reports-header {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* Dropdown */
-
-  .dropdown-panel {
-    right: -10px;
-    width: 92vw;
-    min-width: unset;
-  }
-
-  /* Table */
-
-  .table-scroll {
-    overflow-x: auto;
-  }
-
-  table {
-    min-width: 650px;
-  }
-
-  /* Charts */
-
-  .chart-wrap {
-    height: 280px;
-  }
-
-  .chart-wrap.small {
-    height: 240px;
-  }
-
-  /* Buttons */
-
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .profile-btn span {
-    display: none;
-  }
-
-  .logo {
-    justify-content: center;
-  }
-
-  .logo-text {
-    font-size: 1.1rem;
-  }
-}
-
-/*==================================================
-                iPAD MINI
-              768 × 1024
-==================================================*/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    overflow: auto;
-  }
-
-  .sidebar {
-    position: fixed;
-    left: -300px;
-    top: 0;
-    z-index: 999;
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-  .topbar-right .wrap {
-    margin-left: 100px;
-  }
-  .topbar-right .wrap2 {
-    margin-left: 300px;
-  }
-  .content {
-    padding: 20px;
-  }
-
-  .search {
-    min-width: 240px;
-  }
-
-  /* Layout */
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .kpi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .layout-2,
-  .layout-3,
-  .menu-layout,
-  .inventory-grid,
-  .reports-grid,
-  .kanban {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .filters {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .kitchen-stats {
-    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
   }
 
   .chart-wrap {
     height: 320px;
   }
-}
 
-/*==================================================
-                iPAD PRO
-             1024 × 1366
-==================================================*/
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
-  .sidebar {
-    width: 250px;
+  .chart-wrap.small {
+    height: 260px;
   }
 
-  .content {
-    padding: 22px;
+  .dropdown-wrap {
+    position: relative;
   }
 
-  .search {
-    min-width: 280px;
+  .dropdown-panel,
+  #notifPanel,
+  #profilePanel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: auto;
+    width: min(320px, calc(100vw - 32px));
+    max-width: calc(100vw - 32px);
+    min-width: 0;
+    max-height: 70vh;
+    overflow-y: auto;
   }
 
-  .hero {
-    grid-template-columns: 1.2fr auto;
-  }
-
-  .kpi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .layout-2 {
-    grid-template-columns: 1.6fr 1fr;
-  }
-
-  .layout-3 {
-    grid-template-columns: 1.6fr 1fr;
-  }
-
-  .inventory-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .reports-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .menu-layout {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .kanban {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .chart-wrap {
-    height: 340px;
+  table {
+    min-width: 700px;
   }
 }
 
-/*==================================================
-                GOOGLE NEST HUB
-                1024 × 600
-==================================================*/
-@media screen and (min-width: 1024px) and (max-height: 600px) {
+/* iPad Pro 11" */
+@media screen and (min-width: 821px) and (max-width: 1024px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
-  /* Sidebar */
+  #sidebarToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .sidebar {
-    width: 220px;
-    padding: 15px;
+    width: 320px;
+    max-width: 88vw;
+    position: fixed;
+    top: 0;
+    left: -320px;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
-  .logo img {
-    width: 55px;
+  .sidebar.open {
+    left: 0;
   }
-
-  .logo-text {
-    font-size: 1.05rem;
-  }
-
-  /* Topbar */
 
   .topbar {
-    height: 68px;
-    padding: 0 16px;
+    padding: 16px 20px;
   }
 
   .search {
     min-width: 220px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .content {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .hero,
+  .layout-2,
+  .layout-3,
+  .menu-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-grid,
+  .reports-grid,
+  .inventory-grid,
+  .kanban,
+  .filters,
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kitchen-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dropdown-wrap {
+    position: relative;
+  }
+
+  .dropdown-panel,
+  #notifPanel,
+  #profilePanel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: auto;
+    width: min(320px, calc(100vw - 40px));
+    max-width: calc(100vw - 40px);
+    min-width: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  table {
+    min-width: 760px;
+  }
+}
+
+/* Nest Hub */
+@media screen and (width: 1024px) and (height: 600px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #sidebarToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar {
+    width: 280px;
+    max-width: 88vw;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .topbar {
+    height: 72px;
+    padding: 0 16px;
+  }
+
+  .topbar h2 {
+    font-size: 1.2rem;
+  }
+
+  .topbar p {
+    display: none;
+  }
+
+  .search {
+    min-width: 180px;
+    max-width: 250px;
     height: 40px;
   }
 
-  /* Content */
-
   .content {
-    padding: 16px;
-    gap: 16px;
+    padding: 14px;
+    gap: 14px;
   }
 
-  /* Hero */
-
   .hero {
+    grid-template-columns: 1fr;
     padding: 18px;
   }
 
-  .hero h1 {
-    font-size: 1.8rem;
+  .kpi-grid,
+  .layout-2,
+  .layout-3,
+  .reports-grid,
+  .inventory-grid,
+  .kanban,
+  .filters,
+  .menu-layout,
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  /* KPI */
-
-  .kpi-card {
-    padding: 14px;
-  }
-
-  .kpi-card strong {
-    font-size: 1.35rem;
-  }
-
-  /* Charts */
 
   .chart-wrap {
-    height: 220px;
+    height: 240px;
   }
 
   .chart-wrap.small {
-    height: 180px;
+    height: 210px;
   }
 
-  /* Tables */
-
-  th,
-  td {
-    padding: 10px;
+  .panel-card,
+  .report-card,
+  .kpi-card,
+  .kitchen-hero,
+  .reports-header {
+    padding: 14px;
   }
 
-  /* Reports */
-
-  .report-card {
-    padding: 16px;
+  .dropdown-wrap {
+    position: relative;
   }
 
-  /* Kitchen */
+  .dropdown-panel,
+  #notifPanel,
+  #profilePanel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    left: auto;
+    width: 280px;
+    max-width: calc(100vw - 20px);
+    min-width: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
 
-  .ticket {
-    padding: 12px;
+  table {
+    min-width: 700px;
   }
 }

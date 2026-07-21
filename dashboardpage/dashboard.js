@@ -538,3 +538,17 @@ if (savedTheme) {
 createSalesChart("today");
 
 switchPanel("overview");
+const rtlToggle = document.getElementById("rtlToggle");
+const root = document.documentElement;
+
+rtlToggle.addEventListener("click", () => {
+  const isRTL = root.getAttribute("dir") === "rtl";
+  const newDir = isRTL ? "ltr" : "rtl";
+
+  root.setAttribute("dir", newDir);
+  rtlToggle.setAttribute("aria-pressed", String(!isRTL));
+  rtlToggle.setAttribute(
+    "title",
+    newDir === "rtl" ? "Switch to LTR" : "Switch to RTL",
+  );
+});

@@ -941,8 +941,7 @@ html[dir="rtl"] .logo-content {
   }
 
   .form-row {
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 20px;
   }
 
   .remember,

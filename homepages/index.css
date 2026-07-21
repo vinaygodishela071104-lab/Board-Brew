@@ -97,15 +97,25 @@ img {
 .hero-tag {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 24px;
+  gap: 12px;
+
+  padding: 10px 24px;
+
+  background: #fff4df;
+
+  border: 1px solid rgba(245, 158, 11, 0.2);
+
   border-radius: 50px;
-  background: #ffffff;
-  color: var(--primary);
-  font-size: 0.95rem;
+
+  color: var(--secondary);
+
+  font-size: 15px;
+
   font-weight: 600;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
-  transition: 0.35s;
+
+  letter-spacing: 0.5px;
+
+  margin-bottom: 35px;
 }
 
 .hero-tag:hover {
@@ -125,7 +135,6 @@ img {
 
 .hero-content h1 span {
   color: var(--secondary);
-  font-family: "Baloo 2", sans-serif;
 }
 
 .hero-content h1::before {
@@ -945,18 +954,6 @@ body.dark-mode .scroll-indicator span {
   padding-left: 42px;
 }
 
-.about-tag::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 28px;
-  height: 2px;
-  background: var(--secondary);
-  transform: translateY(-50%);
-  border-radius: 20px;
-}
-
 .about-content h2 {
   font-family: "Baloo 2", sans-serif;
   font-size: 3rem;
@@ -1137,18 +1134,6 @@ body.dark-mode .secondary-btn:hover {
   margin-bottom: 18px;
   position: relative;
   padding-left: 42px;
-}
-
-.choose-tag::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 28px;
-  height: 2px;
-  background: var(--secondary);
-  transform: translateY(-50%);
-  border-radius: 20px;
 }
 
 .choose-left h2 {
@@ -1441,7 +1426,7 @@ body.dark-mode .choose-text p {
 
 .menu-top h3 {
   font-family: "Baloo 2", sans-serif;
-  font-size: 1.55rem;
+  font-size: 1.15rem;
   line-height: 1.2;
   color: var(--primary);
   flex: 1;
@@ -2061,7 +2046,7 @@ body.dark-mode .timeline-content::before {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  background: var(--secondary);
   color: #fff;
   font-family: "Baloo 2", sans-serif;
   font-size: 1.2rem;
@@ -2074,7 +2059,7 @@ body.dark-mode .timeline-content::before {
 
 .review-user h4 {
   font-family: "Baloo 2", sans-serif;
-  font-size: 1.35rem;
+  font-size: 1rem;
   line-height: 1.1;
   color: var(--primary);
   margin-bottom: 4px;
@@ -2130,7 +2115,7 @@ body.dark-mode .review-user {
 .cta-section {
   position: relative;
   width: 80%;
-  height: 600px;
+  height: 450px;
   padding: 120px 20px;
   background: url("/images/cta.jpg") center center/cover no-repeat;
   border-radius: 32px;
@@ -2159,24 +2144,32 @@ body.dark-mode .review-user {
 }
 
 .cta-tag {
-  display: inline-block;
-  padding: 10px 18px;
-  margin-bottom: 20px;
-  border-radius: 40px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 24px;
+
+  background: rgba(0, 0, 0, 0.08);
+
+  border: 1px solid rgba(245, 158, 11, 0.2);
+
+  border-radius: 50px;
+
+  color: var(--secondary);
+
+  font-size: 15px;
+
   font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  backdrop-filter: blur(8px);
+
+  letter-spacing: 0.5px;
+
+  margin-bottom: 35px;
 }
 
 .cta-content h2 {
   font-family: "Baloo 2", sans-serif;
-  font-size: 3.2rem;
+  font-size: 2rem;
   line-height: 1.2;
   color: #fff;
   margin-bottom: 20px;
@@ -2451,7 +2444,7 @@ body.dark-mode .cta-section {
   .hero-animation {
     width: 420px;
     height: 420px;
-    margin: 50px auto 0;
+    margin: 90px auto 0;
     transform: none;
   }
 
@@ -2695,14 +2688,11 @@ body.dark-mode .cta-section {
   }
 
   .about-floating-card {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    margin-top: 20px;
+    display: none;
   }
 
   .about-badge {
-    right: 10px;
+    display: none;
   }
 
   .choose-left,
@@ -2722,7 +2712,7 @@ body.dark-mode .cta-section {
   }
 
   .menu-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .reviews-grid {
