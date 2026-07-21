@@ -512,6 +512,7 @@ body.dark-mode .btn-outline:hover {
   font-size: 1rem;
   line-height: 1.95;
   color: #6f5c4e;
+  text-align: justify;
 }
 
 .mood-rail {
