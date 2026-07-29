@@ -21,11 +21,12 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
+  font-weight: 400;
 }
 
 img {
@@ -81,7 +82,7 @@ textarea {
   min-height: 72vh;
   display: grid;
   align-items: center;
-  padding: 112px 0 74px;
+  padding: 112px 74px;
   position: relative;
   background:
     linear-gradient(rgba(18, 10, 7, 0.6), rgba(18, 10, 7, 0.64)),
@@ -112,23 +113,29 @@ textarea {
   margin-top: 30px;
 }
 
-.eyebrow {
+.hero .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  gap: 12px;
+  padding: 8px 20px;
+  background: rgba(247, 205, 133, 0.2);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 50px;
   color: var(--secondary);
-  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  margin-bottom: 12px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
   line-height: 1.03;
   max-width: 14ch;
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .hero p {
@@ -136,6 +143,7 @@ textarea {
   font-size: clamp(1rem, 1.2vw, 1.12rem);
   color: rgba(255, 255, 255, 0.88);
   margin-bottom: 30px;
+  font-weight: 400;
 }
 
 .btn {
@@ -166,7 +174,7 @@ textarea {
 }
 
 .highlights {
-  padding: 0 0 110px;
+  padding: 0 100px;
   margin-top: -18px;
 }
 
@@ -194,10 +202,11 @@ textarea {
 }
 
 .menu-card__head h2 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(1.8rem, 2.4vw, 2.5rem);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   color: var(--primary);
   line-height: 1.08;
+  font-weight: 400;
 }
 
 .menu-card__head span {
@@ -206,6 +215,8 @@ textarea {
   text-transform: uppercase;
   color: var(--secondary);
   white-space: nowrap;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .menu-list {
@@ -254,22 +265,24 @@ textarea {
 }
 
 .menu-item__body h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.08rem;
   color: var(--primary);
   margin-bottom: 4px;
+  font-weight: 400;
 }
 
 .menu-item__body p {
   font-size: 0.9rem;
   color: var(--muted);
+  font-weight: 400;
 }
 
 .menu-item__price {
-  font-family: "Baloo 2", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1rem;
   color: var(--secondary);
-  font-weight: 700;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -308,7 +321,9 @@ textarea {
 }
 
 .order {
-  padding: 0 0 110px;
+  padding: 0 100px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .order__card {
@@ -325,16 +340,18 @@ textarea {
 }
 
 .order__head h2 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 2.8vw, 3rem);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   color: var(--primary);
   line-height: 1.06;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 
 .order__head p {
   color: var(--muted);
   max-width: 70ch;
+  font-weight: 400;
 }
 
 .order__grid {
@@ -369,11 +386,11 @@ textarea {
   grid-column: 1 / -1;
 }
 
-.field label,
-.summary-title {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--primary);
+.field label {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  margin-bottom: 12px;
 }
 
 .field input,
@@ -387,6 +404,8 @@ textarea {
   padding: 14px 16px;
   outline: none;
   transition: 0.3s ease;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .field textarea {
@@ -472,10 +491,13 @@ textarea {
   gap: 14px;
   font-size: 0.98rem;
   color: var(--muted);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .total-row strong {
   color: var(--primary);
+  font-weight: 400;
 }
 
 .grand {
@@ -506,6 +528,7 @@ textarea {
   border-radius: 999px;
   font-weight: 700;
 }
+
 .right-stack {
   display: grid;
   gap: 24px;
@@ -521,15 +544,17 @@ textarea {
 }
 
 .info-card h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.85rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   color: var(--primary);
   margin: 10px 0 12px;
+  font-weight: 400;
 }
 
 .info-card p {
   color: var(--muted);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .pickup-points {
@@ -561,13 +586,17 @@ textarea {
   display: block;
   color: var(--primary);
   margin-bottom: 4px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .pickup-point p {
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
+  font-weight: 400;
 }
+
 .btn-outline:hover {
   border-color: var(--secondary);
   color: var(--secondary);
@@ -578,21 +607,17 @@ textarea {
   font-size: 0.9rem;
   color: var(--muted);
   margin-top: 10px;
+  font-weight: 400;
 }
 
 .hidden {
   display: none;
 }
-/*=================================
-          DARK MODE
-=================================*/
 
 body.dark-mode {
   background: #121212;
   color: #f5f5f5;
 }
-
-/* Hero */
 
 body.dark-mode .hero {
   background:
@@ -609,8 +634,6 @@ body.dark-mode .hero::after {
   );
 }
 
-/* Cards */
-
 body.dark-mode .menu-card,
 body.dark-mode .order__card,
 body.dark-mode .info-card,
@@ -620,8 +643,6 @@ body.dark-mode .summary-box {
   border-color: #333;
 }
 
-/* Menu Items */
-
 body.dark-mode .menu-item,
 body.dark-mode .check-item,
 body.dark-mode .pickup-point {
@@ -629,22 +650,20 @@ body.dark-mode .pickup-point {
   border-color: #333;
 }
 
-/* Form */
-
 body.dark-mode input,
 body.dark-mode select,
 body.dark-mode textarea {
   background: #252525;
   color: #fff;
   border: 1px solid #333;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 body.dark-mode input::placeholder,
 body.dark-mode textarea::placeholder {
   color: #999;
 }
-
-/* Quantity */
 
 body.dark-mode .qty {
   background: #252525;
@@ -660,14 +679,14 @@ body.dark-mode .qty button:hover {
   background: #f59e0b;
 }
 
-/* Text */
-
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode label,
 body.dark-mode strong {
   color: #f5d3b2;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 body.dark-mode p,
@@ -676,9 +695,9 @@ body.dark-mode li,
 body.dark-mode .total-row,
 body.dark-mode .live-note {
   color: #c7c7c7;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
-
-/* Buttons */
 
 body.dark-mode .btn-outline {
   color: #fff;
@@ -689,6 +708,7 @@ body.dark-mode .btn-outline:hover {
   color: #f59e0b;
   border-color: #f59e0b;
 }
+
 @media screen and (max-width: 480px) {
   .section-wrap {
     padding: 0 18px;
@@ -701,7 +721,7 @@ body.dark-mode .btn-outline:hover {
 
   .hero h1 {
     max-width: 100%;
-    font-size: 2.35rem;
+    font-size: 3rem;
   }
 
   .highlights,
