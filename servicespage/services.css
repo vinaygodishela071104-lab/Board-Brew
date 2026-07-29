@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background: var(--bg-soft);
   overflow-x: hidden;
 }
@@ -82,26 +82,31 @@ img {
   border: 1px solid var(--border-light);
   color: #ffd27a;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.5px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .services-hero-content h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 4.2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
   line-height: 1.08;
   color: var(--white);
   margin-bottom: 24px;
+  font-weight: 400;
 }
+
 .services-hero-content span {
   color: var(--secondary);
 }
+
 .services-hero-content p {
   max-width: 650px;
   font-size: 18px;
   line-height: 1.9;
   color: var(--text-light);
   margin-bottom: 36px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .services-hero-buttons {
@@ -120,8 +125,9 @@ img {
   padding: 16px 34px;
   border-radius: 999px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
   transition: all 0.35s ease;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .hero-btn-primary {
@@ -164,9 +170,10 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #f6efe9;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .services-hero-points i {
@@ -190,9 +197,11 @@ body.dark-mode .services-hero-overlay {
     rgba(10, 10, 10, 0.62)
   );
 }
+
 body.dark-mode .services-hero {
   background-image: url("/images/table.avif");
 }
+
 body.dark-mode .services-hero-tag {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -235,6 +244,7 @@ body.dark-mode .services-hero-points span {
 body.dark-mode .services-hero-points i {
   color: #f5b335;
 }
+
 .our-services-section {
   padding: 110px 120px;
   background: #fffaf4;
@@ -274,16 +284,18 @@ body.dark-mode .services-hero-points i {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .our-services-intro h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.15;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .our-services-intro p {
@@ -292,6 +304,7 @@ body.dark-mode .services-hero-points i {
   color: #666;
   max-width: 680px;
   margin: 0 auto;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .our-services-grid {
@@ -365,7 +378,8 @@ body.dark-mode .services-hero-points i {
   line-height: 1.35;
   color: var(--primary);
   margin-bottom: 14px;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .service-card p {
@@ -376,6 +390,7 @@ body.dark-mode .services-hero-points i {
   color: #6b6b6b;
   margin-bottom: 22px;
   flex-grow: 1;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .service-link {
@@ -386,8 +401,9 @@ body.dark-mode .services-hero-points i {
   gap: 8px;
   color: var(--primary);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 400;
   transition: color 0.3s ease;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .service-link::after {
@@ -457,6 +473,7 @@ body.dark-mode .service-link {
 body.dark-mode .service-card:hover .service-link {
   color: #f5b335;
 }
+
 .how-it-works-section {
   padding: 110px 120px;
   background: #fff9f3;
@@ -496,16 +513,18 @@ body.dark-mode .service-card:hover .service-link {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .how-it-works-intro h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.15;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .how-it-works-intro p {
@@ -514,6 +533,7 @@ body.dark-mode .service-card:hover .service-link {
   color: #666;
   max-width: 680px;
   margin: 0 auto;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .timeline-scroll {
@@ -587,7 +607,7 @@ body.dark-mode .service-card:hover .service-link {
 }
 
 .timeline-marker span {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--secondary);
@@ -604,7 +624,6 @@ body.dark-mode .service-card:hover .service-link {
   -webkit-backdrop-filter: blur(12px);
   overflow: hidden;
   height: 250px;
-
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
@@ -641,6 +660,8 @@ body.dark-mode .service-card:hover .service-link {
   line-height: 1.3;
   color: var(--primary);
   margin-bottom: 14px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .timeline-card p {
@@ -649,6 +670,7 @@ body.dark-mode .service-card:hover .service-link {
   font-size: 0.97rem;
   line-height: 1.85;
   color: #6b6b6b;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* =========================
@@ -708,6 +730,7 @@ body.dark-mode .timeline-card h3 {
 body.dark-mode .timeline-card p {
   color: #c8c8c8;
 }
+
 .game-library-section {
   padding: 110px 120px;
   background: #fffaf4;
@@ -783,16 +806,18 @@ body.dark-mode .timeline-card p {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .game-library-content h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .game-library-lead {
@@ -800,6 +825,7 @@ body.dark-mode .timeline-card p {
   line-height: 1.95;
   color: #666;
   margin-bottom: 34px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .game-library-lines {
@@ -824,9 +850,10 @@ body.dark-mode .timeline-card p {
 .library-line-title {
   display: inline-block;
   font-size: 1.18rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--primary);
   margin-bottom: 8px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .library-line p {
@@ -834,6 +861,7 @@ body.dark-mode .timeline-card p {
   line-height: 1.85;
   color: #6d6d6d;
   max-width: 430px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* =========================
@@ -872,6 +900,7 @@ body.dark-mode .library-line-title {
 body.dark-mode .library-line p {
   color: #c8c8c8;
 }
+
 .private-bookings-section {
   padding: 110px 120px;
   background: #fff9f3;
@@ -916,16 +945,18 @@ body.dark-mode .library-line p {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .private-bookings-content h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .private-bookings-lead {
@@ -933,6 +964,7 @@ body.dark-mode .library-line p {
   line-height: 1.95;
   color: #666;
   margin-bottom: 34px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .private-bookings-details {
@@ -950,11 +982,12 @@ body.dark-mode .library-line p {
 .booking-detail-label {
   display: inline-block;
   font-size: 0.88rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--secondary);
   margin-bottom: 8px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .booking-detail-row p {
@@ -962,6 +995,7 @@ body.dark-mode .library-line p {
   line-height: 1.85;
   color: #6c6c6c;
   max-width: 480px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .private-bookings-actions {
@@ -979,8 +1013,9 @@ body.dark-mode .library-line p {
   padding: 15px 30px;
   border-radius: 999px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
   transition: all 0.35s ease;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .booking-btn-primary {
@@ -1084,6 +1119,7 @@ body.dark-mode .booking-btn-outline:hover {
   background: #ffffff;
   color: #111111;
 }
+
 .season-community-section.alt-layout {
   padding: 110px 120px;
   background: #fffaf5;
@@ -1135,16 +1171,18 @@ body.dark-mode .booking-btn-outline:hover {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .season-community-header h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .season-community-header p {
@@ -1153,6 +1191,7 @@ body.dark-mode .booking-btn-outline:hover {
   color: #666;
   max-width: 680px;
   margin: 0 auto;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .season-community-editorial {
@@ -1264,11 +1303,12 @@ body.dark-mode .booking-btn-outline:hover {
   z-index: 2;
   display: inline-block;
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   color: var(--secondary);
   margin-bottom: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .editorial-main h3,
@@ -1279,6 +1319,8 @@ body.dark-mode .booking-btn-outline:hover {
   line-height: 1.22;
   color: var(--primary);
   margin-bottom: 16px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .editorial-side h3 {
@@ -1294,6 +1336,7 @@ body.dark-mode .booking-btn-outline:hover {
   line-height: 1.9;
   color: #6a6a6a;
   max-width: 56ch;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .editorial-main,
@@ -1367,6 +1410,7 @@ body.dark-mode .editorial-side:hover {
   border-color: rgba(245, 179, 53, 0.26);
   box-shadow: none;
 }
+
 .simple-cafe-cta {
   background: url("/images/cta.jpg") center center / cover no-repeat;
   border-radius: 34px;
@@ -1402,16 +1446,17 @@ body.dark-mode .editorial-side:hover {
   background: rgba(255, 255, 255, 0.14);
   color: #fff4df;
   font-size: 0.88rem;
-  font-weight: 700;
-
+  font-weight: 400;
   backdrop-filter: blur(8px);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .simple-cafe-cta-content h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 2.5rem;
   line-height: 1.12;
   color: #ffffff;
+  font-weight: 400;
 }
 
 .simple-cafe-cta-content p {
@@ -1422,6 +1467,7 @@ body.dark-mode .editorial-side:hover {
   max-width: 48ch;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .simple-cafe-cta-btn {
@@ -1435,11 +1481,12 @@ body.dark-mode .editorial-side:hover {
   color: #1d1d1d;
   text-decoration: none;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 400;
   transition:
     transform 0.3s ease,
     background 0.3s ease,
     box-shadow 0.3s ease;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .simple-cafe-cta-btn:hover {
@@ -1447,6 +1494,7 @@ body.dark-mode .editorial-side:hover {
   background: #ffc04a;
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
 }
+
 /* =========================
    DARK MODE
 ========================= */
@@ -1459,6 +1507,7 @@ body.dark-mode .simple-cafe-cta-tag {
   background: rgba(255, 255, 255, 0.1);
   color: #ffe2a0;
 }
+
 /* =========================================
    SAMSUNG GALAXY S8+ / 360px width
 ========================================= */
@@ -1493,6 +1542,7 @@ body.dark-mode .simple-cafe-cta-tag {
   .simple-cafe-cta-content h2 {
     font-size: 2rem;
     line-height: 1.18;
+    font-weight: 400;
   }
 
   .services-hero-content p,
@@ -1562,6 +1612,7 @@ body.dark-mode .simple-cafe-cta-tag {
   .cafe-cta-feature h3 {
     font-size: 1.15rem;
     line-height: 1.3;
+    font-weight: 400;
   }
 
   .service-card p,
@@ -1630,8 +1681,9 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 
   .services-hero-content h1 {
-    font-size: 3.1rem;
+    font-size: 3rem;
     line-height: 1.12;
+    font-weight: 400;
   }
 
   .services-hero-content p {
@@ -1654,12 +1706,15 @@ body.dark-mode .simple-cafe-cta-tag {
   .season-community-header h2,
   .simple-cafe-cta-content h2 {
     font-size: 2.45rem;
+    font-weight: 400;
   }
+
   .game-library-content,
   .private-bookings-content {
     margin-left: 100px;
     text-align: center;
   }
+
   .our-services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
@@ -1709,7 +1764,8 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 
   .services-hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    font-weight: 400;
   }
 
   .services-hero-content p {
@@ -1728,11 +1784,13 @@ body.dark-mode .simple-cafe-cta-tag {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
+
   .game-library-content,
   .private-bookings-content {
     margin-left: 200px;
     text-align: center;
   }
+
   .game-library-grid,
   .private-bookings-grid,
   .season-community-editorial {
@@ -1768,6 +1826,7 @@ body.dark-mode .simple-cafe-cta-tag {
 
   .simple-cafe-cta-content h2 {
     font-size: 2.6rem;
+    font-weight: 400;
   }
 }
 
@@ -1782,7 +1841,7 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 
   .services-hero-content h1 {
-    font-size: 3.1rem;
+    font-size: 3rem;
   }
 
   .services-hero-content p {

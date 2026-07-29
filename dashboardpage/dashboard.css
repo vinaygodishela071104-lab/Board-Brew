@@ -13,15 +13,26 @@ body {
   padding: 0;
   height: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
 #sidebarToggle {
   display: none;
 }
+
 body {
   display: flex;
   overflow: hidden;
-  font-family: Inter, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background: linear-gradient(180deg, #fbf8f3 0%, #f4eee6 100%);
   color: #1f1f1f;
+  font-weight: 400;
 }
 
 .sidebar {
@@ -61,40 +72,41 @@ body {
   border-radius: 22px;
   box-shadow: 0 14px 38px rgba(75, 36, 19, 0.08);
 }
+
 .panel-card {
   margin-top: 20px;
 }
-/*==========================
-        LOGO
-==========================*/
-/*==========================
-        LOGO
-==========================*/
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 1px; /* Reduced gap */
-  margin-right: 50px;
+  gap: 10px;
+  margin: 10px;
 }
 
 .logo img {
-  width: 68px;
-  height: auto;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
   flex-shrink: 0;
+  display: block;
 }
 
 .logo-content {
-  flex: 1;
-  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-text {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.3rem;
   font-weight: 800;
   line-height: 1;
   white-space: nowrap;
+  text-align: center;
+  margin: 0;
 }
 
 .board,
@@ -104,58 +116,55 @@ body {
 
 .amp {
   color: var(--secondary);
-  margin: 0 2px;
+  margin: 0 4px;
 }
-
-a {
-  text-decoration: none;
-}
-
-/*==========================
-        TAGLINE
-==========================*/
 
 .tagline {
   display: flex;
   align-items: center;
-  gap: 5px;
-
-  padding-left: 0; /* Removed left padding */
+  justify-content: center;
+  gap: 6px;
+  margin-top: 6px;
+  width: 100%;
+  padding-left: 0;
 }
 
 .tagline .line {
-  width: 14px;
+  width: 16px;
   height: 2px;
   background: var(--secondary);
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
-.tagline p {
+.tagline p,
+.sub-tagline,
+.logo-content h5 {
   font-family: "Poppins", sans-serif;
-  font-size: 0.48rem;
+  font-size: 0.42rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   color: #5a3a28;
-  white-space: nowrap;
+  text-align: center;
+  margin: 0;
 }
 
 .sub-tagline {
-  font-size: 0.42rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
 }
 
 .logo-content h5 {
-  padding-left: 20px;
-  font-size: 0.48rem;
-  color: var(--primary);
+  padding-left: 0;
 }
 .panel h2,
 .panel h3,
-.report-card h3 {
+.report-card h3,
+.topbar h2,
+.hero h1 {
   margin: 0;
   color: var(--primary);
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .brand p,
@@ -168,6 +177,7 @@ a {
 .report-metric span {
   margin: 0;
   color: #666666;
+  font-weight: 400;
 }
 
 .profile-card {
@@ -201,6 +211,8 @@ a {
   color: #1f1f1f;
   text-align: left;
   background: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .nav-link:hover,
@@ -258,12 +270,6 @@ a {
   gap: 14px;
 }
 
-.topbar h2 {
-  margin: 0;
-  font-family: "Playfair Display", serif;
-  color: var(--primary);
-}
-
 .icon-btn,
 .profile-btn,
 .close-btn,
@@ -274,6 +280,8 @@ a {
   color: #1f1f1f;
   cursor: pointer;
   border-radius: 16px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .icon-btn {
@@ -306,6 +314,8 @@ a {
   background: transparent;
   color: #1f1f1f;
   font: inherit;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .dropdown-wrap {
@@ -355,6 +365,8 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .profile-panel button:hover {
@@ -426,16 +438,17 @@ a {
   box-shadow: 0 22px 50px rgba(75, 36, 19, 0.14);
 }
 
-.hero h1,
-.panel h2,
-.panel h3 {
-  color: var(--primary);
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.12;
 }
 
 .hero p,
 .panel p {
   margin: 8px 0 0;
   color: #666666;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .hero-actions {
@@ -449,11 +462,12 @@ a {
   border-radius: 14px;
   padding: 12px 16px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .btn.primary {
@@ -489,6 +503,8 @@ a {
   font-size: 1.65rem;
   margin: 5px 0;
   color: var(--primary);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .kpi-card i {
@@ -513,6 +529,16 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
+}
+
+.panel-head p,
+.report-card p,
+.report-metric span,
+.simple-list,
+.legend li,
+.field span {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .segmented {
@@ -577,6 +603,8 @@ td {
   border-bottom: 1px solid rgba(75, 36, 19, 0.08);
   text-align: left;
   white-space: nowrap;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 th {
@@ -686,6 +714,8 @@ th {
   display: block;
   font-size: 1.35rem;
   color: var(--primary);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .kanban {
@@ -734,6 +764,8 @@ th {
 .review strong {
   display: block;
   color: var(--primary);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .menu-layout {
@@ -776,11 +808,15 @@ th {
 
 .category-card strong {
   color: var(--primary);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .category-card span {
   color: #666666;
   font-size: 0.92rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .inventory-grid {
@@ -807,7 +843,8 @@ th {
   background: #f8f6f2;
   border: 1px solid rgba(75, 36, 19, 0.08);
   color: var(--primary);
-  font-weight: 600;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .reports-grid {
@@ -848,6 +885,8 @@ th {
 .report-metric strong {
   font-size: 1.8rem;
   color: var(--primary);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .page-hero {
@@ -892,20 +931,11 @@ th {
   margin-top: 18px;
 }
 
-/*==================================================
-                DARK MODE - PART 1
-      Body • Sidebar • Topbar • Hero • Buttons
-==================================================*/
-
 body.dark-mode {
   background: #111315;
   color: #f5f5f5;
   transition: 0.35s ease;
 }
-
-/*-----------------------------------
-    Common Transition
------------------------------------*/
 
 body.dark-mode *,
 body.dark-mode *::before,
@@ -917,9 +947,6 @@ body.dark-mode *::after {
     box-shadow 0.35s ease;
 }
 
-/*-----------------------------------
-            Sidebar
------------------------------------*/
 body.dark-mode .logo-text,
 body.dark-mode .board,
 body.dark-mode .brew {
@@ -960,10 +987,6 @@ body.dark-mode .profile-card strong {
   color: #ffffff;
 }
 
-/*-----------------------------------
-            Navigation
------------------------------------*/
-
 body.dark-mode .nav-link {
   background: #23262a;
   color: #f5f5f5;
@@ -989,18 +1012,10 @@ body.dark-mode .badge {
   color: #111;
 }
 
-/*-----------------------------------
-        View Website Button
------------------------------------*/
-
 body.dark-mode .view-site {
   background: var(--primary);
   color: #ffffff;
 }
-
-/*-----------------------------------
-            Topbar
------------------------------------*/
 
 body.dark-mode .topbar {
   background: rgba(20, 20, 20, 0.92);
@@ -1015,10 +1030,6 @@ body.dark-mode .topbar h2 {
 body.dark-mode .topbar p {
   color: #bcbcbc;
 }
-
-/*-----------------------------------
-            Search
------------------------------------*/
 
 body.dark-mode .search {
   background: #23262a;
@@ -1037,10 +1048,6 @@ body.dark-mode .search i {
   color: #bbbbbb;
 }
 
-/*-----------------------------------
-            Icon Buttons
------------------------------------*/
-
 body.dark-mode .icon-btn,
 body.dark-mode .profile-btn,
 body.dark-mode .seg-btn,
@@ -1056,10 +1063,6 @@ body.dark-mode .profile-btn:hover {
   background: #2d3136;
 }
 
-/*-----------------------------------
-        Profile Button
------------------------------------*/
-
 body.dark-mode .profile-btn span {
   color: #f5f5f5;
 }
@@ -1068,15 +1071,9 @@ body.dark-mode .profile-btn i {
   color: #cfcfcf;
 }
 
-/*-----------------------------------
-                Hero
------------------------------------*/
-
 body.dark-mode .hero {
   background: linear-gradient(135deg, #1b1d20 0%, #26211c 100%);
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
@@ -1088,10 +1085,6 @@ body.dark-mode .hero p {
   color: #bcbcbc;
 }
 
-/*-----------------------------------
-            Primary Button
------------------------------------*/
-
 body.dark-mode .btn.primary {
   background: var(--primary);
   color: #ffffff;
@@ -1101,10 +1094,6 @@ body.dark-mode .btn.primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 32px rgba(75, 36, 19, 0.45);
 }
-
-/*-----------------------------------
-            Secondary Button
------------------------------------*/
 
 body.dark-mode .btn.secondary {
   background: #23262a;
@@ -1116,10 +1105,6 @@ body.dark-mode .btn.secondary:hover {
   background: #2f3438;
 }
 
-/*-----------------------------------
-        Page Titles
------------------------------------*/
-
 body.dark-mode .panel h2,
 body.dark-mode .panel h3 {
   color: #ffffff;
@@ -1127,14 +1112,7 @@ body.dark-mode .panel h3 {
 
 body.dark-mode .panel p {
   color: #bdbdbd;
-} /*==================================================
-                DARK MODE - PART 2
-      Cards • KPI • Tables • Forms • Dropdowns
-==================================================*/
-
-/*-----------------------------------
-        Common Dashboard Cards
------------------------------------*/
+}
 
 body.dark-mode .panel-card,
 body.dark-mode .report-card,
@@ -1153,10 +1131,6 @@ body.dark-mode .kpi-card:hover {
   border-color: rgba(245, 158, 11, 0.25);
 }
 
-/*-----------------------------------
-        Card Typography
------------------------------------*/
-
 body.dark-mode .panel-card h3,
 body.dark-mode .panel-card h4,
 body.dark-mode .report-card h3,
@@ -1172,10 +1146,6 @@ body.dark-mode .chart-card p,
 body.dark-mode .summary-card p {
   color: #bdbdbd;
 }
-
-/*-----------------------------------
-            KPI Cards
------------------------------------*/
 
 body.dark-mode .kpi-card {
   background: linear-gradient(135deg, #1b1d20, #24272c);
@@ -1195,10 +1165,6 @@ body.dark-mode .kpi-icon {
   color: var(--secondary);
 }
 
-/*-----------------------------------
-            Report Metrics
------------------------------------*/
-
 body.dark-mode .metric,
 body.dark-mode .metric-card {
   background: #23262a;
@@ -1212,10 +1178,6 @@ body.dark-mode .metric strong {
 body.dark-mode .metric span {
   color: #bdbdbd;
 }
-
-/*-----------------------------------
-            Segmented Buttons
------------------------------------*/
 
 body.dark-mode .segmented {
   background: #23262a;
@@ -1231,10 +1193,6 @@ body.dark-mode .seg-btn.active {
   background: var(--secondary);
   color: #111;
 }
-
-/*-----------------------------------
-            Tables
------------------------------------*/
 
 body.dark-mode table {
   background: #1b1d20;
@@ -1260,10 +1218,6 @@ body.dark-mode tbody tr:hover {
   background: #23262a;
 }
 
-/*-----------------------------------
-        Status Pills
------------------------------------*/
-
 body.dark-mode .status {
   border: none;
 }
@@ -1280,16 +1234,14 @@ body.dark-mode .status.pending {
   background: rgba(245, 158, 11, 0.18);
 }
 
-/*-----------------------------------
-            Inputs
------------------------------------*/
-
 body.dark-mode input,
 body.dark-mode textarea,
 body.dark-mode select {
   background: #23262a;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 body.dark-mode input::placeholder,
@@ -1304,18 +1256,10 @@ body.dark-mode select:focus {
   box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15);
 }
 
-/*-----------------------------------
-            Form Groups
------------------------------------*/
-
 body.dark-mode .field label,
 body.dark-mode .form-group label {
   color: #f5f5f5;
 }
-
-/*-----------------------------------
-        Dropdown Panels
------------------------------------*/
 
 body.dark-mode .dropdown-panel {
   background: #1b1d20;
@@ -1335,10 +1279,6 @@ body.dark-mode .dropdown-panel hr {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-/*-----------------------------------
-        Notification Items
------------------------------------*/
-
 body.dark-mode .notif-item {
   background: #23262a;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -1348,10 +1288,6 @@ body.dark-mode .notif-item {
 body.dark-mode .notif-item:hover {
   background: #2c3035;
 }
-
-/*-----------------------------------
-        Profile Dropdown
------------------------------------*/
 
 body.dark-mode .profile-menu a,
 body.dark-mode .dropdown-panel a {
@@ -1363,29 +1299,13 @@ body.dark-mode .dropdown-panel a:hover {
   background: #2b2f34;
 }
 
-/*-----------------------------------
-            Empty States
------------------------------------*/
-
 body.dark-mode .empty-state {
   color: #9d9d9d;
 }
 
-/*-----------------------------------
-            Dividers
------------------------------------*/
-
 body.dark-mode hr {
   border-color: rgba(255, 255, 255, 0.08);
-} /*==================================================
-                DARK MODE - PART 3
-     Kitchen • Reservations • Inventory • Reports
-     Modals • Scrollbars • Final Polish
-==================================================*/
-
-/*-----------------------------------
-        Kitchen Queue Cards
------------------------------------*/
+}
 
 body.dark-mode .kitchen-card,
 body.dark-mode .kitchen-column {
@@ -1417,10 +1337,6 @@ body.dark-mode .ticket:hover {
   transform: translateY(-3px);
 }
 
-/*-----------------------------------
-        Reservation Cards
------------------------------------*/
-
 body.dark-mode .reservation,
 body.dark-mode .reservation-card {
   background: #23262a;
@@ -1438,10 +1354,6 @@ body.dark-mode .reservation p {
 body.dark-mode .reservation:hover {
   background: #2c3136;
 }
-
-/*-----------------------------------
-            Menu Cards
------------------------------------*/
 
 body.dark-mode .menu-card,
 body.dark-mode .food-card,
@@ -1466,10 +1378,6 @@ body.dark-mode .menu-card:hover {
   border-color: rgba(245, 158, 11, 0.3);
 }
 
-/*-----------------------------------
-        Inventory Section
------------------------------------*/
-
 body.dark-mode .inventory-card {
   background: #1b1d20;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1487,10 +1395,6 @@ body.dark-mode .inventory-card:hover {
   border-color: rgba(245, 158, 11, 0.3);
 }
 
-/*-----------------------------------
-            Reports
------------------------------------*/
-
 body.dark-mode .report-stat,
 body.dark-mode .report-item {
   background: #23262a;
@@ -1507,10 +1411,6 @@ body.dark-mode .report-item span {
   color: #bdbdbd;
 }
 
-/*-----------------------------------
-            Chart Containers
------------------------------------*/
-
 body.dark-mode canvas {
   background: transparent;
 }
@@ -1518,10 +1418,6 @@ body.dark-mode canvas {
 body.dark-mode .chart-wrapper {
   background: #1b1d20;
 }
-
-/*-----------------------------------
-            Modal
------------------------------------*/
 
 body.dark-mode .modal-backdrop {
   background: rgba(0, 0, 0, 0.65);
@@ -1543,10 +1439,6 @@ body.dark-mode .modal p {
   color: #bdbdbd;
 }
 
-/*-----------------------------------
-        Close Button
------------------------------------*/
-
 body.dark-mode .close-btn {
   background: #23262a;
 }
@@ -1554,10 +1446,6 @@ body.dark-mode .close-btn {
 body.dark-mode .close-btn:hover {
   background: #30353a;
 }
-
-/*-----------------------------------
-        Footer
------------------------------------*/
 
 body.dark-mode footer {
   background: #181a1d;
@@ -1567,10 +1455,6 @@ body.dark-mode footer {
 body.dark-mode footer p {
   color: #bdbdbd;
 }
-
-/*-----------------------------------
-        Scrollbars
------------------------------------*/
 
 body.dark-mode ::-webkit-scrollbar {
   width: 10px;
@@ -1590,27 +1474,15 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary);
 }
 
-/*-----------------------------------
-        Selection
------------------------------------*/
-
 body.dark-mode ::selection {
   background: var(--secondary);
   color: #111;
 }
 
-/*-----------------------------------
-        Focus Ring
------------------------------------*/
-
 body.dark-mode *:focus-visible {
   outline: 2px solid var(--secondary);
   outline-offset: 2px;
 }
-
-/*-----------------------------------
-        Hover Glow
------------------------------------*/
 
 body.dark-mode .panel-card:hover,
 body.dark-mode .kpi-card:hover,
@@ -1623,26 +1495,14 @@ body.dark-mode .inventory-card:hover {
     0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
-/*-----------------------------------
-        Active Borders
------------------------------------*/
-
 body.dark-mode .active,
 body.dark-mode .selected {
   border-color: var(--secondary);
 }
 
-/*-----------------------------------
-        Lucide Icons
------------------------------------*/
-
 body.dark-mode svg {
   stroke: #e7e7e7;
 }
-
-/*-----------------------------------
-        Disabled Elements
------------------------------------*/
 
 body.dark-mode button:disabled,
 body.dark-mode input:disabled,
@@ -1650,10 +1510,6 @@ body.dark-mode select:disabled {
   opacity: 0.45;
   cursor: not-allowed;
 }
-
-/*-----------------------------------
-        Smooth Animation
------------------------------------*/
 
 body.dark-mode .panel-card,
 body.dark-mode .kpi-card,
@@ -1668,10 +1524,6 @@ body.dark-mode .inventory-card {
     box-shadow 0.35s ease;
 }
 
-/*-----------------------------------
-        Premium Coffee Accent
------------------------------------*/
-
 body.dark-mode .panel-card::before,
 body.dark-mode .kpi-card::before,
 body.dark-mode .chart-card::before {
@@ -1685,9 +1537,6 @@ body.dark-mode .chart-card::before {
   opacity: 0.65;
 }
 
-/*-----------------------------------
-        End of Dark Mode
------------------------------------*/
 .theme-icon-sun {
   display: none;
 }
@@ -1699,15 +1548,6 @@ body.dark-mode .theme-icon-moon {
 body.dark-mode .theme-icon-sun {
   display: block;
 }
-/*==================================================
-        DARK MODE FIXES (ACTUAL HTML)
-==================================================*/
-
-/*==================================
-        KITCHEN PAGE
-==================================*/
-
-/* Preparing / Ready / Completed */
 
 body.dark-mode .kanban-col {
   background: #1b1d20;
@@ -1723,21 +1563,15 @@ body.dark-mode .kanban-head p {
   color: #b8b8b8;
 }
 
-/* Active Tickets / Ready / Delayed */
-
 body.dark-mode .kitchen-stats {
   gap: 14px;
 }
 
 body.dark-mode .kitchen-stats > div {
   background: #23262a;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   border-radius: 14px;
-
   padding: 14px 18px;
-
   box-shadow: none;
 }
 
@@ -1749,11 +1583,8 @@ body.dark-mode .kitchen-stats span {
   color: #d0d0d0;
 }
 
-/* Ticket Cards */
-
 body.dark-mode .ticket {
   background: #23262a;
-
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -1765,10 +1596,6 @@ body.dark-mode .ticket span {
   color: #c8c8c8;
 }
 
-/*==================================
-            MENU PAGE
-==================================*/
-
 body.dark-mode .category-feature {
   background: #1b1d20;
 }
@@ -1779,17 +1606,13 @@ body.dark-mode .category-grid {
 
 body.dark-mode .category-card {
   background: #23262a;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   box-shadow: none;
 }
 
 body.dark-mode .category-card:hover {
   background: #2b2f34;
-
   border-color: rgba(245, 158, 11, 0.4);
-
   transform: translateY(-4px);
 }
 
@@ -1805,19 +1628,8 @@ body.dark-mode .category-card img {
   border: 2px solid rgba(255, 255, 255, 0.08);
 }
 
-/*==================================
-            REPORTS
-==================================*/
-
-/* This Month
-   Total Orders
-   Low Items
-   Repeat Rate
-*/
-
 body.dark-mode .report-card {
   background: #1b1d20;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -1831,17 +1643,13 @@ body.dark-mode .report-card span {
   color: #bcbcbc;
 }
 
-/* Daily Weekly Monthly */
-
 body.dark-mode .segmented {
   background: #23262a;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 body.dark-mode .seg-btn {
   background: transparent;
-
   color: #d6d6d6;
 }
 
@@ -1851,13 +1659,8 @@ body.dark-mode .seg-btn:hover {
 
 body.dark-mode .seg-btn.active {
   background: var(--secondary);
-
   color: #111;
 }
-
-/*==================================
-        PANEL HEADS
-==================================*/
 
 body.dark-mode .panel-head {
   background: transparent;
@@ -1870,11 +1673,6 @@ body.dark-mode .panel-head h2 {
 body.dark-mode .panel-head p {
   color: #bdbdbd;
 }
-/*==================================================
-        REPORT PAGE DARK MODE FIX
-==================================================*/
-
-/* Report Header */
 
 body.dark-mode .reports-header {
   background: transparent;
@@ -1889,15 +1687,9 @@ body.dark-mode .reports-header p {
   color: #bdbdbd;
 }
 
-/*----------------------------------
-      Daily Weekly Monthly Chips
-----------------------------------*/
-
 body.dark-mode .reports-chip-row span {
   background: #23262a;
-
   color: #ffffff;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -1905,28 +1697,14 @@ body.dark-mode .reports-chip-row span:hover {
   background: #2d3136;
 }
 
-/*----------------------------------
-      Report Cards
-----------------------------------*/
-
 body.dark-mode .report-card {
   background: #1b1d20;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/*----------------------------------
-      This Month
-      Total Orders
-      Low Items
-      Repeat Rate
-----------------------------------*/
-
 body.dark-mode .report-metric {
   background: #23262a;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   box-shadow: none;
 }
 
@@ -1938,23 +1716,13 @@ body.dark-mode .report-metric span {
   color: #bdbdbd;
 }
 
-/*----------------------------------
-      Report Icon
-----------------------------------*/
-
 body.dark-mode .report-icon {
   background: rgba(245, 158, 11, 0.15);
-
   color: var(--secondary);
 }
 
-/*----------------------------------
-      Daily Weekly Monthly Buttons
-----------------------------------*/
-
 body.dark-mode .segmented {
   background: #23262a;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -1964,11 +1732,10 @@ body.dark-mode .seg-btn {
 
 body.dark-mode .seg-btn.active {
   background: var(--secondary);
-
   color: #111111;
-
   box-shadow: none;
 }
+
 #rtlToggle {
   font-weight: 700;
   font-size: 0.85rem;
@@ -1981,12 +1748,8 @@ body.dark-mode .seg-btn.active {
 
 html[dir="rtl"] .topbar-right {
   direction: rtl;
-} /* ==================================================
-   RESPONSIVE MEDIA QUERIES
-   Samsung Galaxy S8+ • iPad Mini • iPad Pro 11" • Nest Hub
-================================================== */
+}
 
-/* Samsung Galaxy S8+ */
 @media screen and (max-width: 480px) {
   body {
     overflow-x: hidden;
@@ -2141,7 +1904,6 @@ html[dir="rtl"] .topbar-right {
   }
 }
 
-/* iPad Mini */
 @media screen and (min-width: 768px) and (max-width: 820px) {
   body {
     overflow-x: hidden;
@@ -2259,7 +2021,6 @@ html[dir="rtl"] .topbar-right {
   }
 }
 
-/* iPad Pro 11" */
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   body {
     overflow-x: hidden;
@@ -2347,7 +2108,6 @@ html[dir="rtl"] .topbar-right {
   }
 }
 
-/* Nest Hub */
 @media screen and (width: 1024px) and (height: 600px) {
   body {
     overflow-x: hidden;

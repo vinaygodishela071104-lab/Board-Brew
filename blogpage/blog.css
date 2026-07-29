@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   overflow-x: hidden;
   background: #fff9f3;
 }
@@ -30,7 +30,7 @@ img {
 
 .blog-editorial-hero {
   position: relative;
-  padding: 140px 120px 100px;
+  padding: 80px 100px;
   background: #fff9f3;
   overflow: hidden;
 }
@@ -81,19 +81,20 @@ img {
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 22px;
 }
 
 .blog-editorial-hero-content h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
   line-height: 1.04;
   color: var(--primary);
   margin-bottom: 22px;
   max-width: 18ch;
+  font-weight: 400;
 }
 
 .blog-editorial-hero-content p {
@@ -103,6 +104,7 @@ img {
   opacity: 0.72;
   max-width: 58ch;
   margin-bottom: 34px;
+  font-weight: 400;
 }
 
 .blog-editorial-hero-actions {
@@ -118,7 +120,7 @@ img {
   padding: 15px 28px;
   border-radius: 999px;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 400;
   transition: 0.35s ease;
 }
 
@@ -145,7 +147,7 @@ img {
 
 .blog-editorial-hero-visual {
   position: relative;
-  min-height: 620px;
+  height: 620px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +157,7 @@ img {
   position: relative;
   width: 100%;
   max-width: 560px;
-  height: 620px;
+  height: 500px;
   padding: 14px;
   border-radius: 34px;
   background: #ffffff;
@@ -206,12 +208,14 @@ img {
   right: 24px;
   animation-delay: 1.4s;
 }
+
 .floating-png-5 {
   width: 88px;
-  top: -30px;
+  top: 20px;
   right: 250px;
   animation-delay: 1.4s;
 }
+
 .blog-editorial-badge {
   position: absolute;
   z-index: 4;
@@ -226,19 +230,19 @@ img {
 
 .blog-editorial-badge span {
   font-size: 0.84rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--primary);
   letter-spacing: 0.4px;
 }
 
 .badge-top {
-  top: 34px;
-  right: 44px;
+  top: 44px;
+  right: 24px;
 }
 
 .badge-bottom {
   left: 28px;
-  bottom: 34px;
+  bottom: 44px;
 }
 
 @keyframes floatSoft {
@@ -341,17 +345,18 @@ body.dark-mode .blog-editorial-badge span {
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .featured-article-heading h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
+  font-weight: 400;
 }
 
 .featured-article-layout {
@@ -404,7 +409,7 @@ body.dark-mode .blog-editorial-badge span {
 .featured-article-image-badge span {
   color: #ffffff;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.7px;
   text-transform: uppercase;
 }
@@ -418,17 +423,18 @@ body.dark-mode .blog-editorial-badge span {
   margin-bottom: 16px;
   color: var(--secondary);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .featured-article-content h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .featured-article-content p {
@@ -437,6 +443,7 @@ body.dark-mode .blog-editorial-badge span {
   color: var(--primary);
   opacity: 0.72;
   margin-bottom: 24px;
+  font-weight: 400;
 }
 
 .featured-article-meta {
@@ -448,6 +455,7 @@ body.dark-mode .blog-editorial-badge span {
   color: var(--primary);
   opacity: 0.62;
   font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .featured-article-link {
@@ -458,7 +466,7 @@ body.dark-mode .blog-editorial-badge span {
   background: var(--secondary);
   color: #fff;
   font-size: 0.98rem;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   border-radius: 999px;
   transition:
@@ -501,6 +509,7 @@ body.dark-mode .featured-article-layout {
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
 }
+
 .blog-categories-section {
   position: relative;
   padding: 110px 120px;
@@ -552,18 +561,19 @@ body.dark-mode .featured-article-layout {
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .blog-categories-header h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .blog-categories-header p {
@@ -573,6 +583,7 @@ body.dark-mode .featured-article-layout {
   line-height: 1.9;
   color: var(--primary);
   opacity: 0.72;
+  font-weight: 400;
 }
 
 .blog-category-chips {
@@ -593,7 +604,7 @@ body.dark-mode .featured-article-layout {
   border: 1px solid rgba(75, 36, 19, 0.1);
   color: var(--primary);
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 400;
   transition: 0.3s ease;
 }
 
@@ -641,7 +652,7 @@ body.dark-mode .featured-article-layout {
   background: rgba(245, 158, 11, 0.1);
   color: var(--secondary);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -651,6 +662,7 @@ body.dark-mode .featured-article-layout {
   line-height: 1.28;
   color: var(--primary);
   margin-bottom: 14px;
+  font-weight: 400;
 }
 
 .blog-category-card p {
@@ -659,6 +671,7 @@ body.dark-mode .featured-article-layout {
   color: var(--primary);
   opacity: 0.72;
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .blog-category-card a {
@@ -667,7 +680,7 @@ body.dark-mode .featured-article-layout {
   color: var(--primary);
   font-size: 0.94rem;
   margin-right: 2px;
-  font-weight: 600;
+  font-weight: 400;
   transition: 0.3s ease;
 }
 
@@ -713,6 +726,7 @@ body.dark-mode .blog-category-card {
 body.dark-mode .blog-category-card:hover {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
+
 .journal-purpose-section {
   position: relative;
   padding: 110px 120px;
@@ -752,18 +766,19 @@ body.dark-mode .blog-category-card:hover {
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .journal-purpose-header h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .journal-purpose-header p {
@@ -773,6 +788,7 @@ body.dark-mode .blog-category-card:hover {
   line-height: 1.9;
   color: var(--primary);
   opacity: 0.72;
+  font-weight: 400;
 }
 
 .journal-purpose-grid {
@@ -799,6 +815,7 @@ body.dark-mode .blog-category-card:hover {
   line-height: 1.24;
   color: var(--primary);
   margin-bottom: 14px;
+  font-weight: 400;
 }
 
 .journal-purpose-card p {
@@ -806,6 +823,7 @@ body.dark-mode .blog-category-card:hover {
   line-height: 1.88;
   color: var(--primary);
   opacity: 0.72;
+  font-weight: 400;
 }
 
 .journal-purpose-card.accent {
@@ -850,6 +868,7 @@ body.dark-mode .journal-purpose-card:hover {
 body.dark-mode .journal-purpose-card.accent {
   background: linear-gradient(135deg, #2a160d 0%, #4b2413 100%);
 }
+
 .community-story-section {
   position: relative;
   padding: 110px 120px;
@@ -901,18 +920,19 @@ body.dark-mode .journal-purpose-card.accent {
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .community-story-header h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .community-story-header p {
@@ -922,6 +942,7 @@ body.dark-mode .journal-purpose-card.accent {
   line-height: 1.9;
   color: var(--primary);
   opacity: 0.72;
+  font-weight: 400;
 }
 
 .community-story-layout {
@@ -965,17 +986,18 @@ body.dark-mode .journal-purpose-card.accent {
   margin-bottom: 16px;
   color: var(--secondary);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .community-story-feature-content h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 2.2rem;
   line-height: 1.14;
   color: var(--primary);
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .community-story-feature-content p {
@@ -983,6 +1005,7 @@ body.dark-mode .journal-purpose-card.accent {
   line-height: 1.92;
   color: var(--primary);
   opacity: 0.72;
+  font-weight: 400;
 }
 
 .community-story-feature-content p + p {
@@ -1016,7 +1039,7 @@ body.dark-mode .journal-purpose-card.accent {
   margin-bottom: 14px;
   color: var(--secondary);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.1px;
   text-transform: uppercase;
 }
@@ -1026,6 +1049,7 @@ body.dark-mode .journal-purpose-card.accent {
   line-height: 1.88;
   color: var(--primary);
   opacity: 0.72;
+  font-weight: 400;
 }
 
 .community-story-note.accent {
@@ -1134,18 +1158,19 @@ body.dark-mode .community-story-note.accent {
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .newsletter-content h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.7rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 16px;
+  font-weight: 400;
 }
 
 .newsletter-content p {
@@ -1153,6 +1178,7 @@ body.dark-mode .community-story-note.accent {
   line-height: 1.9;
   color: var(--primary);
   opacity: 0.74;
+  font-weight: 400;
 }
 
 .newsletter-form {
@@ -1177,6 +1203,8 @@ body.dark-mode .community-story-note.accent {
   color: var(--primary);
   font-size: 0.96rem;
   padding: 0 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .newsletter-input-wrap input::placeholder {
@@ -1192,7 +1220,7 @@ body.dark-mode .community-story-note.accent {
   background: var(--secondary);
   color: #ffffff;
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 400;
   transition: 0.3s ease;
 }
 
@@ -1207,13 +1235,14 @@ body.dark-mode .community-story-note.accent {
   line-height: 1.7;
   color: var(--primary);
   opacity: 0.62;
+  font-weight: 400;
 }
 
 .newsletter-message {
   min-height: 24px;
   margin-top: 12px;
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--primary);
 }
 
@@ -1259,6 +1288,7 @@ body.dark-mode .newsletter-input-wrap input {
 body.dark-mode .newsletter-input-wrap input::placeholder {
   color: rgba(255, 255, 255, 0.48);
 }
+
 /* =========================================================
    Samsung Galaxy S8+ (360px - 480px)
 ========================================================= */
@@ -1267,8 +1297,6 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
   section {
     padding: 80px 20px !important;
   }
-
-  /* Hero */
 
   .blog-editorial-hero {
     padding: 120px 20px 70px;
@@ -1325,8 +1353,6 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
     bottom: 20px;
   }
 
-  /* Featured */
-
   .featured-article-layout {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1345,8 +1371,6 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
     font-size: 2rem;
   }
 
-  /* Categories */
-
   .blog-category-results {
     grid-template-columns: 1fr;
   }
@@ -1358,13 +1382,9 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
     padding-bottom: 8px;
   }
 
-  /* Journal */
-
   .journal-purpose-grid {
     grid-template-columns: 1fr;
   }
-
-  /* Community */
 
   .community-story-layout {
     grid-template-columns: 1fr;
@@ -1385,8 +1405,6 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
   .community-story-side {
     grid-template-rows: auto;
   }
-
-  /* Newsletter */
 
   .newsletter-card {
     grid-template-columns: 1fr;
@@ -1415,12 +1433,11 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
     width: 100%;
   }
 
-  /* Shared */
-
   h2 {
     font-size: 2.2rem !important;
   }
 }
+
 /* =========================================================
    iPad Mini (768px - 1024px)
 ========================================================= */
@@ -1488,6 +1505,7 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
     gap: 30px;
   }
 }
+
 /* =========================================================
    iPad Pro (1024px - 1366px)
 ========================================================= */
@@ -1526,6 +1544,7 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
     gap: 30px;
   }
 }
+
 /* =========================================================
    Nest Hub (1024px × 600px)
 ========================================================= */

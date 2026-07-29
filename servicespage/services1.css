@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background: #fff9f3;
   overflow-x: hidden;
 }
@@ -40,7 +40,7 @@ a {
 .coffee-service-hero {
   position: relative;
   overflow: hidden;
-  padding: 150px 120px 100px;
+  padding: 60px 100px;
   background: linear-gradient(135deg, #fffaf4 0%, #fff4e8 52%, #fdf0df 100%);
 }
 
@@ -66,19 +66,21 @@ a {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.6px;
   margin-bottom: 24px;
   margin-top: 30px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .coffee-service-hero__content h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
   line-height: 1.05;
   color: var(--primary);
   margin-bottom: 22px;
-  max-width: 11ch;
+  max-width: 15ch;
+  font-weight: 400;
 }
 
 .coffee-service-hero__content p {
@@ -87,6 +89,7 @@ a {
   color: #666;
   max-width: 58ch;
   margin-bottom: 30px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .coffee-service-hero__actions {
@@ -102,9 +105,10 @@ a {
   justify-content: center;
   padding: 14px 24px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.96rem;
   transition: all 0.35s ease;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .hero-btn--primary {
@@ -143,6 +147,7 @@ a {
   border: 1px solid rgba(75, 36, 19, 0.08);
   color: #6c5a4f;
   font-size: 0.9rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* =========================
@@ -182,10 +187,10 @@ a {
   top: 90px;
   z-index: 2;
 }
+
 /* ===========================
    Floating Captions
 =========================== */
-
 .floating-caption {
   position: absolute;
   z-index: 4;
@@ -196,47 +201,40 @@ a {
   box-shadow: 0 12px 28px rgba(75, 36, 19, 0.08);
   color: var(--primary);
   font-size: 0.88rem;
-  font-weight: 600;
-
+  font-weight: 400;
   animation: floatCaption 4s ease-in-out infinite;
   will-change: transform;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .floating-caption--one {
   left: 0;
   top: 100px;
-
   animation-delay: 0s;
 }
 
 .floating-caption--two {
   right: 0px;
   bottom: 25px;
-
   animation-delay: 2s;
 }
 
 /* ===========================
    Floating Animation
 =========================== */
-
 @keyframes floatCaption {
   0% {
     transform: translateY(0px) rotate(0deg);
   }
-
   25% {
     transform: translateY(-8px) rotate(-1deg);
   }
-
   50% {
     transform: translateY(-14px) rotate(0deg);
   }
-
   75% {
     transform: translateY(-8px) rotate(1deg);
   }
-
   100% {
     transform: translateY(0px) rotate(0deg);
   }
@@ -318,6 +316,7 @@ body.dark-mode .floating-caption {
   box-shadow: none;
   color: #f2f2f2;
 }
+
 .coffee-experience-intro {
   position: relative;
   overflow: hidden;
@@ -355,6 +354,7 @@ body.dark-mode .floating-caption {
   max-width: 1320px;
   margin: 0 auto;
 }
+
 .coffee-experience-top {
   display: flex;
   flex-direction: column;
@@ -369,19 +369,22 @@ body.dark-mode .floating-caption {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.6px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .coffee-experience-top h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3.4rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.06;
   color: var(--primary);
   width: 800px;
   margin-top: 20px;
   margin-bottom: 30px;
+  font-weight: 400;
 }
+
 .coffee-experience-layout {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -416,11 +419,11 @@ body.dark-mode .floating-caption {
   font-size: 1.12rem;
   line-height: 1.9;
   color: #666;
-
   max-width: 38ch;
   margin-bottom: 34px;
   padding-bottom: 26px;
   border-bottom: 1px solid rgba(75, 36, 19, 0.1);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .coffee-points {
@@ -456,6 +459,8 @@ body.dark-mode .floating-caption {
   color: var(--primary);
   margin-bottom: 8px;
   max-width: 22ch;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .coffee-point-text p {
@@ -463,6 +468,7 @@ body.dark-mode .floating-caption {
   line-height: 1.82;
   color: #5f5f5f;
   max-width: 36ch;
+  font-family: "Times New Roman", Times, serif;
 }
 
 body.dark-mode .coffee-experience-intro {
@@ -496,6 +502,7 @@ body.dark-mode .coffee-point-no {
   background: rgba(245, 179, 53, 0.12);
   color: #f5b335;
 }
+
 .signature-brews-spotlight {
   position: relative;
   overflow: hidden;
@@ -547,17 +554,19 @@ body.dark-mode .coffee-point-no {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.6px;
   margin-bottom: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .signature-brews-header h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3.2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.1;
   color: var(--primary);
   margin-bottom: 16px;
+  font-weight: 400;
 }
 
 .signature-brews-header p {
@@ -566,6 +575,7 @@ body.dark-mode .coffee-point-no {
   font-size: 1rem;
   line-height: 1.85;
   color: #666;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .signature-brews-showcase {
@@ -604,9 +614,10 @@ body.dark-mode .coffee-point-no {
   margin-bottom: 12px;
   color: var(--secondary);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.1px;
   text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .brew-note h3 {
@@ -614,12 +625,15 @@ body.dark-mode .coffee-point-no {
   line-height: 1.3;
   color: var(--primary);
   margin-bottom: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .brew-note p {
   font-size: 0.95rem;
   line-height: 1.8;
   color: #666;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .brew-featured {
@@ -672,17 +686,19 @@ body.dark-mode .coffee-point-no {
   margin-bottom: 14px;
   color: var(--secondary);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.15px;
   text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .brew-featured-content h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 2rem;
   line-height: 1.18;
   color: var(--primary);
   margin-bottom: 14px;
+  font-weight: 400;
 }
 
 .brew-featured-content p {
@@ -690,8 +706,12 @@ body.dark-mode .coffee-point-no {
   line-height: 1.85;
   color: #666;
   max-width: 40ch;
+  font-family: "Times New Roman", Times, serif;
 }
 
+/* =========================
+   DARK MODE
+========================= */
 body.dark-mode .signature-brews-spotlight {
   background: #171717;
 }
@@ -730,6 +750,7 @@ body.dark-mode .brew-featured:hover {
   border-color: rgba(245, 179, 53, 0.26);
   box-shadow: none;
 }
+
 .seasonal-editorial-section {
   position: relative;
   overflow: hidden;
@@ -781,17 +802,19 @@ body.dark-mode .brew-featured:hover {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.6px;
   margin-bottom: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .seasonal-editorial-header h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.1;
   color: var(--primary);
   margin-bottom: 16px;
+  font-weight: 400;
 }
 
 .seasonal-editorial-header p {
@@ -800,6 +823,7 @@ body.dark-mode .brew-featured:hover {
   font-size: 1rem;
   line-height: 1.9;
   color: #666;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .seasonal-editorial-layout {
@@ -860,19 +884,21 @@ body.dark-mode .brew-featured:hover {
   margin-bottom: 14px;
   color: var(--secondary);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .seasonal-featured-content h3,
 .seasonal-note h3,
 .seasonal-bottom-left h3 {
   color: var(--primary);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .seasonal-featured-content h3 {
-  font-family: "Playfair Display", serif;
   font-size: 2rem;
   line-height: 1.18;
   margin-bottom: 14px;
@@ -882,6 +908,7 @@ body.dark-mode .brew-featured:hover {
 .seasonal-note p,
 .seasonal-bottom-right p {
   color: #666;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .seasonal-featured-content p {
@@ -1015,6 +1042,7 @@ body.dark-mode .seasonal-bottom-strip:hover {
   border-color: rgba(245, 179, 53, 0.26);
   box-shadow: none;
 }
+
 .pairings-section {
   position: relative;
   overflow: hidden;
@@ -1066,17 +1094,19 @@ body.dark-mode .seasonal-bottom-strip:hover {
   background: #fff1dc;
   color: #d88a07;
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.6px;
   margin-bottom: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .pairings-header h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.1;
   color: var(--primary);
   margin-bottom: 16px;
+  font-weight: 400;
 }
 
 .pairings-header p {
@@ -1085,6 +1115,7 @@ body.dark-mode .seasonal-bottom-strip:hover {
   font-size: 1rem;
   line-height: 1.9;
   color: #666;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .pairings-rail {
@@ -1124,15 +1155,18 @@ body.dark-mode .seasonal-bottom-strip:hover {
   margin-bottom: 10px;
   color: var(--secondary);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.1px;
   text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .pairing-item h3 {
   font-size: 1.38rem;
   line-height: 1.28;
   color: var(--primary);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 
 .pairing-link {
@@ -1147,7 +1181,6 @@ body.dark-mode .seasonal-bottom-strip:hover {
   content: "";
   position: absolute;
   top: 50%;
-
   width: 26px;
   height: 1px;
   background: rgba(245, 158, 11, 0.45);
@@ -1168,7 +1201,6 @@ body.dark-mode .seasonal-bottom-strip:hover {
   min-width: 62px;
   height: 62px;
   padding: 0 12px;
-
   border-radius: 50%;
   background: #fff4e6;
   color: #b97505;
@@ -1177,6 +1209,7 @@ body.dark-mode .seasonal-bottom-strip:hover {
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .pairing-note p {
@@ -1184,6 +1217,7 @@ body.dark-mode .seasonal-bottom-strip:hover {
   line-height: 1.82;
   color: #666;
   max-width: 42ch;
+  font-family: "Times New Roman", Times, serif;
 }
 
 body.dark-mode .pairings-section {
@@ -1224,7 +1258,9 @@ body.dark-mode .pairing-link span {
 body.dark-mode .pairing-row:hover {
   border-color: rgba(245, 179, 53, 0.26);
   box-shadow: none;
-} /* =========================================
+}
+
+/* =========================================
    SAMSUNG GALAXY S8+ / 360px phones
    CSS viewport width: 360px
 ========================================= */
@@ -1377,52 +1413,51 @@ body.dark-mode .pairing-row:hover {
     padding-top: 130px;
     padding-bottom: 85px;
   }
+
   .coffee-service-hero__container {
-    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.95fr);
+    grid-template-columns: 1fr;
     gap: 34px;
+  }
+
+  .coffee-service-hero__content {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .coffee-service-hero__content h1 {
+    font-size: 3rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .coffee-service-hero__content p {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .coffee-service-hero__actions {
+    justify-content: center;
+  }
+
+  .coffee-service-hero__notes {
+    justify-content: center;
+  }
+
+  .coffee-service-hero__visual {
+    display: none;
+  }
+
+  .floating-gallery {
+    display: none;
   }
 
   .coffee-experience-layout,
   .signature-brews-showcase,
   .seasonal-editorial-layout {
     grid-template-columns: 1fr;
-  }
-
-  .coffee-service-hero__container {
-    gap: 42px;
-  }
-
-  .coffee-service-hero__content {
-    max-width: 100%;
-  }
-
-  .coffee-service-hero__content h1 {
-    font-size: 3rem;
-    max-width: 12ch;
-  }
-
-  .coffee-service-hero__visual,
-  .floating-gallery {
-    min-height: auto;
-    height: 520px;
-  }
-
-  .floating-shot--main {
-    width: 430px;
-    height: 430px;
-    left: 50%;
-    top: 55px;
-    transform: translateX(-50%);
-  }
-
-  .floating-caption--one {
-    left: 18px;
-    top: 62px;
-  }
-
-  .floating-caption--two {
-    right: 18px;
-    bottom: 20px;
   }
 
   .coffee-experience-top h2,
@@ -1463,7 +1498,6 @@ body.dark-mode .pairing-row:hover {
     grid-column: 1 / -1;
   }
 }
-
 /* =========================================
    IPAD PRO 12.9 + NEST HUB range
    iPad Pro 12.9 CSS viewport width: 1024px
@@ -1569,6 +1603,7 @@ body.dark-mode .pairing-row:hover {
     font-size: 1.22rem;
   }
 }
+
 @media screen and (width: 1024px) and (height: 600px) {
   .coffee-service-hero {
     padding-top: 90px;

@@ -1,6 +1,3 @@
-// ==============================
-// Load Navbar
-// ==============================
 fetch("../components/navbar.html")
   .then((response) => response.text())
   .then((data) => {
@@ -9,19 +6,14 @@ fetch("../components/navbar.html")
   })
   .catch((error) => console.error("Navbar failed to load:", error));
 
-// ==============================
-// Load Footer
-// ==============================
 fetch("../components/footer.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("footer").innerHTML = data;
+    initializeBackToTop();
   })
   .catch((error) => console.error("Footer failed to load:", error));
 
-// ==============================
-// Navbar Functions
-// ==============================
 function initializeNavbar() {
   const darkToggle = document.getElementById("darkToggle");
   const rtlToggle = document.getElementById("rtlToggle");
@@ -34,12 +26,9 @@ function initializeNavbar() {
     return;
   }
 
-  // ==============================
-  // Active Link
-  // ==============================
   const currentPath = window.location.pathname.replace(/\/$/, "");
 
-  document.querySelectorAll(".nav-links a").forEach((link) => {
+  document.querySelectorAll(".nav-links > li > a").forEach((link) => {
     const linkPath = new URL(
       link.href,
       window.location.origin,
@@ -54,9 +43,6 @@ function initializeNavbar() {
     }
   });
 
-  // ==============================
-  // Dark Mode
-  // ==============================
   darkToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
@@ -68,35 +54,26 @@ function initializeNavbar() {
     }
   });
 
-  // ==============================
-  // RTL Toggle
-  // ==============================
   rtlToggle.addEventListener("click", () => {
     document.documentElement.dir =
       document.documentElement.dir === "rtl" ? "ltr" : "rtl";
   });
 
-  // ==============================
-  // Mobile Menu Toggle
-  // ==============================
   menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+    const isOpen = navLinks.classList.toggle("active");
 
     if (mobileLogin) {
-      mobileLogin.classList.toggle("active");
+      mobileLogin.classList.toggle("active", isOpen);
     }
 
     const icon = menuToggle.querySelector("i");
-    if (navLinks.classList.contains("active")) {
+    if (isOpen) {
       icon.classList.replace("fa-bars", "fa-xmark");
     } else {
       icon.classList.replace("fa-xmark", "fa-bars");
     }
   });
 
-  // ==============================
-  // Close Menu on Desktop Resize
-  // ==============================
   window.addEventListener("resize", () => {
     if (window.innerWidth > 1024) {
       navLinks.classList.remove("active");
@@ -110,13 +87,12 @@ function initializeNavbar() {
     }
   });
 
-  // ==============================
-  // Mobile Dropdown Toggle
-  // ==============================
   const dropdowns = document.querySelectorAll(".dropdown");
 
   dropdowns.forEach((dropdown) => {
-    const link = dropdown.querySelector("a");
+    const link = dropdown.querySelector(":scope > a");
+
+    if (!link) return;
 
     link.addEventListener("click", (e) => {
       if (window.innerWidth <= 1024) {
@@ -127,9 +103,20 @@ function initializeNavbar() {
   });
 }
 
-// ===============================
-// Reveal Animation
-// ===============================
+function initializeBackToTop() {
+  const topBtn = document.querySelector(".top-btn");
+
+  if (!topBtn) return;
+
+  topBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
+
 const revealElements = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(

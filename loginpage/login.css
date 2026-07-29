@@ -290,7 +290,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 2px;
   text-align: left;
   margin-bottom: 12px;
   flex-shrink: 0;
@@ -312,7 +312,7 @@ input {
 
 .logo-text {
   margin: 0;
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.36rem;
   font-weight: 800;
   line-height: 1;

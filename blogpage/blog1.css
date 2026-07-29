@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background: #fff9f3;
   color: #2b1b14;
   line-height: 1.7;
@@ -89,7 +89,9 @@ main {
   color: var(--secondary);
   margin-bottom: 16px;
   margin-top: 10px;
+  font-weight: 400;
 }
+
 .blog-eyebrow {
   display: flex;
   align-items: center;
@@ -101,7 +103,9 @@ main {
   text-transform: uppercase;
   color: var(--secondary);
   margin: 10px auto 16px;
+  font-weight: 400;
 }
+
 .blog-crumbs,
 .blog-meta {
   display: flex;
@@ -109,16 +113,18 @@ main {
   gap: 12px;
   font-size: 0.92rem;
   color: rgba(255, 255, 255, 0.78);
+  font-weight: 400;
 }
 
 .blog-hero h1 {
   margin: 18px 0 14px;
-  font-family: "Playfair Display", serif;
-  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
   line-height: 1;
-  /* letter-spacing: -0.03em; */
   max-width: 28ch;
+  font-weight: 400;
 }
+
 .head {
   color: var(--secondary);
 }
@@ -127,6 +133,7 @@ main {
   max-width: 620px;
   font-size: clamp(1rem, 1.3vw, 1.14rem);
   color: rgba(255, 255, 255, 0.88);
+  font-weight: 400;
 }
 
 .blog-featured-visual {
@@ -159,6 +166,7 @@ main {
   max-width: 760px;
   margin: 0 auto;
   font-size: 1.03rem;
+  font-weight: 400;
 }
 
 .blog-reading-wrap p {
@@ -167,19 +175,16 @@ main {
 
 .blog-reading-wrap p:first-child::first-letter {
   float: left;
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 4.2rem;
   line-height: 0.9;
   padding-right: 10px;
   padding-top: 6px;
   color: var(--primary);
 }
-/*=====================================
-    COFFEE TIMELINE
-=====================================*/
 
 .coffee-timeline {
-  padding: 0 40px 120px;
+  padding: 40px 120px;
 }
 
 .coffee-timeline__intro {
@@ -190,11 +195,12 @@ main {
 
 .coffee-timeline__intro h2,
 .similar-articles__head h2 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 3vw, 3.3rem);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.1;
   margin-bottom: 18px;
   color: var(--primary);
+  font-weight: 400;
 }
 
 .coffee-timeline__intro p,
@@ -203,16 +209,13 @@ main {
   line-height: 1.8;
   max-width: 68ch;
   margin: auto;
+  font-weight: 400;
 }
 
 .coffee-timeline__grid {
   display: grid;
   gap: 40px;
 }
-
-/*=====================================
-    CARD
-=====================================*/
 
 .coffee-step {
   display: grid;
@@ -227,8 +230,6 @@ main {
   padding: 20px;
 }
 
-/* Alternate Cards */
-
 .coffee-step:nth-child(even) {
   grid-template-columns: 0.85fr 1.15fr;
 }
@@ -240,10 +241,6 @@ main {
 .coffee-step:nth-child(even) .coffee-step__body {
   order: 1;
 }
-
-/*=====================================
-    IMAGE
-=====================================*/
 
 .coffee-step__media {
   width: 100%;
@@ -260,10 +257,6 @@ main {
   border-radius: 22px;
 }
 
-/*=====================================
-    CONTENT
-=====================================*/
-
 .coffee-step__body {
   display: flex;
   flex-direction: column;
@@ -276,18 +269,19 @@ main {
   display: inline-block;
   margin-bottom: 18px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #f59e0b;
 }
 
 .coffee-step__body h3 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.15;
   margin-bottom: 22px;
   color: var(--primary);
+  font-weight: 400;
 }
 
 .coffee-step__body p {
@@ -295,10 +289,11 @@ main {
   font-size: 1.08rem;
   line-height: 1.9;
   max-width: 95%;
+  font-weight: 400;
 }
 
 .similar-articles {
-  padding: 0 24px 110px;
+  padding: 24px 110px;
 }
 
 .similar-articles__head {
@@ -308,11 +303,12 @@ main {
 }
 
 .similar-articles__head h2 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 3vw, 3.3rem);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   line-height: 1.08;
   margin-bottom: 14px;
   color: var(--primary);
+  font-weight: 400;
 }
 
 .similar-articles__head p {
@@ -363,38 +359,34 @@ main {
   letter-spacing: 0.12em;
   color: var(--secondary);
   margin-bottom: 14px;
+  font-weight: 400;
 }
 
 .similar-card h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.35rem;
   line-height: 1.18;
   margin-bottom: 12px;
   color: var(--primary);
+  font-weight: 400;
 }
 
 .similar-card p {
   color: #6b5a51;
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .similar-card__link {
   display: inline-flex;
   color: var(--secondary);
-  font-weight: 600;
+  font-weight: 400;
 }
-/* ==========================================
-   BLOG DETAILS - DARK MODE
-========================================== */
 
 body.dark-mode {
   background: #171717;
   color: #f5f5f5;
 }
-
-/* ===========================
-   Hero
-=========================== */
 
 body.dark-mode .blog-hero::after {
   background: linear-gradient(
@@ -419,19 +411,11 @@ body.dark-mode .blog-hero__lead {
   color: rgba(255, 255, 255, 0.82);
 }
 
-/* ===========================
-   Featured Image
-=========================== */
-
 body.dark-mode .blog-featured-visual__frame {
   background: #211c19;
   border-color: #211c19;
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
 }
-
-/* ===========================
-   Story
-=========================== */
 
 body.dark-mode .blog-reading-wrap {
   color: rgba(255, 255, 255, 0.75);
@@ -440,10 +424,6 @@ body.dark-mode .blog-reading-wrap {
 body.dark-mode .blog-reading-wrap p:first-child::first-letter {
   color: var(--secondary);
 }
-
-/* ===========================
-   Timeline Intro
-=========================== */
 
 body.dark-mode .coffee-timeline__intro h2,
 body.dark-mode .similar-articles__head h2 {
@@ -455,15 +435,9 @@ body.dark-mode .similar-articles__head p {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* ===========================
-   Coffee Steps
-=========================== */
-
 body.dark-mode .coffee-step {
   background: #211c19;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
 }
 
@@ -479,23 +453,15 @@ body.dark-mode .coffee-step__body p {
   color: rgba(255, 255, 255, 0.72);
 }
 
-/* ===========================
-   Similar Cards
-=========================== */
-
 body.dark-mode .similar-card {
   background: #211c19;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
 body.dark-mode .similar-card:hover {
   transform: translateY(-6px);
-
   border-color: rgba(245, 158, 11, 0.25);
-
   box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(245, 158, 11, 0.1);
@@ -517,10 +483,6 @@ body.dark-mode .similar-card__link {
   color: var(--secondary);
 }
 
-/* ===========================
-   Images
-=========================== */
-
 body.dark-mode .coffee-step__media img,
 body.dark-mode .similar-card__image img {
   filter: brightness(0.92);
@@ -531,19 +493,11 @@ body.dark-mode .similar-card:hover img {
   filter: brightness(1);
 }
 
-/* ===========================
-   Sections
-=========================== */
-
 body.dark-mode .blog-story-copy,
 body.dark-mode .coffee-timeline,
 body.dark-mode .similar-articles {
   background: #171717;
 }
-
-/* ===========================
-   Decorative Glow
-=========================== */
 
 body.dark-mode .coffee-timeline,
 body.dark-mode .similar-articles,
@@ -555,47 +509,29 @@ body.dark-mode .blog-story-copy {
 body.dark-mode .coffee-timeline::before,
 body.dark-mode .similar-articles::before {
   content: "";
-
   position: absolute;
-
   width: 360px;
   height: 360px;
-
   border-radius: 50%;
-
   top: -150px;
   right: -120px;
-
   background: rgba(245, 158, 11, 0.05);
-
   filter: blur(120px);
-
   pointer-events: none;
 }
 
 body.dark-mode .blog-story-copy::after {
   content: "";
-
   position: absolute;
-
   width: 340px;
   height: 340px;
-
   border-radius: 50%;
-
   left: -150px;
   bottom: -140px;
-
   background: rgba(75, 36, 19, 0.22);
-
   filter: blur(130px);
-
   pointer-events: none;
 }
-
-/* ===========================
-   Scrollbar
-=========================== */
 
 body.dark-mode::-webkit-scrollbar {
   width: 10px;
@@ -614,18 +550,10 @@ body.dark-mode::-webkit-scrollbar-thumb:hover {
   background: #f59e0b;
 }
 
-/* ===========================
-   Selection
-=========================== */
-
 body.dark-mode ::selection {
   background: var(--secondary);
   color: #ffffff;
 }
-/* ==========================================
-   Samsung Galaxy S8+
-   (max-width:480px)
-========================================== */
 
 @media screen and (max-width: 480px) {
   .blog-hero {
@@ -727,14 +655,11 @@ body.dark-mode ::selection {
   .similar-card__content {
     padding: 20px;
   }
+
   .similar-card {
     margin-left: 10px;
   }
 }
-/* ==========================================
-   iPad Mini
-   (768px - 820px)
-========================================== */
 
 @media screen and (min-width: 768px) and (max-width: 820px) {
   .blog-hero {
@@ -803,10 +728,6 @@ body.dark-mode ::selection {
     gap: 22px;
   }
 }
-/* ==========================================
-   iPad Pro 11"
-   (821px - 1024px)
-========================================== */
 
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   .blog-hero {
@@ -866,7 +787,7 @@ body.dark-mode ::selection {
     gap: 24px;
   }
 }
-/* Nest Hub */
+
 @media screen and (width: 1024px) and (height: 600px) {
   .blog-hero {
     height: 100vh;
@@ -906,7 +827,6 @@ body.dark-mode ::selection {
     align-items: center;
   }
 
-  /* Fix even cards */
   .coffee-step:nth-child(even) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -918,6 +838,7 @@ body.dark-mode ::selection {
   .coffee-step:nth-child(even) .coffee-step__body {
     order: 2;
   }
+
   .similar-articles {
     padding: 0 45px 70px;
   }
@@ -959,10 +880,6 @@ body.dark-mode ::selection {
   }
 }
 
-/*=====================================
-    TABLET
-=====================================*/
-
 @media (max-width: 991px) {
   .coffee-step,
   .coffee-step:nth-child(even) {
@@ -984,10 +901,6 @@ body.dark-mode ::selection {
     padding-right: 0;
   }
 }
-
-/*=====================================
-    MOBILE
-=====================================*/
 
 @media (max-width: 768px) {
   .coffee-timeline {
