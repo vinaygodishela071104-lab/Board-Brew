@@ -1,3 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
+:root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --nav-font-size: 1rem;
+  --button-font-size: 1rem;
+  --small-font-size: 0.95rem;
+  --label-font-size: 13px;
+  --card-heading-font-size: 1.08rem;
+  --small-card-heading-font-size: 1.05rem;
+  --feature-heading-font-size: 2rem;
+  --cta-heading-font-size: 2.2rem;
+
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+  --label-font-weight: 500;
+  --card-heading-font-weight: 600;
+  --feature-heading-font-weight: 400;
+  --cta-heading-font-weight: 400;
+
+  --line-height: 1.7;
+  --heading-line-height: 1.15;
+  --letter-spacing: 0.01em;
+
+  --primary: #4b2413;
+  --secondary: #f59e0b;
+  --white: #ffffff;
+  --text-light: #f5f5f5;
+
+  --section-space-desktop: 72px;
+  --section-space-tablet: 72px;
+  --section-space-mobile: 60px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,25 +54,38 @@ html {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
   background: #fff9f3;
   color: #2e1b12;
-  line-height: 1.75;
+  line-height: var(--line-height);
   overflow-x: hidden;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  letter-spacing: var(--letter-spacing);
+}
+
+a,
+p,
+span,
+li,
+button,
+input,
+textarea,
+select,
+label,
+summary,
+strong,
+small {
+  font-family: var(--body-font);
 }
 
 a {
   text-decoration: none;
 }
 
-:root {
-  --primary: #4b2413;
-  --secondary: #f59e0b;
-  --white: #ffffff;
-  --text-light: #f5f5f5;
-}
-
+/* ==========================
+   HERO
+========================== */
 .contact-hero-section {
   position: relative;
   min-height: 100vh;
@@ -57,38 +115,10 @@ a {
   max-width: 850px;
   color: #fff;
 }
-.hours-label,
-.contact-hero-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 20px;
-  background: rgba(255, 217, 152, 0.2);
-  border: 1px solid rgba(245, 158, 11, 0.2);
-  border-radius: 50px;
-  color: var(--secondary);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.4px;
-  margin-bottom: 12px;
-  font-family: "Times New Roman", Times, serif;
-}
 
-.cta-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 20px;
-  background: rgba(255, 217, 152, 0.2);
-  border: 1px solid rgba(245, 158, 11, 0.2);
-  border-radius: 50px;
-  color: var(--secondary);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.4px;
-  margin-bottom: 12px;
-  font-family: "Times New Roman", Times, serif;
-}
+.hours-label,
+.contact-hero-label,
+.cta-badge,
 .contact-info-left .section-label,
 .reservation-left .section-label,
 .find-us-left .section-label,
@@ -97,24 +127,31 @@ a {
   align-items: center;
   gap: 12px;
   padding: 8px 20px;
-  background: #fff4df;
+  background: rgba(255, 217, 152, 0.2);
   border: 1px solid rgba(245, 158, 11, 0.2);
   border-radius: 50px;
   color: var(--secondary);
-  font-size: 13px;
-  font-weight: 400;
+  font-size: var(--label-font-size);
+  font-weight: var(--label-font-weight);
   letter-spacing: 0.4px;
   margin-bottom: 12px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
+}
+
+.contact-info-left .section-label,
+.reservation-left .section-label,
+.find-us-left .section-label,
+.faq-left .section-label {
+  background: #fff4df;
 }
 
 .contact-hero-content h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 3rem;
+  font-family: var(--heading-font);
+  font-size: var(--hero-font-size);
   line-height: 1.12;
   margin-bottom: 22px;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: var(--hero-font-weight);
 }
 
 .head {
@@ -124,10 +161,10 @@ a {
 .contact-hero-content p {
   max-width: 700px;
   margin: 0 auto 34px;
-  font-size: 1.08rem;
-  line-height: 1.9;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: rgba(255, 255, 255, 0.9);
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .contact-hero-buttons {
@@ -145,10 +182,11 @@ a {
   min-width: 185px;
   padding: 15px 30px;
   border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   text-decoration: none;
   transition: all 0.35s ease;
+  font-family: var(--body-font);
 }
 
 .hero-btn-primary {
@@ -175,8 +213,11 @@ a {
   transform: translateY(-3px);
 }
 
+/* ==========================
+   CONTACT INFO
+========================== */
 .contact-info-section {
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fffaf4;
   position: relative;
   overflow: hidden;
@@ -205,22 +246,25 @@ a {
   z-index: 2;
 }
 
-.contact-info-left h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.15;
+.contact-info-left h2,
+.reservation-left h2,
+.find-us-left h2,
+.faq-left h2 {
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
+  line-height: var(--heading-line-height);
   color: var(--primary);
   margin-bottom: 22px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .contact-info-left > p {
-  font-size: 1.02rem;
-  line-height: 1.9;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #666;
   max-width: 640px;
   margin-bottom: 34px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .contact-details-grid {
@@ -264,19 +308,20 @@ a {
 }
 
 .info-card h3 {
-  font-size: 1.08rem;
+  font-family: var(--heading-font);
+  font-size: var(--card-heading-font-size);
   color: var(--primary);
   margin-bottom: 8px;
-  font-weight: 600;
+  font-weight: var(--card-heading-font-weight);
 }
 
 .info-card p,
 .info-card a {
-  font-size: 0.96rem;
-  line-height: 1.75;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6b6b6b;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .info-card a:hover {
@@ -295,16 +340,16 @@ a {
   box-shadow: 0 24px 60px rgba(45, 20, 10, 0.18);
   position: sticky;
   top: 110px;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .hours-card h3 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2rem;
+  font-family: var(--heading-font);
+  font-size: var(--feature-heading-font-size);
   line-height: 1.3;
   margin-bottom: 28px;
   color: #fff;
-  font-weight: 400;
+  font-weight: var(--feature-heading-font-weight);
 }
 
 .hours-list {
@@ -324,14 +369,14 @@ a {
 
 .hours-row span {
   color: rgba(255, 255, 255, 0.82);
-  font-size: 0.96rem;
-  font-weight: 400;
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
 }
 
 .hours-row strong {
   color: #fff;
-  font-size: 0.96rem;
-  font-weight: 600;
+  font-size: var(--body-font-size);
+  font-weight: var(--button-font-weight);
   text-align: right;
 }
 
@@ -350,14 +395,17 @@ a {
 }
 
 .hours-note p {
-  font-size: 0.93rem;
-  line-height: 1.7;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: rgba(255, 255, 255, 0.88);
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
+/* ==========================
+   RESERVATION
+========================== */
 .reservation-section {
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fdf7f0;
   position: relative;
   overflow: hidden;
@@ -387,22 +435,16 @@ a {
 }
 
 .reservation-left h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.15;
-  color: var(--primary);
-  margin-bottom: 22px;
   max-width: 580px;
-  font-weight: 400;
 }
 
 .reservation-left p {
-  font-size: 1.02rem;
-  line-height: 1.9;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #666;
   max-width: 580px;
   margin-bottom: 30px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .reservation-points {
@@ -416,20 +458,20 @@ a {
   align-items: center;
   gap: 14px;
   color: var(--primary);
-  font-size: 0.97rem;
-  font-weight: 400;
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
 }
 
 .reservation-point i {
   color: var(--secondary);
   font-size: 1rem;
 }
-
 .reservation-right {
   background: rgba(255, 255, 255, 0.84);
   border: 1px solid rgba(75, 36, 19, 0.08);
   border-radius: 30px;
-  padding: 34px 30px;
+  padding: 24px 24px;
   box-shadow: 0 22px 54px rgba(75, 36, 19, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -442,7 +484,7 @@ a {
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 14px;
 }
 
 .form-group {
@@ -455,10 +497,12 @@ a {
 }
 
 .form-group label {
-  font-size: 0.92rem;
-  font-weight: 600;
+  font-size: var(--body-font-size);
+  font-weight: var(--button-font-weight);
   color: var(--primary);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+  font-family: var(--body-font);
+  line-height: 1.4;
 }
 
 .form-group input,
@@ -467,16 +511,25 @@ a {
   width: 100%;
   border: 1px solid rgba(75, 36, 19, 0.12);
   background: #fff;
-  border-radius: 18px;
-  padding: 15px 16px;
-  font-size: 0.96rem;
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-size: var(--body-font-size);
   color: #4b2413;
   outline: none;
   transition:
     border-color 0.3s ease,
-    box-shadow 0.3s ease;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
+  line-height: 1.45;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group select {
+  cursor: pointer;
 }
 
 .form-group input::placeholder,
@@ -493,24 +546,26 @@ a {
 
 .form-group textarea {
   resize: vertical;
-  min-height: 140px;
+  min-height: 100px;
 }
 
 .reservation-btn {
-  margin-top: 26px;
+  margin-top: 18px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 32px;
+  padding: 13px 26px;
+  min-height: 48px;
   border: none;
   border-radius: 999px;
   background: #f59e0b;
   color: #fff;
-  font-size: 0.96rem;
-  font-weight: 600;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   cursor: pointer;
   box-shadow: 0 14px 34px rgba(245, 158, 11, 0.22);
   transition: all 0.35s ease;
+  font-family: var(--body-font);
 }
 
 .reservation-btn:hover {
@@ -518,8 +573,119 @@ a {
   transform: translateY(-3px);
 }
 
+/* ==========================
+   DARK MODE FORM
+========================== */
+body.dark-mode .reservation-right {
+  background: rgba(28, 23, 19, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .form-group label {
+  color: #f3e7dc;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+  background: #26201b;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+  color: #9e9389;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group select:focus,
+body.dark-mode .form-group textarea:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.18);
+}
+
+body.dark-mode .reservation-btn {
+  background: linear-gradient(135deg, #f59e0b, #ffb534);
+  color: #fff;
+}
+
+body.dark-mode .reservation-btn:hover {
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+}
+
+/* ==========================
+   DATE / TIME ICONS IN DARK MODE
+========================== */
+body.dark-mode .form-group input[type="date"],
+body.dark-mode .form-group input[type="time"] {
+  color-scheme: dark;
+}
+
+body.dark-mode
+  .form-group
+  input[type="date"]::-webkit-calendar-picker-indicator,
+body.dark-mode
+  .form-group
+  input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Optional: make the whole field feel clickable */
+.form-group input[type="date"],
+.form-group input[type="time"] {
+  cursor: pointer;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+@media screen and (max-width: 480px) {
+  .reservation-right {
+    padding: 20px 18px;
+    border-radius: 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-group-full {
+    grid-column: span 1;
+  }
+
+  .form-group label {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 11px 12px;
+    border-radius: 14px;
+    font-size: 0.95rem;
+  }
+
+  .form-group textarea {
+    min-height: 90px;
+  }
+
+  .reservation-btn {
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px 20px;
+  }
+}
+/* ==========================
+   FIND US
+========================== */
 .find-us-section {
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fffaf4;
   position: relative;
   overflow: hidden;
@@ -549,22 +715,16 @@ a {
 }
 
 .find-us-left h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.15;
-  color: var(--primary);
-  margin-bottom: 22px;
   max-width: 580px;
-  font-weight: 400;
 }
 
 .find-us-left > p {
-  font-size: 1.02rem;
-  line-height: 1.9;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #666;
   max-width: 580px;
   margin-bottom: 32px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .location-info-list {
@@ -599,17 +759,18 @@ a {
 }
 
 .location-info-card h3 {
-  font-size: 1.05rem;
+  font-family: var(--heading-font);
+  font-size: var(--small-card-heading-font-size);
   color: var(--primary);
   margin-bottom: 7px;
-  font-weight: 600;
+  font-weight: var(--card-heading-font-weight);
 }
 
 .location-info-card p {
-  font-size: 0.96rem;
-  line-height: 1.75;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6d6d6d;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .directions-btn {
@@ -621,10 +782,11 @@ a {
   background: #f59e0b;
   color: #fff;
   text-decoration: none;
-  font-size: 0.96rem;
-  font-weight: 600;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   box-shadow: 0 14px 34px rgba(245, 158, 11, 0.22);
   transition: all 0.35s ease;
+  font-family: var(--body-font);
 }
 
 .directions-btn:hover {
@@ -650,8 +812,11 @@ a {
   filter: grayscale(0.15) contrast(1.02);
 }
 
+/* ==========================
+   FAQ + CTA
+========================== */
 .faq-cta-section {
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fdf7f0;
   position: relative;
   overflow: hidden;
@@ -680,22 +845,13 @@ a {
   z-index: 2;
 }
 
-.faq-left h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.15;
-  color: var(--primary);
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
 .faq-left > p {
-  font-size: 1.02rem;
-  line-height: 1.9;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #666;
   max-width: 620px;
   margin-bottom: 32px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .faq-list {
@@ -717,11 +873,12 @@ a {
   list-style: none;
   cursor: pointer;
   padding: 22px 24px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: var(--body-font-size);
+  font-weight: var(--button-font-weight);
   color: var(--primary);
   position: relative;
   transition: background 0.3s ease;
+  font-family: var(--body-font);
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -750,12 +907,14 @@ a {
 .faq-item p {
   padding: 0 24px 22px;
   color: #6a6a6a;
-  font-size: 0.97rem;
-  line-height: 1.8;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   max-width: 90%;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
-
+.faq-right {
+  margin-top: 35px;
+}
 .final-cta-card {
   background: linear-gradient(
     180deg,
@@ -767,24 +926,24 @@ a {
   padding: 38px 32px;
   box-shadow: 0 26px 60px rgba(45, 20, 10, 0.18);
   position: sticky;
-  top: 110px;
-  margin-top: 70px;
+  top: 100px;
+  margin-top: 50px;
 }
 
 .final-cta-card h3 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.2rem;
+  font-family: var(--heading-font);
+  font-size: var(--cta-heading-font-size);
   line-height: 1.2;
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--cta-heading-font-weight);
 }
 
 .final-cta-card p {
-  font-size: 0.98rem;
-  line-height: 1.85;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: rgba(255, 255, 255, 0.86);
   margin-bottom: 26px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .cta-highlights {
@@ -799,8 +958,9 @@ a {
   align-items: center;
   gap: 14px;
   color: rgba(255, 255, 255, 0.95);
-  font-size: 0.96rem;
-  font-weight: 400;
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
 }
 
 .cta-highlight i {
@@ -830,9 +990,10 @@ a {
   padding: 15px 26px;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   transition: all 0.35s ease;
+  font-family: var(--body-font);
 }
 
 .final-btn-primary {
@@ -857,6 +1018,9 @@ a {
   transform: translateY(-3px);
 }
 
+/* ==========================
+   DARK MODE
+========================== */
 body.dark-mode {
   background: #121212;
   color: #d8d8d8;
@@ -886,9 +1050,11 @@ body.dark-mode .find-us-left .section-label,
 body.dark-mode .faq-left .section-label,
 body.dark-mode .hours-label,
 body.dark-mode .cta-badge {
-  background: #fff4df;
-  border: 1px solid rgba(245, 158, 11, 0.2);
-  color: #f5b335;
+  background: rgba(224, 162, 26, 0.25);
+  color: var(--secondary);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 body.dark-mode .contact-hero-content h1 {
@@ -1166,6 +1332,9 @@ body.dark-mode .final-btn-secondary:hover {
   background: rgba(255, 255, 255, 0.16);
 }
 
+/* ==========================
+   RESPONSIVE
+========================== */
 @media screen and (max-width: 480px) {
   .contact-hero-section {
     min-height: auto;
@@ -1184,14 +1353,15 @@ body.dark-mode .final-btn-secondary:hover {
   }
 
   .contact-hero-content h1 {
-    font-size: 2.2rem;
+    font-size: var(--hero-font-size);
     line-height: 1.18;
     margin-bottom: 16px;
+    font-weight: var(--hero-font-weight);
   }
 
   .contact-hero-content p {
-    font-size: 0.95rem;
-    line-height: 1.75;
+    font-size: var(--body-font-size);
+    line-height: var(--line-height);
     margin-bottom: 24px;
   }
 
@@ -1210,7 +1380,7 @@ body.dark-mode .final-btn-secondary:hover {
   .reservation-section,
   .find-us-section,
   .faq-cta-section {
-    padding: 70px 18px;
+    padding: var(--section-space-mobile) 18px;
   }
 
   .contact-info-container,
@@ -1225,7 +1395,7 @@ body.dark-mode .final-btn-secondary:hover {
   .reservation-left h2,
   .find-us-left h2,
   .faq-left h2 {
-    font-size: 2rem;
+    font-size: var(--section-heading-font-size);
     line-height: 1.18;
   }
 
@@ -1233,8 +1403,8 @@ body.dark-mode .final-btn-secondary:hover {
   .reservation-left p,
   .find-us-left > p,
   .faq-left > p {
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: var(--body-font-size);
+    line-height: var(--line-height);
   }
 
   .contact-details-grid,
@@ -1271,7 +1441,7 @@ body.dark-mode .final-btn-secondary:hover {
 
   .hours-row span,
   .hours-row strong {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .reservation-points {
@@ -1312,12 +1482,13 @@ body.dark-mode .final-btn-secondary:hover {
   }
 
   .contact-hero-content h1 {
-    font-size: 3.2rem;
+    font-size: var(--hero-font-size);
     line-height: 1.15;
+    font-weight: var(--hero-font-weight);
   }
 
   .contact-hero-content p {
-    font-size: 1rem;
+    font-size: var(--body-font-size);
     max-width: 650px;
   }
 
@@ -1333,7 +1504,7 @@ body.dark-mode .final-btn-secondary:hover {
   .reservation-section,
   .find-us-section,
   .faq-cta-section {
-    padding: 90px 32px;
+    padding: var(--section-space-tablet) 32px;
   }
 
   .contact-info-container,
@@ -1348,7 +1519,7 @@ body.dark-mode .final-btn-secondary:hover {
   .reservation-left h2,
   .find-us-left h2,
   .faq-left h2 {
-    font-size: 2.5rem;
+    font-size: var(--section-heading-font-size);
   }
 
   .contact-details-grid,
@@ -1388,11 +1559,12 @@ body.dark-mode .final-btn-secondary:hover {
   }
 
   .contact-hero-content h1 {
-    font-size: 3.8rem;
+    font-size: var(--hero-font-size);
+    font-weight: var(--hero-font-weight);
   }
 
   .contact-hero-content p {
-    font-size: 1.04rem;
+    font-size: var(--body-font-size);
     max-width: 700px;
   }
 
@@ -1404,7 +1576,7 @@ body.dark-mode .final-btn-secondary:hover {
   .reservation-section,
   .find-us-section,
   .faq-cta-section {
-    padding: 100px 40px;
+    padding: var(--section-space-desktop) 40px;
   }
 
   .contact-info-container,
@@ -1450,14 +1622,15 @@ body.dark-mode .final-btn-secondary:hover {
   }
 
   .contact-hero-content h1 {
-    font-size: 3.6rem;
+    font-size: var(--hero-font-size);
+    font-weight: var(--hero-font-weight);
   }
 
   .contact-info-section,
   .reservation-section,
   .find-us-section,
   .faq-cta-section {
-    padding: 90px 40px;
+    padding: var(--section-space-tablet) 40px;
   }
 
   .reservation-container,

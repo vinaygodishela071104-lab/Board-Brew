@@ -1,4 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
 :root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --small-font-size: 0.88rem;
+  --label-font-size: 0.72rem;
+  --button-font-size: 1rem;
+  --nav-font-size: 1rem;
+
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+  --label-font-weight: 600;
+
+  --line-height: 1.7;
+  --heading-line-height: 1.1;
+  --letter-spacing: 0.01em;
+
   --primary: #4b2413;
   --secondary: #f59e0b;
   --bg: #fffaf3;
@@ -22,7 +49,11 @@ body {
 }
 
 body {
-  font-family: Poppins, sans-serif;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
   background:
     radial-gradient(
       circle at 72% 56%,
@@ -39,11 +70,21 @@ body {
 
 a {
   text-decoration: none;
+  font-family: var(--body-font);
 }
 
 button,
 input {
   font: inherit;
+  font-family: var(--body-font);
+}
+
+p,
+span,
+label,
+small,
+strong {
+  font-family: var(--body-font);
 }
 
 .auth-shell {
@@ -121,7 +162,7 @@ input {
   z-index: 2;
   width: 100%;
   max-width: 640px;
-  padding: 88px 80px 88px 96px;
+  padding: 72px 80px 72px 96px;
 }
 
 .location {
@@ -130,14 +171,16 @@ input {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
 
 .editorial-title {
   margin: 0;
   display: grid;
   gap: 2px;
-  line-height: 0.88;
+  line-height: var(--heading-line-height);
   text-transform: uppercase;
+  font-family: var(--heading-font);
 }
 
 .editorial-title span {
@@ -175,15 +218,15 @@ input {
 
 .description {
   max-width: 460px;
-  margin: 32px 0 0;
+  margin: 28px 0 0;
   color: rgba(43, 27, 18, 0.82);
-  font-size: 0.99rem;
-  line-height: 1.85;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
 }
 
 .stats {
-  margin-top: 40px;
-  padding-top: 20px;
+  margin-top: 32px;
+  padding-top: 18px;
   max-width: 560px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -201,19 +244,21 @@ input {
 
 .stat strong {
   display: block;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+  font-family: var(--heading-font);
+  font-size: 2rem;
   line-height: 1;
+  font-weight: 600;
   color: var(--primary);
 }
 
 .stat span {
   display: block;
   margin-top: 8px;
-  font-size: 0.68rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 600;
   letter-spacing: 0.16em;
   color: rgba(75, 36, 19, 0.72);
+  text-transform: uppercase;
 }
 
 .login-panel {
@@ -260,6 +305,9 @@ input {
   box-shadow: 0 10px 24px rgba(75, 36, 19, 0.08);
   color: var(--primary);
   cursor: pointer;
+  font-family: var(--body-font);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
@@ -294,6 +342,7 @@ input {
   text-align: left;
   margin-bottom: 12px;
   flex-shrink: 0;
+  margin-left: -15px;
 }
 
 .logo-wrap img {
@@ -312,9 +361,9 @@ input {
 
 .logo-text {
   margin: 0;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.36rem;
-  font-weight: 800;
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -344,32 +393,34 @@ input {
 
 .tagline p {
   margin: 0;
-  font-size: 0.4rem;
+  font-size: 0.52rem;
   letter-spacing: 1.2px;
-  font-weight: 700;
+  font-weight: 600;
   color: #5a3a28;
+  text-transform: uppercase;
 }
 
 .sub-tagline {
-  margin: 3px 0 0;
-  font-size: 0.4rem;
-  font-weight: 700;
+  margin: 3px 0 0 25px;
+  font-size: 0.52rem;
+  font-weight: 600;
   letter-spacing: 0.9px;
-  margin-left: 25px;
   color: #5a3a28;
-  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
+  font-family: var(--body-font);
 }
 
 .card-heading {
   text-align: center;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .card-heading h3 {
   margin: 0;
-  font-family: "Playfair Display", serif;
-  font-size: 1.55rem;
-  line-height: 1.02;
+  font-family: var(--heading-font);
+  font-size: 1.75rem;
+  line-height: 1.08;
+  font-weight: var(--section-heading-font-weight);
   color: var(--primary);
 }
 
@@ -380,8 +431,8 @@ input {
 
 .card-heading p {
   margin: 6px 0 0;
-  font-size: 0.84rem;
-  line-height: 1.4;
+  font-size: var(--small-font-size);
+  line-height: 1.6;
   color: var(--muted);
 }
 
@@ -402,8 +453,8 @@ input {
 }
 
 .field label {
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: var(--label-font-size);
+  font-weight: var(--label-font-weight);
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: rgba(75, 36, 19, 0.88);
@@ -430,7 +481,8 @@ input {
   outline: none;
   padding: 0 48px 0 42px;
   color: var(--text);
-  font-size: 14px;
+  font-size: var(--body-font-size);
+  font-weight: 400;
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -457,6 +509,7 @@ input {
   color: rgba(75, 36, 19, 0.58);
   cursor: pointer;
   border-radius: 10px;
+  font-family: var(--body-font);
 }
 
 .form-row {
@@ -473,13 +526,13 @@ input {
   align-items: center;
   gap: 10px;
   color: rgba(43, 27, 18, 0.74);
-  font-size: 0.88rem;
+  font-size: var(--small-font-size);
 }
 
 .forgot-link {
   color: var(--primary);
-  font-weight: 700;
-  font-size: 0.88rem;
+  font-weight: 600;
+  font-size: var(--small-font-size);
 }
 
 .signin-btn {
@@ -490,12 +543,13 @@ input {
   border-radius: 16px;
   background: linear-gradient(135deg, #e5aa33 0%, #f59e0b 52%, #ffd77b 100%);
   color: #fff;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   letter-spacing: 0.08em;
   box-shadow: 0 16px 30px rgba(245, 158, 11, 0.24);
   cursor: pointer;
   margin-top: 0;
+  font-family: var(--body-font);
 }
 
 .divider {
@@ -515,9 +569,10 @@ input {
   margin: 0;
   font-size: 0.64rem;
   letter-spacing: 0.16em;
-  font-weight: 700;
+  font-weight: 600;
   color: rgba(43, 27, 18, 0.58);
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .social-stack {
@@ -538,6 +593,9 @@ input {
   justify-content: center;
   gap: 10px;
   cursor: pointer;
+  font-size: var(--body-font-size);
+  font-weight: 500;
+  font-family: var(--body-font);
   box-shadow: 0 10px 24px rgba(75, 36, 19, 0.06);
   transition:
     transform 0.2s ease,
@@ -562,13 +620,13 @@ input {
 }
 
 .auth-switch {
-  margin-top: 8px;
+  margin-top: 6px;
   text-align: center;
 }
 
 .auth-switch p {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: var(--small-font-size);
   color: var(--muted);
 }
 
@@ -576,6 +634,7 @@ input {
   color: var(--secondary);
   font-weight: 600;
   position: relative;
+  font-family: var(--body-font);
 }
 
 .create-link::after {
@@ -594,6 +653,17 @@ input {
 .create-link:hover::after {
   transform: scaleX(1);
 }
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
 
 @keyframes floatUp {
   0% {
@@ -611,6 +681,7 @@ input {
     opacity: 0;
   }
 }
+
 /* ===================================
    DARK MODE
 =================================== */
@@ -623,7 +694,6 @@ body.dark-mode {
       transparent 20%
     ),
     linear-gradient(180deg, #160d08 0%, #0d0704 100%);
-
   color: #fff4e8;
 }
 
@@ -682,9 +752,7 @@ body.dark-mode .login-panel {
 
 body.dark-mode .login-card {
   background: rgba(30, 18, 12, 0.95);
-
   border: 1px solid rgba(255, 214, 153, 0.18);
-
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
 }
 
@@ -714,9 +782,7 @@ body.dark-mode .card-heading p {
 
 body.dark-mode .input-wrap input {
   background: #26170e;
-
   border-color: rgba(255, 214, 153, 0.25);
-
   color: #fff;
 }
 
@@ -739,9 +805,7 @@ body.dark-mode .field label {
 
 body.dark-mode .utility-btn {
   background: rgba(255, 255, 255, 0.08);
-
   border-color: rgba(255, 255, 255, 0.15);
-
   color: #f59e0b;
 }
 
@@ -749,11 +813,8 @@ body.dark-mode .utility-btn {
 
 body.dark-mode .social-btn {
   background: #21150e;
-
   border-color: rgba(255, 214, 153, 0.2);
-
   color: #fff4e8;
-
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -785,9 +846,11 @@ body.dark-mode .create-link {
 body.dark-mode .auth-switch p {
   color: rgba(255, 244, 232, 0.65);
 }
+
 body.dark-mode .stats strong {
   color: white;
 }
+
 body.dark-mode .stats span {
   color: white;
 }
@@ -820,6 +883,7 @@ html[dir="rtl"] .card-heading,
 html[dir="rtl"] .logo-content {
   text-align: right;
 }
+
 /* ================================
    RESPONSIVE
 ================================ */
@@ -855,6 +919,22 @@ html[dir="rtl"] .logo-content {
 
   .editorial-title {
     text-align: center;
+  }
+
+  .y-line {
+    font-size: calc(var(--hero-font-size) * 0.62);
+  }
+
+  .n-line {
+    font-size: calc(var(--hero-font-size) * 0.82);
+  }
+
+  .g-line {
+    font-size: calc(var(--hero-font-size) * 0.72);
+  }
+
+  .a-line {
+    font-size: calc(var(--hero-font-size) * 0.62);
   }
 
   .description {
@@ -920,11 +1000,11 @@ html[dir="rtl"] .logo-content {
 
   .tagline p,
   .sub-tagline {
-    font-size: 0.34rem;
+    font-size: 0.4rem;
   }
 
   .card-heading h3 {
-    font-size: 1.28rem;
+    font-size: 1.4rem;
   }
 
   .card-heading p {

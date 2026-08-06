@@ -1,4 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
 :root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --small-font-size: 0.85rem;
+  --nav-font-size: 1rem;
+  --button-font-size: 1rem;
+
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+
+  --line-height: 1.7;
+  --heading-line-height: 1.15;
+  --letter-spacing: 0.01em;
+
   --primary: #4b2413;
   --secondary: #f59e0b;
 }
@@ -20,6 +45,7 @@ html {
 
 a {
   text-decoration: none;
+  font-family: var(--body-font);
 }
 
 #sidebarToggle {
@@ -29,10 +55,13 @@ a {
 body {
   display: flex;
   overflow: hidden;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
   background: linear-gradient(180deg, #fbf8f3 0%, #f4eee6 100%);
   color: #1f1f1f;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
 }
 
 .sidebar {
@@ -82,6 +111,7 @@ body {
   align-items: center;
   gap: 10px;
   margin: 10px;
+  margin-left: -10px;
 }
 
 .logo img {
@@ -100,9 +130,9 @@ body {
 }
 
 .logo-text {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   white-space: nowrap;
   text-align: center;
@@ -139,7 +169,7 @@ body {
 .tagline p,
 .sub-tagline,
 .logo-content h5 {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--body-font);
   font-size: 0.42rem;
   font-weight: 600;
   letter-spacing: 1.2px;
@@ -149,22 +179,31 @@ body {
 }
 
 .sub-tagline {
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1.1px;
 }
 
 .logo-content h5 {
   padding-left: 0;
 }
+
 .panel h2,
 .panel h3,
 .report-card h3,
-.topbar h2,
+.topbar h2 {
+  margin: 0;
+  color: var(--primary);
+  font-family: var(--heading-font);
+  font-weight: var(--section-heading-font-weight);
+  line-height: var(--heading-line-height);
+}
+
 .hero h1 {
   margin: 0;
   color: var(--primary);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--heading-font);
+  font-weight: var(--hero-font-weight);
+  line-height: 1.12;
 }
 
 .brand p,
@@ -177,7 +216,8 @@ body {
 .report-metric span {
   margin: 0;
   color: #666666;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
 }
 
 .profile-card {
@@ -211,8 +251,9 @@ body {
   color: #1f1f1f;
   text-align: left;
   background: #ffffff;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-size: var(--nav-font-size);
+  font-weight: var(--nav-font-weight);
 }
 
 .nav-link:hover,
@@ -230,6 +271,7 @@ body {
   color: #fff;
   font-size: 0.72rem;
   font-weight: 700;
+  font-family: var(--body-font);
 }
 
 .view-site {
@@ -242,6 +284,9 @@ body {
   text-decoration: none;
   background: var(--primary);
   color: #fff;
+  font-family: var(--body-font);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
 }
 
 .app {
@@ -280,8 +325,8 @@ body {
   color: #1f1f1f;
   cursor: pointer;
   border-radius: 16px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
 }
 
 .icon-btn {
@@ -314,8 +359,9 @@ body {
   background: transparent;
   color: #1f1f1f;
   font: inherit;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
 }
 
 .dropdown-wrap {
@@ -352,6 +398,7 @@ body {
   padding: 12px;
   border-radius: 16px;
   background: #f8f6f2;
+  font-family: var(--body-font);
 }
 
 .profile-panel button {
@@ -365,8 +412,8 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
 }
 
 .profile-panel button:hover {
@@ -439,16 +486,17 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  line-height: 1.12;
+  font-size: var(--hero-font-size);
 }
 
 .hero p,
 .panel p {
   margin: 8px 0 0;
   color: #666666;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
 }
 
 .hero-actions {
@@ -462,12 +510,13 @@ body {
   border-radius: 14px;
   padding: 12px 16px;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
   display: inline-flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .btn.primary {
@@ -503,8 +552,8 @@ body {
   font-size: 1.65rem;
   margin: 5px 0;
   color: var(--primary);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--heading-font);
+  font-weight: 500;
 }
 
 .kpi-card i {
@@ -537,8 +586,8 @@ body {
 .simple-list,
 .legend li,
 .field span {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
 }
 
 .segmented {
@@ -551,6 +600,7 @@ body {
 .seg-btn {
   padding: 8px 12px;
   background: transparent;
+  font-size: var(--button-font-size);
 }
 
 .seg-btn.active {
@@ -603,8 +653,8 @@ td {
   border-bottom: 1px solid rgba(75, 36, 19, 0.08);
   text-align: left;
   white-space: nowrap;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
 }
 
 th {
@@ -686,6 +736,8 @@ th {
   border: 1px solid rgba(75, 36, 19, 0.08);
   padding: 12px 14px;
   border-radius: 14px;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
 }
 
 .kitchen-hero {
@@ -714,8 +766,8 @@ th {
   display: block;
   font-size: 1.35rem;
   color: var(--primary);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--heading-font);
+  font-weight: 500;
 }
 
 .kanban {
@@ -764,8 +816,8 @@ th {
 .review strong {
   display: block;
   color: var(--primary);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--heading-font);
+  font-weight: 500;
 }
 
 .menu-layout {
@@ -808,15 +860,15 @@ th {
 
 .category-card strong {
   color: var(--primary);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--heading-font);
+  font-weight: 500;
 }
 
 .category-card span {
   color: #666666;
   font-size: 0.92rem;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
 }
 
 .inventory-grid {
@@ -843,8 +895,8 @@ th {
   background: #f8f6f2;
   border: 1px solid rgba(75, 36, 19, 0.08);
   color: var(--primary);
-  font-weight: 400;
-  font-family: "Times New Roman", Times, serif;
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
 }
 
 .reports-grid {
@@ -885,8 +937,8 @@ th {
 .report-metric strong {
   font-size: 1.8rem;
   color: var(--primary);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--heading-font);
+  font-weight: 500;
 }
 
 .page-hero {
@@ -1240,8 +1292,8 @@ body.dark-mode select {
   background: #23262a;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
 }
 
 body.dark-mode input::placeholder,
@@ -1269,6 +1321,7 @@ body.dark-mode .dropdown-panel {
 
 body.dark-mode .dropdown-panel h4 {
   color: #ffffff;
+  font-family: var(--heading-font);
 }
 
 body.dark-mode .dropdown-panel p {
@@ -1433,6 +1486,7 @@ body.dark-mode .modal {
 body.dark-mode .modal h2,
 body.dark-mode .modal h3 {
   color: #ffffff;
+  font-family: var(--heading-font);
 }
 
 body.dark-mode .modal p {
@@ -1740,10 +1794,12 @@ body.dark-mode .seg-btn.active {
   font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
+  font-family: var(--body-font);
 }
 
 .rtl-text {
   line-height: 1;
+  font-family: var(--body-font);
 }
 
 html[dir="rtl"] .topbar-right {
@@ -1843,6 +1899,10 @@ html[dir="rtl"] .topbar-right {
   .report-card,
   .kpi-card {
     padding: 16px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
   }
 
   .hero-actions {
@@ -2164,6 +2224,10 @@ html[dir="rtl"] .topbar-right {
   .hero {
     grid-template-columns: 1fr;
     padding: 18px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
   }
 
   .kpi-grid,

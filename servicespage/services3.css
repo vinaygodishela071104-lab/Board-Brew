@@ -1,3 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
+:root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+  --line-height: 1.7;
+
+  --primary: #4b2413;
+  --secondary: #f59e0b;
+}
+
 /* =========================
    UNIVERSAL
 ========================= */
@@ -12,7 +35,10 @@ html {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
   background: #fff9f3;
   overflow-x: hidden;
 }
@@ -24,14 +50,18 @@ img {
 
 a {
   text-decoration: none;
+  font-family: var(--body-font);
 }
 
-/* =========================
-   ROOT
-========================= */
-:root {
-  --primary: #4b2413;
-  --secondary: #f59e0b;
+button,
+input,
+textarea,
+select,
+label,
+li,
+p,
+span {
+  font-family: var(--body-font);
 }
 
 /* =========================
@@ -45,7 +75,7 @@ a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 140px 120px 100px;
+  padding: 120px 120px 88px;
   background-image:
     linear-gradient(
       to right,
@@ -93,8 +123,9 @@ a {
   background: rgba(245, 158, 11, 0.16);
   border: 1px solid rgba(245, 158, 11, 0.14);
   color: #ffd48a;
+  font-family: var(--body-font);
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -102,12 +133,12 @@ a {
 }
 
 .cozy-spaces-hero-content h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 3rem;
+  font-family: var(--heading-font);
+  font-size: var(--hero-font-size);
   line-height: 1.04;
   color: #ffffff;
   margin-bottom: 24px;
-  font-weight: 400;
+  font-weight: var(--hero-font-weight);
 }
 
 .cozy-spaces-hero-content span {
@@ -115,12 +146,13 @@ a {
 }
 
 .cozy-spaces-hero-content p {
-  font-size: 1.05rem;
-  line-height: 1.95;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: rgba(255, 255, 255, 0.88);
   max-width: 64ch;
   margin: 0 auto 34px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .cozy-spaces-hero-buttons {
@@ -136,8 +168,9 @@ a {
   justify-content: center;
   padding: 15px 26px;
   border-radius: 999px;
-  font-size: 0.96rem;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: var(--button-font-weight);
   transition: all 0.35s ease;
 }
 
@@ -200,7 +233,7 @@ body.dark-mode .cozy-spaces-btn-secondary:hover {
 }
 
 .space-mosaic-section {
-  padding: 110px 120px;
+  padding: 88px 120px;
   background: #fffaf5;
   position: relative;
   overflow: hidden;
@@ -249,27 +282,29 @@ body.dark-mode .cozy-spaces-btn-secondary:hover {
   border-radius: 999px;
   background: #fff1dc;
   color: #d88a07;
+  font-family: var(--body-font);
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 18px;
 }
 
 .space-mosaic-intro h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .space-mosaic-intro p {
-  font-size: 1.02rem;
-  line-height: 1.92;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6a6a6a;
   max-width: 680px;
   margin: 0 auto;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .space-mosaic-grid {
@@ -288,6 +323,9 @@ body.dark-mode .cozy-spaces-btn-secondary:hover {
   overflow: hidden;
   background: #1f1a17;
   box-shadow: 0 24px 58px rgba(75, 36, 19, 0.12);
+}
+.span{
+  color: var(--secondary);
 }
 
 .space-mosaic-image,
@@ -334,6 +372,7 @@ body.dark-mode .cozy-spaces-btn-secondary:hover {
 
 .space-mosaic-kicker {
   display: inline-block;
+  font-family: var(--body-font);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 1.4px;
@@ -349,15 +388,16 @@ body.dark-mode .cozy-spaces-btn-secondary:hover {
   margin-bottom: 16px;
   max-width: 15ch;
   font-weight: 400;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
 }
 
 .space-mosaic-overlay p {
-  font-size: 0.98rem;
-  line-height: 1.88;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: var(--line-height);
   color: rgba(255, 255, 255, 0.86);
   max-width: 52ch;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .space-mosaic-side {
@@ -398,14 +438,15 @@ body.dark-mode .cozy-spaces-btn-secondary:hover {
   color: var(--primary);
   margin-bottom: 14px;
   font-weight: 400;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
 }
 
 .space-side-content p {
-  font-size: 0.95rem;
-  line-height: 1.82;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: var(--line-height);
   color: #6b6b6b;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 /* DARK MODE */
@@ -446,7 +487,7 @@ body.dark-mode .space-side-content p {
 }
 
 .day-flow-section {
-  padding: 110px 120px;
+  padding: 88px 120px;
   background: #fff8f2;
   position: relative;
   overflow: hidden;
@@ -495,27 +536,29 @@ body.dark-mode .space-side-content p {
   border-radius: 999px;
   background: #fff1dc;
   color: #d88a07;
+  font-family: var(--body-font);
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 18px;
 }
 
 .day-flow-intro h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .day-flow-intro p {
-  font-size: 1.02rem;
-  line-height: 1.92;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6c6c6c;
   max-width: 690px;
   margin: 0 auto;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .day-flow-rows {
@@ -597,6 +640,7 @@ body.dark-mode .space-side-content p {
 
 .day-flow-label {
   display: inline-block;
+  font-family: var(--body-font);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 1.4px;
@@ -611,15 +655,16 @@ body.dark-mode .space-side-content p {
   color: var(--primary);
   margin-bottom: 16px;
   font-weight: 400;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
 }
 
 .day-flow-content p {
-  font-size: 0.98rem;
-  line-height: 1.9;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: var(--line-height);
   color: #696969;
   max-width: 54ch;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 /* DARK MODE */
@@ -664,7 +709,7 @@ body.dark-mode .day-flow-visual::after {
 }
 
 .photo-story-section {
-  padding: 110px 120px;
+  padding: 88px 120px;
   background: #fcf7f1;
   position: relative;
   overflow: hidden;
@@ -719,27 +764,29 @@ body.dark-mode .day-flow-visual::after {
   border-radius: 999px;
   background: #fff1dc;
   color: #d88a07;
+  font-family: var(--body-font);
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 18px;
 }
 
 .photo-story-intro h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.1;
   color: var(--primary);
   margin-bottom: 20px;
   max-width: 17ch;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .photo-story-intro p {
-  font-size: 1.02rem;
-  line-height: 1.95;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6a6a6a;
   max-width: 46ch;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .photo-story-strip {
@@ -806,6 +853,7 @@ body.dark-mode .day-flow-visual::after {
 
 .photo-story-caption span {
   display: inline-block;
+  font-family: var(--body-font);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 1.4px;
@@ -815,11 +863,12 @@ body.dark-mode .day-flow-visual::after {
 }
 
 .photo-story-caption p {
-  font-size: 0.96rem;
-  line-height: 1.8;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: var(--line-height);
   color: rgba(255, 255, 255, 0.88);
   max-width: 26ch;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 /* DARK MODE */
@@ -841,7 +890,7 @@ body.dark-mode .photo-story-intro p {
 }
 
 .space-fit-section {
-  padding: 110px 120px;
+  padding: 88px 120px;
   background: #fffdf9;
   position: relative;
   overflow: hidden;
@@ -890,27 +939,29 @@ body.dark-mode .photo-story-intro p {
   border-radius: 999px;
   background: #fff1dc;
   color: #d88a07;
+  font-family: var(--body-font);
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 18px;
 }
 
 .space-fit-header h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .space-fit-header p {
-  font-size: 1.02rem;
-  line-height: 1.92;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6a6a6a;
   max-width: 680px;
   margin: 0 auto;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .space-fit-list {
@@ -934,6 +985,7 @@ body.dark-mode .photo-story-intro p {
 }
 
 .space-fit-label {
+  font-family: var(--body-font);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.4px;
@@ -966,15 +1018,16 @@ body.dark-mode .photo-story-intro p {
   margin-bottom: 12px;
   max-width: 32ch;
   font-weight: 400;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
 }
 
 .space-fit-copy p {
-  font-size: 0.98rem;
-  line-height: 1.84;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: var(--line-height);
   color: #6b6b6b;
   max-width: 56ch;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .space-fit-row:hover {
@@ -1043,13 +1096,13 @@ body.dark-mode .space-fit-copy p {
   }
 
   .cozy-spaces-hero-content h1 {
-    font-size: 2.45rem;
+    font-size: var(--hero-font-size);
     line-height: 1.12;
   }
 
   .cozy-spaces-hero-content p {
-    font-size: 0.94rem;
-    line-height: 1.78;
+    font-size: 1rem;
+    line-height: var(--line-height);
     margin-bottom: 24px;
   }
 
@@ -1086,8 +1139,8 @@ body.dark-mode .space-fit-copy p {
   }
 
   .space-mosaic-overlay p {
-    font-size: 0.92rem;
-    line-height: 1.72;
+    font-size: 1rem;
+    line-height: var(--line-height);
     max-width: 100%;
   }
 
@@ -1135,8 +1188,8 @@ body.dark-mode .space-fit-copy p {
   }
 
   .day-flow-content p {
-    font-size: 0.92rem;
-    line-height: 1.74;
+    font-size: 1rem;
+    line-height: var(--line-height);
   }
 
   .photo-story-intro {
@@ -1146,7 +1199,7 @@ body.dark-mode .space-fit-copy p {
   }
 
   .photo-story-intro h2 {
-    font-size: 2.05rem;
+    font-size: var(--section-heading-font-size);
     line-height: 1.16;
     max-width: 100%;
   }
@@ -1188,8 +1241,8 @@ body.dark-mode .space-fit-copy p {
   }
 
   .space-fit-copy p {
-    font-size: 0.92rem;
-    line-height: 1.72;
+    font-size: 1rem;
+    line-height: var(--line-height);
     max-width: 100%;
   }
 
@@ -1217,7 +1270,7 @@ body.dark-mode .space-fit-copy p {
   }
 
   .cozy-spaces-hero-content h1 {
-    font-size: 3rem;
+    font-size: var(--hero-font-size);
     line-height: 1.08;
   }
 
@@ -1257,7 +1310,7 @@ body.dark-mode .space-fit-copy p {
   }
 
   .photo-story-intro h2 {
-    font-size: 2.5rem;
+    font-size: var(--section-heading-font-size);
     max-width: 100%;
   }
 
@@ -1306,7 +1359,7 @@ body.dark-mode .space-fit-copy p {
   }
 
   .cozy-spaces-hero-content h1 {
-    font-size: 3.6rem;
+    font-size: var(--hero-font-size);
   }
 
   .space-mosaic-grid {
@@ -1341,7 +1394,7 @@ body.dark-mode .space-fit-copy p {
 
   .photo-story-intro h2 {
     max-width: 100%;
-    font-size: 3rem;
+    font-size: var(--section-heading-font-size);
   }
 
   .space-fit-row {
@@ -1369,13 +1422,13 @@ body.dark-mode .space-fit-copy p {
   }
 
   .cozy-spaces-hero-content h1 {
-    font-size: 3.1rem;
+    font-size: var(--hero-font-size);
     line-height: 1.08;
   }
 
   .cozy-spaces-hero-content p {
-    font-size: 0.98rem;
-    line-height: 1.78;
+    font-size: 1rem;
+    line-height: var(--line-height);
     margin-bottom: 24px;
   }
 

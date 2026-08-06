@@ -1,4 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
 :root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --nav-font-size: 1rem;
+  --button-font-size: 1rem;
+  --label-font-size: 0.7rem;
+  --meta-font-size: 0.88rem;
+  --small-font-size: 0.95rem;
+
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+  --label-font-weight: 600;
+  --logo-font-weight: 700;
+
+  --line-height: 1.7;
+  --heading-line-height: 1.12;
+  --hero-line-height: 1.02;
+  --letter-spacing: 0.01em;
+
   --primary: #4b2413;
   --secondary: #f59e0b;
   --bg: #fffaf3;
@@ -7,6 +37,10 @@
   --card: #fffdf9;
   --cream: #fff8ef;
   --muted: rgba(43, 27, 18, 0.72);
+
+  --section-space-lg: 72px;
+  --section-space-md: 56px;
+  --section-space-sm: 40px;
 }
 
 * {
@@ -19,10 +53,14 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100%;
+  font-family: var(--body-font);
 }
 
 body {
-  font-family: Poppins, sans-serif;
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
   background:
     radial-gradient(
       circle at 72% 56%,
@@ -36,6 +74,7 @@ body {
 
 a {
   text-decoration: none;
+  font-family: var(--body-font);
 }
 
 button,
@@ -112,7 +151,7 @@ input {
   z-index: 2;
   width: 100%;
   max-width: 640px;
-  padding: 88px 80px 88px 96px;
+  padding: 72px 80px 72px 96px;
 }
 
 .location {
@@ -121,6 +160,7 @@ input {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.24em;
+  font-family: var(--body-font);
 }
 
 .editorial-title {
@@ -129,10 +169,12 @@ input {
   gap: 2px;
   line-height: 0.88;
   text-transform: uppercase;
+  font-family: var(--heading-font);
 }
 
 .editorial-title span {
   display: block;
+  font-family: var(--heading-font);
 }
 
 .y-line {
@@ -163,18 +205,18 @@ input {
   font-weight: 700;
   color: var(--primary);
 }
-
 .description {
   max-width: 460px;
-  margin: 32px 0 0;
+  margin: 24px 0 0;
   color: rgba(43, 27, 18, 0.82);
-  font-size: 0.99rem;
-  line-height: 1.85;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
+  font-family: var(--body-font);
 }
 
 .stats {
-  margin-top: 40px;
-  padding-top: 20px;
+  margin-top: 32px;
+  padding-top: 18px;
   max-width: 560px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -184,8 +226,9 @@ input {
 
 .stat strong {
   display: block;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 600;
   line-height: 1;
   color: var(--primary);
 }
@@ -194,9 +237,10 @@ input {
   display: block;
   margin-top: 8px;
   font-size: 0.68rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.16em;
   color: rgba(75, 36, 19, 0.72);
+  font-family: var(--body-font);
 }
 
 .login-panel {
@@ -277,6 +321,7 @@ input {
   text-align: left;
   margin-bottom: 12px;
   flex-shrink: 0;
+  margin-left: -10px;
 }
 
 .logo-wrap img {
@@ -295,9 +340,9 @@ input {
 
 .logo-text {
   margin: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.36rem;
-  font-weight: 800;
+  font-weight: var(--logo-font-weight);
   line-height: 1;
 }
 
@@ -329,43 +374,47 @@ input {
   margin: 0;
   font-size: 0.4rem;
   letter-spacing: 1.2px;
-  font-weight: 700;
+  font-weight: 600;
   color: #5a3a28;
+  font-family: var(--body-font);
 }
 
 .sub-tagline {
   margin: 3px 0 0;
   font-size: 0.4rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.9px;
   margin-left: 25px;
   color: #5a3a28;
-  font-family: Poppins, sans-serif;
+  font-family: var(--body-font);
 }
 
 .card-heading {
   text-align: center;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .card-heading h3 {
   margin: 0;
-  font-family: "Playfair Display", serif;
-  font-size: 1.55rem;
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
   line-height: 1.02;
   color: var(--primary);
+  font-weight: var(--section-heading-font-weight);
 }
 
 .card-heading span {
   color: var(--secondary);
-  font-style: italic;
+  font-style: normal;
+  font-family: var(--heading-font);
 }
 
 .card-heading p {
   margin: 6px 0 0;
-  font-size: 0.84rem;
-  line-height: 1.4;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: var(--muted);
+  font-family: var(--body-font);
 }
 
 .login-form {
@@ -385,11 +434,12 @@ input {
 }
 
 .field label {
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: var(--label-font-size);
+  font-weight: var(--label-font-weight);
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: rgba(75, 36, 19, 0.88);
+  font-family: var(--body-font);
 }
 
 .input-wrap {
@@ -413,7 +463,8 @@ input {
   outline: none;
   padding: 0 48px 0 42px;
   color: var(--text);
-  font-size: 14px;
+  font-size: var(--body-font-size);
+  font-family: var(--body-font);
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -456,13 +507,15 @@ input {
   align-items: center;
   gap: 10px;
   color: rgba(43, 27, 18, 0.74);
-  font-size: 0.88rem;
+  font-size: var(--meta-font-size);
+  font-family: var(--body-font);
 }
 
 .forgot-link {
   color: var(--primary);
-  font-weight: 700;
-  font-size: 0.88rem;
+  font-weight: 600;
+  font-size: var(--meta-font-size);
+  font-family: var(--body-font);
 }
 
 .signin-btn {
@@ -473,9 +526,10 @@ input {
   border-radius: 16px;
   background: linear-gradient(135deg, #e5aa33 0%, #f59e0b 52%, #ffd77b 100%);
   color: #fff;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   letter-spacing: 0.08em;
+  font-family: var(--body-font);
   box-shadow: 0 16px 30px rgba(245, 158, 11, 0.24);
   cursor: pointer;
   margin-top: 0;
@@ -498,9 +552,10 @@ input {
   margin: 0;
   font-size: 0.62rem;
   letter-spacing: 0.16em;
-  font-weight: 700;
+  font-weight: 600;
   color: rgba(43, 27, 18, 0.58);
   white-space: nowrap;
+  font-family: var(--body-font);
 }
 
 .social-stack {
@@ -522,6 +577,9 @@ input {
   gap: 10px;
   cursor: pointer;
   box-shadow: 0 10px 24px rgba(75, 36, 19, 0.06);
+  font-family: var(--body-font);
+  font-size: var(--button-font-size);
+  font-weight: 500;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -545,20 +603,22 @@ input {
 }
 
 .auth-switch {
-  margin-top: 8px;
+  margin-top: 6px;
   text-align: center;
 }
 
 .auth-switch p {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: var(--meta-font-size);
   color: var(--muted);
+  font-family: var(--body-font);
 }
 
 .create-link {
   color: var(--secondary);
   font-weight: 600;
   position: relative;
+  font-family: var(--body-font);
 }
 
 .create-link::after {
@@ -594,7 +654,17 @@ input {
     opacity: 0;
   }
 }
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
 
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
 @media (max-width: 1100px) {
   body {
     overflow: auto;
@@ -651,7 +721,7 @@ input {
   }
 
   .card-heading h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .login-form {
@@ -701,6 +771,7 @@ html[dir="rtl"] .card-heading,
 html[dir="rtl"] .logo-content {
   text-align: right;
 }
+
 /* ===================================
    DARK MODE
 =================================== */
@@ -713,7 +784,6 @@ body.dark-mode {
       transparent 20%
     ),
     linear-gradient(180deg, #160d08 0%, #0d0704 100%);
-
   color: #fff4e8;
 }
 
@@ -772,9 +842,7 @@ body.dark-mode .login-panel {
 
 body.dark-mode .login-card {
   background: rgba(30, 18, 12, 0.95);
-
   border: 1px solid rgba(255, 214, 153, 0.18);
-
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
 }
 
@@ -804,9 +872,7 @@ body.dark-mode .card-heading p {
 
 body.dark-mode .input-wrap input {
   background: #26170e;
-
   border-color: rgba(255, 214, 153, 0.25);
-
   color: #fff;
 }
 
@@ -829,9 +895,7 @@ body.dark-mode .field label {
 
 body.dark-mode .utility-btn {
   background: rgba(255, 255, 255, 0.08);
-
   border-color: rgba(255, 255, 255, 0.15);
-
   color: #f59e0b;
 }
 
@@ -839,11 +903,8 @@ body.dark-mode .utility-btn {
 
 body.dark-mode .social-btn {
   background: #21150e;
-
   border-color: rgba(255, 214, 153, 0.2);
-
   color: #fff4e8;
-
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -879,9 +940,11 @@ body.dark-mode .auth-switch p {
 body.dark-mode .stats strong {
   color: white;
 }
+
 body.dark-mode .stats span {
   color: white;
 }
+
 /* Samsung Galaxy S8+ */
 @media screen and (max-width: 480px) {
   body {
@@ -987,7 +1050,7 @@ body.dark-mode .stats span {
   }
 
   .card-heading h3 {
-    font-size: 1.28rem;
+    font-size: 2.5rem;
   }
 
   .card-heading p {

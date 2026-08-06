@@ -1,3 +1,8 @@
+const THEME_KEY = "theme";
+const DIR_KEY = "direction";
+
+applySavedPreferences();
+
 fetch("../components/navbar.html")
   .then((response) => response.text())
   .then((data) => {
@@ -13,6 +18,19 @@ fetch("../components/footer.html")
     initializeBackToTop();
   })
   .catch((error) => console.error("Footer failed to load:", error));
+
+function applySavedPreferences() {
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  const savedDir = localStorage.getItem(DIR_KEY);
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.remove("dark-mode");
+  }
+
+  document.documentElement.dir = savedDir === "rtl" ? "rtl" : "ltr";
+}
 
 function initializeNavbar() {
   const darkToggle = document.getElementById("darkToggle");
@@ -43,20 +61,21 @@ function initializeNavbar() {
     }
   });
 
-  darkToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+  updateDarkIcon();
+  updateRtlIcon();
 
-    const icon = darkToggle.querySelector("i");
-    if (document.body.classList.contains("dark-mode")) {
-      icon.classList.replace("fa-moon", "fa-sun");
-    } else {
-      icon.classList.replace("fa-sun", "fa-moon");
-    }
+  darkToggle.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
+    updateDarkIcon();
   });
 
   rtlToggle.addEventListener("click", () => {
-    document.documentElement.dir =
-      document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+    const newDir = document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+
+    document.documentElement.dir = newDir;
+    localStorage.setItem(DIR_KEY, newDir);
+    updateRtlIcon();
   });
 
   menuToggle.addEventListener("click", () => {
@@ -101,6 +120,32 @@ function initializeNavbar() {
       }
     });
   });
+}
+
+function updateDarkIcon() {
+  const darkToggle = document.getElementById("darkToggle");
+  if (!darkToggle) return;
+
+  const icon = darkToggle.querySelector("i");
+  if (!icon) return;
+
+  if (document.body.classList.contains("dark-mode")) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  } else {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+  }
+}
+
+function updateRtlIcon() {
+  const rtlToggle = document.getElementById("rtlToggle");
+  if (!rtlToggle) return;
+
+  rtlToggle.setAttribute(
+    "aria-label",
+    document.documentElement.dir === "rtl" ? "Switch to LTR" : "Switch to RTL",
+  );
 }
 
 function initializeBackToTop() {

@@ -1,3 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
+:root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --nav-font-size: 1rem;
+  --button-font-size: 1rem;
+  --small-font-size: 0.9rem;
+
+  --hero-font-weight: 500;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 500;
+
+  --line-height: 1.7;
+
+  --primary: #4b2413;
+  --secondary: #f59e0b;
+
+  --section-space-desktop: 88px;
+  --section-space-tablet: 80px;
+  --section-space-mobile: 72px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +41,17 @@ html {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
   overflow-x: hidden;
   background: #fff9f3;
 }
 
 a {
   text-decoration: none;
+  font-family: var(--body-font);
 }
 
 img {
@@ -23,14 +59,9 @@ img {
   max-width: 100%;
 }
 
-:root {
-  --primary: #4b2413;
-  --secondary: #f59e0b;
-}
-
 .blog-editorial-hero {
   position: relative;
-  padding: 80px 100px;
+  padding: var(--section-space-desktop) 100px;
   background: #fff9f3;
   overflow: hidden;
 }
@@ -73,6 +104,9 @@ img {
 .blog-editorial-hero-content {
   max-width: 560px;
 }
+.span{
+  color: var(--secondary);
+}
 
 .blog-editorial-hero-tag {
   display: inline-block;
@@ -80,31 +114,33 @@ img {
   border-radius: 999px;
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 22px;
 }
 
 .blog-editorial-hero-content h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 3rem;
+  font-family: var(--heading-font);
+  font-size: var(--hero-font-size);
   line-height: 1.04;
   color: var(--primary);
   margin-bottom: 22px;
   max-width: 18ch;
-  font-weight: 400;
+  font-weight: var(--hero-font-weight);
 }
 
 .blog-editorial-hero-content p {
-  font-size: 1.02rem;
-  line-height: 1.95;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.72;
   max-width: 58ch;
   margin-bottom: 34px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .blog-editorial-hero-actions {
@@ -119,8 +155,9 @@ img {
   justify-content: center;
   padding: 15px 28px;
   border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   transition: 0.35s ease;
 }
 
@@ -229,8 +266,9 @@ img {
 }
 
 .blog-editorial-badge span {
+  font-family: var(--body-font);
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--primary);
   letter-spacing: 0.4px;
 }
@@ -296,7 +334,7 @@ body.dark-mode .blog-editorial-badge span {
 
 .featured-article-section {
   position: relative;
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fffaf5;
   overflow: hidden;
 }
@@ -344,19 +382,20 @@ body.dark-mode .blog-editorial-badge span {
   border-radius: 999px;
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .featured-article-heading h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .featured-article-layout {
@@ -408,8 +447,9 @@ body.dark-mode .blog-editorial-badge span {
 
 .featured-article-image-badge span {
   color: #ffffff;
+  font-family: var(--body-font);
   font-size: 0.82rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.7px;
   text-transform: uppercase;
 }
@@ -422,28 +462,30 @@ body.dark-mode .blog-editorial-badge span {
   display: inline-block;
   margin-bottom: 16px;
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .featured-article-content h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 2.5rem;
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .featured-article-content p {
+  font-family: var(--body-font);
   font-size: 1rem;
-  line-height: 1.95;
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.72;
   margin-bottom: 24px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .featured-article-meta {
@@ -454,8 +496,9 @@ body.dark-mode .blog-editorial-badge span {
   margin-bottom: 26px;
   color: var(--primary);
   opacity: 0.62;
+  font-family: var(--body-font);
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .featured-article-link {
@@ -465,8 +508,9 @@ body.dark-mode .blog-editorial-badge span {
   padding: 12px 18px;
   background: var(--secondary);
   color: #fff;
-  font-size: 0.98rem;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: var(--button-font-weight);
   text-decoration: none;
   border-radius: 999px;
   transition:
@@ -512,7 +556,7 @@ body.dark-mode .featured-article-layout {
 
 .blog-categories-section {
   position: relative;
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fff9f3;
   overflow: hidden;
 }
@@ -560,30 +604,32 @@ body.dark-mode .featured-article-layout {
   border-radius: 999px;
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .blog-categories-header h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .blog-categories-header p {
   max-width: 62ch;
   margin: 0 auto;
+  font-family: var(--body-font);
   font-size: 1rem;
-  line-height: 1.9;
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.72;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .blog-category-chips {
@@ -603,8 +649,9 @@ body.dark-mode .featured-article-layout {
   background: #ffffff;
   border: 1px solid rgba(75, 36, 19, 0.1);
   color: var(--primary);
+  font-family: var(--body-font);
   font-size: 0.92rem;
-  font-weight: 400;
+  font-weight: 500;
   transition: 0.3s ease;
 }
 
@@ -651,13 +698,15 @@ body.dark-mode .featured-article-layout {
   border-radius: 999px;
   background: rgba(245, 158, 11, 0.1);
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.78rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .blog-category-card h3 {
+  font-family: var(--heading-font);
   font-size: 1.4rem;
   line-height: 1.28;
   color: var(--primary);
@@ -666,21 +715,23 @@ body.dark-mode .featured-article-layout {
 }
 
 .blog-category-card p {
+  font-family: var(--body-font);
   font-size: 0.97rem;
-  line-height: 1.85;
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.72;
   margin-bottom: 20px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .blog-category-card a {
   display: inline-flex;
   align-items: center;
   color: var(--primary);
+  font-family: var(--body-font);
   font-size: 0.94rem;
   margin-right: 2px;
-  font-weight: 400;
+  font-weight: 500;
   transition: 0.3s ease;
 }
 
@@ -729,7 +780,7 @@ body.dark-mode .blog-category-card:hover {
 
 .journal-purpose-section {
   position: relative;
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fffaf5;
   overflow: hidden;
 }
@@ -765,30 +816,32 @@ body.dark-mode .blog-category-card:hover {
   border-radius: 999px;
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .journal-purpose-header h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .journal-purpose-header p {
   max-width: 64ch;
   margin: 0 auto;
+  font-family: var(--body-font);
   font-size: 1rem;
-  line-height: 1.9;
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.72;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .journal-purpose-grid {
@@ -811,6 +864,7 @@ body.dark-mode .blog-category-card:hover {
 }
 
 .journal-purpose-card h3 {
+  font-family: var(--heading-font);
   font-size: 1.45rem;
   line-height: 1.24;
   color: var(--primary);
@@ -819,11 +873,12 @@ body.dark-mode .blog-category-card:hover {
 }
 
 .journal-purpose-card p {
+  font-family: var(--body-font);
   font-size: 0.98rem;
-  line-height: 1.88;
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.72;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .journal-purpose-card.accent {
@@ -871,7 +926,7 @@ body.dark-mode .journal-purpose-card.accent {
 
 .community-story-section {
   position: relative;
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fff9f3;
   overflow: hidden;
 }
@@ -919,30 +974,32 @@ body.dark-mode .journal-purpose-card.accent {
   border-radius: 999px;
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .community-story-header h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .community-story-header p {
   max-width: 63ch;
   margin: 0 auto;
+  font-family: var(--body-font);
   font-size: 1rem;
-  line-height: 1.9;
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.72;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .community-story-layout {
@@ -985,14 +1042,15 @@ body.dark-mode .journal-purpose-card.accent {
   display: inline-block;
   margin-bottom: 16px;
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.82rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .community-story-feature-content h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 2.2rem;
   line-height: 1.14;
   color: var(--primary);
@@ -1001,11 +1059,12 @@ body.dark-mode .journal-purpose-card.accent {
 }
 
 .community-story-feature-content p {
+  font-family: var(--body-font);
   font-size: 0.98rem;
-  line-height: 1.92;
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.72;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .community-story-feature-content p + p {
@@ -1038,18 +1097,20 @@ body.dark-mode .journal-purpose-card.accent {
   display: inline-block;
   margin-bottom: 14px;
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.82rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.1px;
   text-transform: uppercase;
 }
 
 .community-story-note p {
+  font-family: var(--body-font);
   font-size: 0.98rem;
-  line-height: 1.88;
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.72;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .community-story-note.accent {
@@ -1099,7 +1160,7 @@ body.dark-mode .community-story-note.accent {
 
 .newsletter-section {
   position: relative;
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fffdf9;
   overflow: hidden;
 }
@@ -1157,28 +1218,30 @@ body.dark-mode .community-story-note.accent {
   border-radius: 999px;
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
+  font-family: var(--body-font);
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .newsletter-content h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 16px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .newsletter-content p {
+  font-family: var(--body-font);
   font-size: 1rem;
-  line-height: 1.9;
+  line-height: var(--line-height);
   color: var(--primary);
   opacity: 0.74;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .newsletter-form {
@@ -1201,10 +1264,10 @@ body.dark-mode .community-story-note.accent {
   outline: none;
   background: transparent;
   color: var(--primary);
-  font-size: 0.96rem;
+  font-family: var(--body-font);
+  font-size: 1rem;
   padding: 0 10px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .newsletter-input-wrap input::placeholder {
@@ -1219,8 +1282,9 @@ body.dark-mode .community-story-note.accent {
   border-radius: 999px;
   background: var(--secondary);
   color: #ffffff;
-  font-size: 0.92rem;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: var(--button-font-weight);
   transition: 0.3s ease;
 }
 
@@ -1231,18 +1295,20 @@ body.dark-mode .community-story-note.accent {
 
 .newsletter-note {
   margin-top: 14px;
+  font-family: var(--body-font);
   font-size: 0.9rem;
   line-height: 1.7;
   color: var(--primary);
   opacity: 0.62;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .newsletter-message {
   min-height: 24px;
   margin-top: 12px;
+  font-family: var(--body-font);
   font-size: 0.92rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--primary);
 }
 
@@ -1295,7 +1361,7 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
 
 @media (max-width: 480px) {
   section {
-    padding: 80px 20px !important;
+    padding: var(--section-space-mobile) 20px !important;
   }
 
   .blog-editorial-hero {
@@ -1314,13 +1380,13 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
   }
 
   .blog-editorial-hero-content h1 {
-    font-size: 2.6rem;
+    font-size: 3.5rem;
     max-width: 100%;
   }
 
   .blog-editorial-hero-content p {
     max-width: 100%;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .blog-editorial-hero-actions {
@@ -1433,8 +1499,12 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
     width: 100%;
   }
 
-  h2 {
-    font-size: 2.2rem !important;
+  .featured-article-heading h2,
+  .blog-categories-header h2,
+  .journal-purpose-header h2,
+  .community-story-header h2,
+  .newsletter-content h2 {
+    font-size: var(--section-heading-font-size) !important;
   }
 }
 
@@ -1444,7 +1514,7 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
 
 @media (min-width: 768px) and (max-width: 820px) {
   section {
-    padding: 90px 50px !important;
+    padding: var(--section-space-tablet) 50px !important;
   }
 
   .blog-editorial-hero {
@@ -1512,7 +1582,7 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
 
 @media (min-width: 821px) and (max-width: 1024px) {
   section {
-    padding: 100px 70px !important;
+    padding: 90px 70px !important;
   }
 
   .blog-editorial-hero {
@@ -1560,7 +1630,7 @@ body.dark-mode .newsletter-input-wrap input::placeholder {
   }
 
   .blog-editorial-hero-content h1 {
-    font-size: 3rem;
+    font-size: var(--hero-font-size);
   }
 
   .featured-article-image {

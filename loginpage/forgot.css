@@ -1,4 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
 :root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --small-font-size: 0.95rem;
+  --nav-font-size: 1rem;
+  --button-font-size: 1rem;
+
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+  --line-height: 1.7;
+
   --primary: #4b2413;
   --secondary: #f59e0b;
   --bg: #fffaf3;
@@ -20,271 +42,10 @@ body {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
-  background:
-    radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 22%),
-    linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
-  color: var(--text);
-}
-
-a {
-  text-decoration: none;
-}
-
-.forgot-shell {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 20px;
-}
-
-.forgot-card {
-  width: min(460px, 100%);
-  background: rgba(255, 253, 249, 0.97);
-  border: 1px solid var(--border);
-  border-radius: 32px;
-  box-shadow: 0 18px 40px rgba(75, 36, 19, 0.1);
-  padding: 28px 24px 24px;
-}
-
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  text-align: left;
-  margin-bottom: 12px;
-  flex-shrink: 0;
-}
-
-.logo-wrap img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  display: block;
-  margin: 0;
-}
-
-.logo-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.logo-text {
-  margin: 0;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.36rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.board,
-.brew {
-  color: var(--primary);
-}
-
-.amp {
-  color: var(--secondary);
-  margin: 0 4px;
-}
-
-.tagline {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 6px;
-}
-
-.tagline .line {
-  width: 18px;
-  height: 2px;
-  background: var(--secondary);
-  border-radius: 999px;
-}
-
-.tagline p {
-  margin: 0;
-  font-size: 0.4rem;
-  letter-spacing: 1.2px;
-  font-weight: 700;
-  color: #5a3a28;
-}
-
-.sub-tagline {
-  margin: 3px 0 0;
-  font-size: 0.4rem;
-  font-weight: 700;
-  letter-spacing: 0.9px;
-  margin-left: 25px;
-  color: #5a3a28;
-  font-family: Poppins, sans-serif;
-}
-
-.card-copy {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.card-copy i {
-  font-size: 2rem;
-  color: var(--secondary);
-  margin-bottom: 10px;
-}
-
-.card-copy h2 {
-  margin: 0;
-  font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
-  color: var(--primary);
-}
-
-.card-copy p {
-  margin: 8px 0 0;
-  color: var(--muted);
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-.forgot-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.field label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.11em;
-  color: rgba(75, 36, 19, 0.88);
-}
-
-.input-wrap {
-  position: relative;
-}
-
-.input-wrap i {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgba(75, 36, 19, 0.5);
-}
-
-.input-wrap input {
-  width: 100%;
-  height: 46px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: var(--cream);
-  outline: none;
-  padding: 0 16px 0 44px;
-  font-size: 14px;
-  color: var(--text);
-}
-
-.input-wrap input::placeholder {
-  color: rgba(43, 27, 18, 0.42);
-}
-
-.input-wrap input:focus {
-  border-color: rgba(245, 158, 11, 0.82);
-  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.14);
-}
-
-.reset-btn {
-  width: 100%;
-  min-height: 46px;
-  border: none;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #e5aa33 0%, #f59e0b 52%, #ffd77b 100%);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  box-shadow: 0 16px 30px rgba(245, 158, 11, 0.22);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.reset-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 34px rgba(245, 158, 11, 0.28);
-}
-
-.links {
-  margin-top: 18px;
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 0.9rem;
-}
-
-.links a {
-  color: var(--primary);
-  font-weight: 700;
-}
-
-@media (max-width: 480px) {
-  .forgot-shell {
-    padding: 14px;
-  }
-
-  .forgot-card {
-    padding: 22px 18px 18px;
-    border-radius: 24px;
-  }
-
-  .logo-wrap img {
-    width: 44px;
-    height: 44px;
-  }
-
-  .logo-content h1 {
-    font-size: 1.3rem;
-  }
-
-  .card-copy h2 {
-    font-size: 1.55rem;
-  }
-
-  .links {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-:root {
-  --primary: #4b2413;
-  --secondary: #f59e0b;
-  --bg: #fffaf3;
-  --text: #2b1b12;
-  --border: #ead9c3;
-  --cream: #fff8ef;
-  --muted: rgba(43, 27, 18, 0.72);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  width: 100%;
-  min-height: 100%;
-}
-
-body {
-  font-family: Poppins, sans-serif;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
   background:
     radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 22%),
     linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
@@ -296,13 +57,33 @@ body {
 
 a {
   text-decoration: none;
+  font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo-text {
+  font-family: var(--heading-font);
+}
+
+p,
+span,
+label,
+input,
+button,
+small {
+  font-family: var(--body-font);
 }
 
 .forgot-shell {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 20px;
+  padding: 16px;
   position: relative;
 }
 
@@ -370,9 +151,8 @@ a {
 
 .logo-text {
   margin: 0;
-  font-family: "Playfair Display", serif;
   font-size: 1.36rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -404,23 +184,22 @@ a {
   margin: 0;
   font-size: 0.4rem;
   letter-spacing: 1.2px;
-  font-weight: 700;
+  font-weight: 600;
   color: #5a3a28;
 }
 
 .sub-tagline {
   margin: 3px 0 0;
-  font-size: 0.4rem;
-  font-weight: 700;
-  letter-spacing: 0.9px;
   margin-left: 25px;
+  font-size: 0.4rem;
+  font-weight: 600;
+  letter-spacing: 0.9px;
   color: #5a3a28;
-  font-family: Poppins, sans-serif;
 }
 
 .card-copy {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .card-copy i {
@@ -431,16 +210,16 @@ a {
 
 .card-copy h2 {
   margin: 0;
-  font-family: "Playfair Display", serif;
   font-size: 1.8rem;
+  font-weight: 400;
   color: var(--primary);
 }
 
 .card-copy p {
   margin: 8px 0 0;
   color: var(--muted);
-  line-height: 1.6;
-  font-size: 0.95rem;
+  line-height: var(--line-height);
+  font-size: var(--body-font-size);
 }
 
 .forgot-form {
@@ -457,7 +236,7 @@ a {
 
 .field label {
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.11em;
   color: rgba(75, 36, 19, 0.88);
@@ -483,7 +262,8 @@ a {
   background: var(--cream);
   outline: none;
   padding: 0 16px 0 44px;
-  font-size: 14px;
+  font-size: var(--body-font-size);
+  font-weight: 400;
   color: var(--text);
 }
 
@@ -503,8 +283,8 @@ a {
   border-radius: 16px;
   background: linear-gradient(135deg, #e5aa33 0%, #f59e0b 52%, #ffd77b 100%);
   color: #fff;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   letter-spacing: 0.06em;
   cursor: pointer;
   box-shadow: 0 16px 30px rgba(245, 158, 11, 0.22);
@@ -519,7 +299,7 @@ a {
 }
 
 .links {
-  margin-top: 18px;
+  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -528,7 +308,7 @@ a {
 
 .links a {
   color: var(--primary);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 html[dir="rtl"] {
@@ -552,10 +332,10 @@ html[dir="rtl"] .input-wrap input {
 html[dir="rtl"] .links {
   flex-direction: row-reverse;
 }
+
 /* ===================================
    DARK MODE
 =================================== */
-
 body.dark-mode {
   background:
     radial-gradient(circle at top, rgba(245, 158, 11, 0.12), transparent 22%),
@@ -566,7 +346,6 @@ body.dark-mode {
 /* ===================================
    CARD
 =================================== */
-
 body.dark-mode .forgot-card {
   background: rgba(30, 18, 12, 0.95);
   border: 1px solid rgba(255, 214, 153, 0.18);
@@ -576,7 +355,6 @@ body.dark-mode .forgot-card {
 /* ===================================
    UTILITY BUTTON
 =================================== */
-
 body.dark-mode .utility-btn {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.15);
@@ -590,7 +368,6 @@ body.dark-mode .utility-btn:hover {
 /* ===================================
    LOGO
 =================================== */
-
 body.dark-mode .board,
 body.dark-mode .brew {
   color: #fff4e8;
@@ -608,7 +385,6 @@ body.dark-mode .tagline .line {
 /* ===================================
    ICON
 =================================== */
-
 body.dark-mode .card-copy i {
   color: var(--secondary);
 }
@@ -616,7 +392,6 @@ body.dark-mode .card-copy i {
 /* ===================================
    TEXT
 =================================== */
-
 body.dark-mode .card-copy h2 {
   color: #fff4e8;
 }
@@ -628,7 +403,6 @@ body.dark-mode .card-copy p {
 /* ===================================
    LABELS
 =================================== */
-
 body.dark-mode .field label {
   color: rgba(255, 220, 160, 0.82);
 }
@@ -636,7 +410,6 @@ body.dark-mode .field label {
 /* ===================================
    INPUTS
 =================================== */
-
 body.dark-mode .input-wrap input {
   background: #26170e;
   border-color: rgba(255, 214, 153, 0.25);
@@ -659,7 +432,6 @@ body.dark-mode .input-wrap i {
 /* ===================================
    BUTTON
 =================================== */
-
 body.dark-mode .reset-btn {
   background: linear-gradient(135deg, #d9921f 0%, #f59e0b 55%, #ffc65c 100%);
   color: white;
@@ -673,7 +445,6 @@ body.dark-mode .reset-btn:hover {
 /* ===================================
    LINKS
 =================================== */
-
 body.dark-mode .links a {
   color: #ffc65c;
 }
@@ -685,10 +456,10 @@ body.dark-mode .links a:hover {
 /* ===================================
    RTL SUPPORT
 =================================== */
-
 body.dark-mode html[dir="rtl"] .input-wrap input {
   color: #fff4e8;
 }
+
 /* Samsung Galaxy S8+ */
 @media screen and (max-width: 480px) {
   .forgot-shell {
@@ -759,12 +530,12 @@ body.dark-mode html[dir="rtl"] .input-wrap input {
 
   .input-wrap input {
     height: 44px;
-    font-size: 13px;
+    font-size: 0.95rem;
   }
 
   .reset-btn {
     min-height: 44px;
-    font-size: 14px;
+    font-size: 0.95rem;
   }
 
   .links {

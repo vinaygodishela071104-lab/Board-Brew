@@ -1,10 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
 :root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --paragraph-font-size: 1rem;
+  --nav-font-size: 1rem;
+  --button-font-size: 1rem;
+  --tag-font-size: 0.9rem;
+
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+
+  --line-height: 1.7;
+  --heading-line-height: 1.15;
+  --hero-line-height: 1.08;
+  --letter-spacing: 0.01em;
+
   --primary: #4b2413;
   --secondary: #f59e0b;
   --white: #ffffff;
@@ -15,6 +42,10 @@
   --border-light: rgba(255, 255, 255, 0.18);
   --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.12);
   --shadow-hover: 0 28px 70px rgba(0, 0, 0, 0.18);
+
+  --section-space-desktop: 96px;
+  --section-space-tablet: 88px;
+  --section-space-mobile: 72px;
 }
 
 html {
@@ -22,18 +53,34 @@ html {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
   background: var(--bg-soft);
   overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
+  font-family: var(--body-font);
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+p,
+span,
+li,
+button,
+input,
+textarea,
+select,
+label {
+  font-family: var(--body-font);
 }
 
 .services-hero {
@@ -81,19 +128,19 @@ img {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid var(--border-light);
   color: #ffd27a;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--tag-font-size);
+  font-weight: 500;
   letter-spacing: 0.5px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .services-hero-content h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 3rem;
-  line-height: 1.08;
+  font-family: var(--heading-font);
+  font-size: var(--hero-font-size);
+  line-height: var(--hero-line-height);
   color: var(--white);
   margin-bottom: 24px;
-  font-weight: 400;
+  font-weight: var(--hero-font-weight);
 }
 
 .services-hero-content span {
@@ -102,11 +149,11 @@ img {
 
 .services-hero-content p {
   max-width: 650px;
-  font-size: 18px;
-  line-height: 1.9;
+  font-size: var(--paragraph-font-size);
+  line-height: var(--line-height);
   color: var(--text-light);
   margin-bottom: 36px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .services-hero-buttons {
@@ -124,10 +171,10 @@ img {
   min-width: 190px;
   padding: 16px 34px;
   border-radius: 999px;
-  font-size: 15px;
-  font-weight: 400;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   transition: all 0.35s ease;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .hero-btn-primary {
@@ -169,11 +216,11 @@ img {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #f6efe9;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 0.95rem;
+  font-weight: 500;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .services-hero-points i {
@@ -246,7 +293,7 @@ body.dark-mode .services-hero-points i {
 }
 
 .our-services-section {
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fffaf4;
   position: relative;
   overflow: hidden;
@@ -283,28 +330,31 @@ body.dark-mode .services-hero-points i {
   border-radius: 999px;
   background: #fff1dc;
   color: #d88a07;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: var(--tag-font-size);
+  font-weight: 500;
   margin-bottom: 18px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .our-services-intro h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.15;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
+  line-height: var(--heading-line-height);
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
+}
+.span {
+  color: var(--secondary);
 }
 
 .our-services-intro p {
-  font-size: 1.02rem;
-  line-height: 1.9;
+  font-size: var(--paragraph-font-size);
+  line-height: var(--line-height);
   color: #666;
   max-width: 680px;
   margin: 0 auto;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .our-services-grid {
@@ -378,19 +428,19 @@ body.dark-mode .services-hero-points i {
   line-height: 1.35;
   color: var(--primary);
   margin-bottom: 14px;
-  font-weight: 400;
-  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-family: var(--heading-font);
 }
 
 .service-card p {
   position: relative;
   z-index: 1;
-  font-size: 0.97rem;
-  line-height: 1.85;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6b6b6b;
   margin-bottom: 22px;
   flex-grow: 1;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .service-link {
@@ -400,10 +450,10 @@ body.dark-mode .services-hero-points i {
   align-items: center;
   gap: 8px;
   color: var(--primary);
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
   transition: color 0.3s ease;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .service-link::after {
@@ -475,7 +525,7 @@ body.dark-mode .service-card:hover .service-link {
 }
 
 .how-it-works-section {
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fff9f3;
   position: relative;
   overflow: hidden;
@@ -512,28 +562,28 @@ body.dark-mode .service-card:hover .service-link {
   border-radius: 999px;
   background: #fff1dc;
   color: #d88a07;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: var(--tag-font-size);
+  font-weight: 500;
   margin-bottom: 18px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .how-it-works-intro h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.15;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
+  line-height: var(--heading-line-height);
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .how-it-works-intro p {
-  font-size: 1.02rem;
-  line-height: 1.9;
+  font-size: var(--paragraph-font-size);
+  line-height: var(--line-height);
   color: #666;
   max-width: 680px;
   margin: 0 auto;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .timeline-scroll {
@@ -607,7 +657,7 @@ body.dark-mode .service-card:hover .service-link {
 }
 
 .timeline-marker span {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--secondary);
@@ -660,17 +710,17 @@ body.dark-mode .service-card:hover .service-link {
   line-height: 1.3;
   color: var(--primary);
   margin-bottom: 14px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--heading-font);
+  font-weight: 500;
 }
 
 .timeline-card p {
   position: relative;
   z-index: 1;
-  font-size: 0.97rem;
-  line-height: 1.85;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6b6b6b;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 /* =========================
@@ -732,7 +782,7 @@ body.dark-mode .timeline-card p {
 }
 
 .game-library-section {
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fffaf4;
   position: relative;
   overflow: hidden;
@@ -805,27 +855,27 @@ body.dark-mode .timeline-card p {
   border-radius: 999px;
   background: #fff1dc;
   color: #d88a07;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: var(--tag-font-size);
+  font-weight: 500;
   margin-bottom: 18px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .game-library-content h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .game-library-lead {
-  font-size: 1.02rem;
-  line-height: 1.95;
+  font-size: var(--paragraph-font-size);
+  line-height: var(--line-height);
   color: #666;
   margin-bottom: 34px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .game-library-lines {
@@ -850,18 +900,18 @@ body.dark-mode .timeline-card p {
 .library-line-title {
   display: inline-block;
   font-size: 1.18rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--primary);
   margin-bottom: 8px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
 }
 
 .library-line p {
-  font-size: 0.96rem;
-  line-height: 1.85;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6d6d6d;
   max-width: 430px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 /* =========================
@@ -902,7 +952,7 @@ body.dark-mode .library-line p {
 }
 
 .private-bookings-section {
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fff9f3;
   position: relative;
   overflow: hidden;
@@ -944,27 +994,27 @@ body.dark-mode .library-line p {
   border-radius: 999px;
   background: #fff1dc;
   color: #d88a07;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: var(--tag-font-size);
+  font-weight: 500;
   margin-bottom: 18px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .private-bookings-content h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .private-bookings-lead {
-  font-size: 1.02rem;
-  line-height: 1.95;
+  font-size: var(--paragraph-font-size);
+  line-height: var(--line-height);
   color: #666;
   margin-bottom: 34px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .private-bookings-details {
@@ -982,20 +1032,20 @@ body.dark-mode .library-line p {
 .booking-detail-label {
   display: inline-block;
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--secondary);
   margin-bottom: 8px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .booking-detail-row p {
-  font-size: 0.96rem;
-  line-height: 1.85;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6c6c6c;
   max-width: 480px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .private-bookings-actions {
@@ -1012,10 +1062,10 @@ body.dark-mode .library-line p {
   min-width: 190px;
   padding: 15px 30px;
   border-radius: 999px;
-  font-size: 15px;
-  font-weight: 400;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   transition: all 0.35s ease;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .booking-btn-primary {
@@ -1121,7 +1171,7 @@ body.dark-mode .booking-btn-outline:hover {
 }
 
 .season-community-section.alt-layout {
-  padding: 110px 120px;
+  padding: var(--section-space-desktop) 120px;
   background: #fffaf5;
   position: relative;
   overflow: hidden;
@@ -1170,28 +1220,28 @@ body.dark-mode .booking-btn-outline:hover {
   border-radius: 999px;
   background: #fff1dc;
   color: #d88a07;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: var(--tag-font-size);
+  font-weight: 500;
   margin-bottom: 18px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .season-community-header h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.12;
   color: var(--primary);
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .season-community-header p {
-  font-size: 1.02rem;
-  line-height: 1.95;
+  font-size: var(--paragraph-font-size);
+  line-height: var(--line-height);
   color: #666;
   max-width: 680px;
   margin: 0 auto;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .season-community-editorial {
@@ -1303,12 +1353,12 @@ body.dark-mode .booking-btn-outline:hover {
   z-index: 2;
   display: inline-block;
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   color: var(--secondary);
   margin-bottom: 18px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .editorial-main h3,
@@ -1319,8 +1369,8 @@ body.dark-mode .booking-btn-outline:hover {
   line-height: 1.22;
   color: var(--primary);
   margin-bottom: 16px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--heading-font);
+  font-weight: 500;
 }
 
 .editorial-side h3 {
@@ -1332,11 +1382,11 @@ body.dark-mode .booking-btn-outline:hover {
 .editorial-side p {
   position: relative;
   z-index: 2;
-  font-size: 1rem;
-  line-height: 1.9;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6a6a6a;
   max-width: 56ch;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .editorial-main,
@@ -1410,91 +1460,119 @@ body.dark-mode .editorial-side:hover {
   border-color: rgba(245, 179, 53, 0.26);
   box-shadow: none;
 }
+/* ==========================
+   Simple Cafe CTA Section
+========================== */
 
 .simple-cafe-cta {
-  background: url("/images/cta.jpg") center center / cover no-repeat;
+  position: relative;
+  margin: 0 120px 96px;
+  height: 400px;
   border-radius: 34px;
   overflow: hidden;
-  height: 400px;
-  margin: 0 120px 110px;
-  position: relative;
+
+  background: url("/images/cta.jpg") center center / cover no-repeat;
 }
 
 .simple-cafe-cta-overlay {
-  background: linear-gradient(
-    90deg,
-    rgba(32, 18, 10, 0.72),
-    rgba(32, 18, 10, 0.5)
-  );
-  padding: 110px 80px;
-  min-height: 100%;
+  position: absolute;
+  inset: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 70px 80px;
   text-align: center;
+
+  background: linear-gradient(
+    90deg,
+    rgba(32, 18, 10, 0.7) 0%,
+    rgba(32, 18, 10, 0.55) 45%,
+    rgba(32, 18, 10, 0.7) 100%
+  );
 }
 
 .simple-cafe-cta-content {
-  max-width: 620px;
+  width: 100%;
+  max-width: 680px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   margin: 0 auto;
 }
 
 .simple-cafe-cta-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 10px 18px;
+  margin-bottom: 18px;
+
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+
   color: #fff4df;
+  font-family: var(--body-font);
   font-size: 0.88rem;
-  font-weight: 400;
-  backdrop-filter: blur(8px);
-  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
 .simple-cafe-cta-content h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.12;
+  margin-bottom: 18px;
+
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
+  font-weight: var(--section-heading-font-weight);
+  line-height: 1.15;
   color: #ffffff;
-  font-weight: 400;
+  text-align: center;
 }
 
 .simple-cafe-cta-content p {
-  font-size: 1rem;
-  line-height: 1.85;
-  color: rgba(255, 255, 255, 0.88);
-  margin-bottom: 28px;
   max-width: 48ch;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "Times New Roman", Times, serif;
+  margin: 0 auto 32px;
+
+  font-family: var(--body-font);
+  font-size: var(--paragraph-font-size);
+  line-height: var(--line-height);
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
 }
 
 .simple-cafe-cta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 52px;
-  padding: 14px 26px;
+
+  min-width: 180px;
+  min-height: 54px;
+  padding: 14px 30px;
+
   border-radius: 999px;
   background: #f5b335;
+
   color: #1d1d1d;
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 400;
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease;
-  font-family: "Times New Roman", Times, serif;
+
+  font-family: var(--body-font);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+
+  transition: all 0.35s ease;
 }
 
 .simple-cafe-cta-btn:hover {
-  transform: translateY(-3px);
   background: #ffc04a;
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(245, 179, 53, 0.28);
 }
-
 /* =========================
    DARK MODE
 ========================= */
@@ -1533,16 +1611,21 @@ body.dark-mode .simple-cafe-cta-tag {
     padding: 8px 14px;
   }
 
-  .services-hero-content h1,
+  .services-hero-content h1 {
+    font-size: var(--hero-font-size);
+    line-height: 1.18;
+    font-weight: var(--hero-font-weight);
+  }
+
   .our-services-intro h2,
   .how-it-works-intro h2,
   .game-library-content h2,
   .private-bookings-content h2,
   .season-community-header h2,
   .simple-cafe-cta-content h2 {
-    font-size: 2rem;
+    font-size: var(--section-heading-font-size);
     line-height: 1.18;
-    font-weight: 400;
+    font-weight: var(--section-heading-font-weight);
   }
 
   .services-hero-content p,
@@ -1587,7 +1670,7 @@ body.dark-mode .simple-cafe-cta-tag {
   .game-library-section,
   .private-bookings-section,
   .season-community-section.alt-layout {
-    padding: 72px 16px;
+    padding: var(--section-space-mobile) 16px;
   }
 
   .our-services-grid,
@@ -1612,7 +1695,7 @@ body.dark-mode .simple-cafe-cta-tag {
   .cafe-cta-feature h3 {
     font-size: 1.15rem;
     line-height: 1.3;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .service-card p,
@@ -1662,7 +1745,7 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 
   .simple-cafe-cta {
-    margin: 0 16px 72px;
+    margin: 0 16px var(--section-space-mobile);
     border-radius: 24px;
   }
 
@@ -1681,13 +1764,13 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 
   .services-hero-content h1 {
-    font-size: 3rem;
+    font-size: var(--hero-font-size);
     line-height: 1.12;
-    font-weight: 400;
+    font-weight: var(--hero-font-weight);
   }
 
   .services-hero-content p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.8;
   }
 
@@ -1696,7 +1779,7 @@ body.dark-mode .simple-cafe-cta-tag {
   .game-library-section,
   .private-bookings-section,
   .season-community-section.alt-layout {
-    padding: 88px 32px;
+    padding: var(--section-space-tablet) 32px;
   }
 
   .our-services-intro h2,
@@ -1705,8 +1788,8 @@ body.dark-mode .simple-cafe-cta-tag {
   .private-bookings-content h2,
   .season-community-header h2,
   .simple-cafe-cta-content h2 {
-    font-size: 2.45rem;
-    font-weight: 400;
+    font-size: var(--section-heading-font-size);
+    font-weight: var(--section-heading-font-weight);
   }
 
   .game-library-content,
@@ -1746,7 +1829,7 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 
   .simple-cafe-cta {
-    margin: 0 32px 88px;
+    margin: 0 32px var(--section-space-tablet);
   }
 
   .simple-cafe-cta-overlay {
@@ -1764,12 +1847,12 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 
   .services-hero-content h1 {
-    font-size: 3rem;
-    font-weight: 400;
+    font-size: var(--hero-font-size);
+    font-weight: var(--hero-font-weight);
   }
 
   .services-hero-content p {
-    font-size: 17px;
+    font-size: 1rem;
   }
 
   .our-services-section,
@@ -1825,8 +1908,8 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 
   .simple-cafe-cta-content h2 {
-    font-size: 2.6rem;
-    font-weight: 400;
+    font-size: var(--section-heading-font-size);
+    font-weight: var(--section-heading-font-weight);
   }
 }
 
@@ -1841,11 +1924,11 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 
   .services-hero-content h1 {
-    font-size: 3rem;
+    font-size: var(--hero-font-size);
   }
 
   .services-hero-content p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.75;
     margin-bottom: 24px;
   }

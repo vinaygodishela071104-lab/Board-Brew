@@ -1,3 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
+:root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --nav-font-size: 1rem;
+  --button-font-size: 1rem;
+
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 500;
+
+  --line-height: 1.7;
+
+  --primary: #4b2413;
+  --secondary: #f59e0b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +37,10 @@ html {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
   overflow-x: hidden;
   background: #fff9f3;
   color: #2d2d2d;
@@ -20,16 +49,12 @@ body {
 
 a {
   text-decoration: none;
+  font-family: var(--body-font);
 }
 
 img {
   display: block;
   max-width: 100%;
-}
-
-:root {
-  --primary: #4b2413;
-  --secondary: #f59e0b;
 }
 
 .section-tag,
@@ -51,65 +76,92 @@ img {
   border: 1px solid rgba(245, 158, 11, 0.2);
   border-radius: 50px;
   color: var(--secondary);
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 0.875rem;
+  font-weight: 500;
   letter-spacing: 0.4px;
   margin-bottom: 12px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
+  line-height: 1.4;
 }
 
 .hero2 {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 110px 6% 60px;
+  padding: 110px 6% 52px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 48px;
-  overflow: clip;
-  background: #fffdf8;
+  overflow: hidden;
+  background: url("/images/banner7.avif") center center / cover no-repeat;
 }
 
+/* dark overlay */
 .hero2::before {
   content: "";
   position: absolute;
-  width: 420px;
-  height: 420px;
-  background: rgba(245, 158, 11, 0.12);
-  filter: blur(120px);
-  border-radius: 50%;
-  left: -150px;
-  top: -150px;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 10, 6, 0.82) 0%,
+    rgba(18, 10, 6, 0.62) 40%,
+    rgba(18, 10, 6, 0.4) 100%
+  );
+  z-index: 1;
 }
 
+/* soft extra tint for premium depth */
 .hero2::after {
   content: "";
   position: absolute;
-  width: 360px;
-  height: 360px;
-  background: rgba(75, 36, 19, 0.05);
-  filter: blur(120px);
-  border-radius: 50%;
-  right: -120px;
-  bottom: -100px;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.14);
+  z-index: 1;
 }
 
-.hero-left {
+.hero-left,
+.hero-right {
   flex: 1;
   position: relative;
   z-index: 2;
 }
 
+.hero-left {
+  max-width: 720px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-tag i {
+  color: #f6c56f;
+  font-size: 0.95rem;
+}
+
 .hero-left h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(2.8rem, 4vw, 3.6rem);
+  font-family: var(--heading-font);
+  font-size: var(--hero-font-size);
   line-height: 1.08;
-  color: var(--primary);
-  margin-top: 8px;
+  color: #ffffff;
+  margin-top: 16px;
   margin-bottom: 18px;
-  font-weight: 400;
-  letter-spacing: -0.5px;
+  font-weight: var(--hero-font-weight);
+  letter-spacing: -0.02em;
 }
 
 .hero-left h1 span {
@@ -118,12 +170,12 @@ img {
 
 .hero-left p {
   max-width: 620px;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #666;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
+  color: rgba(255, 255, 255, 0.88);
   margin-bottom: 28px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
 }
 
 .hero-buttons {
@@ -141,52 +193,70 @@ img {
   gap: 10px;
   padding: 14px 22px;
   border-radius: 60px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   white-space: nowrap;
   width: fit-content;
   transition: all 0.35s ease;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
+  line-height: 1.2;
+  text-decoration: none;
 }
 
 .btn-primary {
-  background: var(--secondary);
-  color: #fff;
+  background: #c8862f;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(200, 134, 47, 0.28);
 }
 
 .btn-primary:hover {
   transform: translateY(-4px);
+  background: #d89438;
 }
 
 .btn-outline {
-  background: #fff;
-  color: var(--primary);
-  border: 1px solid rgba(75, 36, 19, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .btn-outline:hover {
-  background: var(--primary);
-  color: #fff;
+  background: #ffffff;
+  color: #2b1a12;
   transform: translateY(-4px);
 }
 
 .hero-right {
-  flex: 1;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
 }
 
 .blob-image {
+  position: relative;
   width: min(470px, 100%);
   aspect-ratio: 1 / 1;
   height: auto;
   overflow: hidden;
   border-radius: 42% 58% 48% 52% / 22% 30% 70% 78%;
-  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.28);
   animation: float 4s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.blob-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.24) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 @keyframes float {
@@ -205,13 +275,12 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.5s;
+  transition: transform 0.5s ease;
 }
 
 .blob-image:hover img {
   transform: scale(1.06);
 }
-
 .coffee-cup {
   position: absolute;
   width: 220px;
@@ -221,7 +290,7 @@ img {
 }
 
 .inside-board-brew {
-  padding: 90px 6%;
+  padding: 82px 6%;
   background: #fffaf4;
   overflow: clip;
 }
@@ -242,6 +311,7 @@ img {
 .inside-main-image {
   position: relative;
   overflow: hidden;
+  height: 500px;
   border-radius: 28px;
   box-shadow: 0 24px 55px rgba(75, 36, 19, 0.12);
 }
@@ -258,7 +328,7 @@ img {
 
 .inside-main-image img {
   width: 100%;
-  height: 620px;
+  height: 500px;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
@@ -278,10 +348,18 @@ img {
   box-shadow: 0 16px 30px rgba(75, 36, 19, 0.08);
   transition: transform 0.35s ease;
   z-index: 4;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.45);
 }
 
 .inside-visual:hover .inside-floating-note {
   transform: translateY(-5px);
+}
+.span {
+  color: var(--secondary);
+}
+body.dark-mode .span {
+  color: var(--secondary);
 }
 
 .note-one {
@@ -296,17 +374,18 @@ img {
 
 .inside-floating-note span {
   display: block;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--secondary);
   margin-bottom: 6px;
+  font-family: var(--body-font);
 }
 
 .inside-floating-note h4 {
   font-size: 1.05rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   color: var(--primary);
   line-height: 1.2;
   font-weight: 400;
@@ -317,21 +396,22 @@ img {
 }
 
 .inside-content h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.08;
   color: var(--primary);
   margin-bottom: 18px;
   max-width: 560px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .inside-text {
-  font-size: 0.98rem;
-  line-height: 1.8;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6b5a4c;
   margin-bottom: 24px;
   max-width: 560px;
+  font-family: var(--body-font);
 }
 
 .inside-columns {
@@ -341,23 +421,60 @@ img {
   margin-bottom: 24px;
 }
 
+.inside-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 4px;
+}
+
 .inside-item {
-  padding: 18px 0 0;
-  border-top: 1px solid rgba(75, 36, 19, 0.12);
+  background: #ffffff;
+  padding: 08px 24px;
+  border: 1px solid rgba(75, 36, 19, 0.1);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 24px rgba(75, 36, 19, 0.06),
+    0 2px 8px rgba(75, 36, 19, 0.04);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.inside-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(75, 36, 19, 0.18);
+  box-shadow:
+    0 18px 40px rgba(75, 36, 19, 0.1),
+    0 6px 16px rgba(75, 36, 19, 0.06);
 }
 
 .inside-item h3 {
-  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 12px;
   font-size: 1.2rem;
   color: var(--primary);
+}
+
+.inside-item p {
+  margin: 0;
+  color: #6b625d;
+  line-height: 1.7;
+}
+.inside-item h3 {
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  color: var(--secondary);
   margin-bottom: 10px;
   font-weight: 400;
+  line-height: 1.25;
 }
 
 .inside-item p {
   font-size: 0.92rem;
-  line-height: 1.75;
+  line-height: var(--line-height);
   color: #735f51;
+  font-family: var(--body-font);
 }
 
 .inside-footer-line {
@@ -377,13 +494,14 @@ img {
 
 .inside-footer-line p {
   font-size: 0.92rem;
-  line-height: 1.7;
+  line-height: var(--line-height);
   color: #7b6859;
   font-style: italic;
+  font-family: var(--body-font);
 }
 
 .pick-mood-section {
-  padding: 90px 6%;
+  padding: 82px 6%;
   background: #fffdf8;
   overflow: clip;
 }
@@ -403,27 +521,29 @@ img {
 }
 
 .pick-mood-intro h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(2rem, 2.8vw, 2.75rem);
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.08;
   color: var(--primary);
   margin-bottom: 16px;
   max-width: 500px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .mood-text {
   max-width: 480px;
-  font-size: 0.98rem;
-  line-height: 1.8;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6f5c4e;
   text-align: justify;
+  font-family: var(--body-font);
 }
 
 .mood-rail {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  margin-top: 25px;
 }
 
 .mood-band {
@@ -445,7 +565,7 @@ img {
 }
 
 .mood-number {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 2.4rem;
   line-height: 1;
   color: rgba(245, 158, 11, 0.9);
@@ -476,7 +596,7 @@ img {
 }
 
 .mood-copy h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.35rem;
   color: var(--primary);
   margin-bottom: 10px;
@@ -487,12 +607,13 @@ img {
 .mood-copy p {
   max-width: 620px;
   font-size: 0.94rem;
-  line-height: 1.75;
+  line-height: var(--line-height);
   color: #735f51;
+  font-family: var(--body-font);
 }
 
 .signature-drinks-showcase {
-  padding: 90px 6%;
+  padding: 82px 6%;
   background: #fff8f1;
   overflow: clip;
 }
@@ -514,12 +635,12 @@ img {
 .brew-club-left h2,
 .hall-frames-left h2,
 .matchmaker-left h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(2rem, 2.8vw, 2.75rem);
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.08;
   color: var(--primary);
   margin-bottom: 14px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .drinks-heading p,
@@ -528,9 +649,10 @@ img {
 .brew-club-desc,
 .hall-desc,
 .matchmaker-desc {
-  font-size: 0.98rem;
-  line-height: 1.8;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6e5c4e;
+  font-family: var(--body-font);
 }
 
 .drinks-grid {
@@ -587,7 +709,7 @@ img {
 }
 
 .drink-content h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.12rem;
   line-height: 1.2;
   color: var(--primary);
@@ -597,9 +719,10 @@ img {
 
 .drink-content p {
   font-size: 0.92rem;
-  line-height: 1.75;
+  line-height: var(--line-height);
   color: #745f51;
   margin-bottom: 18px;
+  font-family: var(--body-font);
 }
 
 .drink-meta {
@@ -614,16 +737,18 @@ img {
 .drink-meta span {
   font-size: 0.84rem;
   color: #8b7564;
+  font-family: var(--body-font);
 }
 
 .drink-meta strong {
   font-size: 0.95rem;
   color: var(--primary);
-  font-weight: 400;
+  font-weight: 500;
+  font-family: var(--body-font);
 }
 
 .game-events-section {
-  padding: 90px 6%;
+  padding: 82px 6%;
   background: #fffaf4;
   overflow: clip;
 }
@@ -648,7 +773,7 @@ img {
 
 .game-events-feature {
   position: relative;
-  min-height: 620px;
+  height: 500px;
   overflow: hidden;
   border-radius: 28px;
   box-shadow: 0 22px 52px rgba(75, 36, 19, 0.12);
@@ -669,7 +794,20 @@ img {
 .game-events-feature:hover .feature-image img {
   transform: scale(1.05);
 }
+.event-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+}
 
+.event-time i {
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
 .feature-overlay {
   position: absolute;
   inset: 0;
@@ -686,7 +824,7 @@ img {
 }
 
 .feature-overlay h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.65rem;
   line-height: 1.15;
   color: #fff;
@@ -698,8 +836,9 @@ img {
 .feature-overlay p {
   max-width: 460px;
   font-size: 0.94rem;
-  line-height: 1.75;
+  line-height: var(--line-height);
   color: rgba(255, 255, 255, 0.86);
+  font-family: var(--body-font);
 }
 
 .events-list-side {
@@ -707,6 +846,7 @@ img {
   border: 1px solid rgba(75, 36, 19, 0.08);
   border-radius: 28px;
   padding: 20px 24px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -732,14 +872,14 @@ img {
 }
 
 .event-day {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.3rem;
   color: var(--secondary);
   font-weight: 400;
 }
 
 .event-info h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.25rem;
   color: var(--primary);
   margin-bottom: 6px;
@@ -749,9 +889,10 @@ img {
 
 .event-info p {
   font-size: 0.92rem;
-  line-height: 1.7;
+  line-height: var(--line-height);
   color: #735f51;
   max-width: 420px;
+  font-family: var(--body-font);
 }
 
 .event-time {
@@ -759,10 +900,11 @@ img {
   color: #8b7768;
   text-align: right;
   white-space: nowrap;
+  font-family: var(--body-font);
 }
 
 .community-section {
-  padding: 90px 6%;
+  padding: 82px 6%;
   background: #fffdf8;
   overflow: clip;
 }
@@ -821,7 +963,7 @@ img {
 
 .community-overlay h3 {
   max-width: 480px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.9rem;
   line-height: 1.14;
   color: #fff;
@@ -865,7 +1007,7 @@ img {
 }
 
 .community-card-content h4 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.25rem;
   color: var(--primary);
   margin-bottom: 8px;
@@ -874,12 +1016,13 @@ img {
 
 .community-card-content p {
   font-size: 0.92rem;
-  line-height: 1.75;
+  line-height: var(--line-height);
   color: #735f51;
+  font-family: var(--body-font);
 }
 
 .brew-club-section {
-  padding: 90px 6%;
+  padding: 82px 6%;
   background: #fffaf4;
   overflow: clip;
 }
@@ -912,10 +1055,12 @@ img {
   letter-spacing: 1.4px;
   color: #9b816f;
   margin-bottom: 8px;
+  font-family: var(--body-font);
+  font-weight: 500;
 }
 
 .brew-club-price h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 2.8rem;
   color: var(--primary);
   line-height: 1;
@@ -924,7 +1069,7 @@ img {
 
 .brew-club-price h3 small {
   font-size: 1rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
   color: #8b7363;
   font-weight: 400;
 }
@@ -942,10 +1087,11 @@ img {
   padding: 14px 24px;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.92rem;
-  font-weight: 400;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   transition: all 0.35s ease;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
+  line-height: 1.2;
 }
 
 .brew-btn.primary {
@@ -992,15 +1138,17 @@ img {
 }
 
 .brew-feature-no {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.5rem;
   line-height: 1;
   color: var(--secondary);
   font-weight: 400;
 }
-
+.feature-badge {
+  color: var(--secondary);
+}
 .brew-feature h4 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.25rem;
   color: var(--primary);
   margin-bottom: 6px;
@@ -1009,41 +1157,59 @@ img {
 
 .brew-feature p {
   font-size: 0.92rem;
-  line-height: 1.75;
+  line-height: var(--line-height);
   color: #735f51;
   max-width: 430px;
+  font-family: var(--body-font);
 }
-
 .hall-frames-section {
-  padding: 90px 6%;
+  padding: 82px 6%;
   background: #fffdf8;
-  overflow: clip;
+  overflow: hidden;
 }
 
 .hall-frames-container {
   max-width: 1300px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 50px;
-  align-items: center;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 42px;
+  align-items: stretch;
 }
 
 .hall-frames-left {
-  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  padding-block: 6px;
+}
+
+.hall-tag {
+  margin-bottom: 10px;
+  width: 150px;
+}
+
+.hall-frames-left h2 {
+  margin-bottom: 18px;
 }
 
 .hall-desc {
-  font-size: 0.98rem;
-  line-height: 1.8;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6f5d50;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
+  font-family: var(--body-font);
+  max-width: 520px;
 }
 
 .hall-note {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  margin-top: auto;
+  padding-top: 28px;
 }
 
 .hall-note span {
@@ -1056,24 +1222,36 @@ img {
 
 .hall-note p {
   font-size: 0.92rem;
-  line-height: 1.75;
+  line-height: var(--line-height);
   color: #7a6759;
   max-width: 420px;
+  font-family: var(--body-font);
+  margin-top: -20px;
 }
-
 .hall-frames-wall {
-  position: relative;
-  min-height: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(75, 36, 19, 0.1);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow:
+    0 18px 40px rgba(75, 36, 19, 0.08),
+    0 6px 18px rgba(75, 36, 19, 0.05);
+  height: 460px;
+  min-height: 460px;
 }
 
 .frame {
-  position: absolute;
-  background: #fff;
-  padding: 12px 12px 30px;
-  box-shadow: 0 20px 42px rgba(75, 36, 19, 0.12);
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 0.82;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f3ede7;
 }
 
 .frame img {
@@ -1081,48 +1259,15 @@ img {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 2px;
+  border-radius: inherit;
+  transition: transform 0.35s ease;
 }
 
-.frame:hover {
-  transform: translateY(-10px) rotate(0deg) !important;
-  box-shadow: 0 28px 60px rgba(75, 36, 19, 0.16);
+.frame:hover img {
+  transform: scale(1.04);
 }
-
-.frame-one {
-  width: 250px;
-  height: 310px;
-  top: 10px;
-  left: 20px;
-  transform: rotate(-6deg);
-}
-
-.frame-two {
-  width: 270px;
-  height: 200px;
-  top: 35px;
-  right: -20px;
-  transform: rotate(5deg);
-}
-
-.frame-three {
-  width: 280px;
-  height: 340px;
-  bottom: 35px;
-  left: 60px;
-  transform: rotate(4deg);
-}
-
-.frame-four {
-  width: 230px;
-  height: 260px;
-  bottom: 60px;
-  right: -35px;
-  transform: rotate(-5deg);
-}
-
 .matchmaker-section {
-  padding: 90px 6%;
+  padding: 82px 6%;
   background: #fffaf4;
   overflow: clip;
 }
@@ -1141,19 +1286,20 @@ img {
 }
 
 .matchmaker-left h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(2rem, 2.8vw, 2.75rem);
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.08;
   color: var(--primary);
   margin-bottom: 16px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .matchmaker-desc {
-  font-size: 0.98rem;
-  line-height: 1.8;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
   color: #6f5d50;
   margin-bottom: 24px;
+  font-family: var(--body-font);
 }
 
 .matchmaker-points {
@@ -1181,14 +1327,18 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 0.85rem;
-  font-weight: 700;
-  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-family: var(--body-font);
 }
 
 .matchmaker-points .point p {
   font-size: 0.94rem;
   color: var(--primary);
-  font-weight: 400;
+  font-weight: 500;
+  font-family: var(--body-font);
+}
+body.dark-mode .point p {
+  color: white;
 }
 
 .matchmaker-btn {
@@ -1200,14 +1350,14 @@ img {
   background: var(--secondary);
   color: #fff;
   text-decoration: none;
-  font-size: 0.92rem;
-  font-weight: 400;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   transition: all 0.35s ease;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
+  line-height: 1.2;
 }
 
 .matchmaker-btn:hover {
-  background: var(--primary);
   transform: translateY(-4px);
 }
 
@@ -1234,20 +1384,20 @@ img {
   margin-bottom: 10px;
   color: var(--secondary);
   font-weight: 600;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
 }
 
 .match-card h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.5rem;
   margin-bottom: 10px;
   font-weight: 400;
 }
 
 .match-card p {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
   font-size: 0.92rem;
-  line-height: 1.75;
+  line-height: var(--line-height);
   color: #735f51;
   max-width: 440px;
   font-weight: 400;
@@ -1289,20 +1439,46 @@ body.dark-mode h4 {
 }
 
 body.dark-mode p {
-  color: #d2d2d2;
+  color: #ffffff;
 }
+/* ===============================
+   TAGS / LABELS - DARK MODE
+================================= */
 
+body.dark-mode .section-tag,
 body.dark-mode .hero-tag,
+body.dark-mode .inside-label,
+body.dark-mode .mood-label,
 body.dark-mode .drinks-label,
 body.dark-mode .events-tag,
 body.dark-mode .community-tag,
 body.dark-mode .brew-club-tag,
 body.dark-mode .hall-tag,
 body.dark-mode .matchmaker-tag,
-body.dark-mode .inside-label,
-body.dark-mode .mood-label,
 body.dark-mode .drink-tag {
-  color: #f59e0b;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--secondary);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover effect for clickable tags */
+body.dark-mode a.section-tag:hover,
+body.dark-mode a.hero-tag:hover,
+body.dark-mode a.inside-label:hover,
+body.dark-mode a.mood-label:hover,
+body.dark-mode a.drinks-label:hover,
+body.dark-mode a.events-tag:hover,
+body.dark-mode a.community-tag:hover,
+body.dark-mode a.brew-club-tag:hover,
+body.dark-mode a.hall-tag:hover,
+body.dark-mode a.matchmaker-tag:hover,
+body.dark-mode a.drink-tag:hover {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: 0 16px 36px rgba(245, 158, 11, 0.18);
 }
 
 body.dark-mode .drink-card,

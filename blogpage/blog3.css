@@ -1,12 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
+:root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --small-font-size: 0.95rem;
+  --nav-font-size: 1rem;
+  --button-font-size: 1rem;
+  --meta-font-size: 0.92rem;
+  --eyebrow-font-size: 0.8rem;
+
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+  --meta-font-weight: 400;
+
+  --line-height: 1.7;
+  --heading-line-height: 1.08;
+  --hero-letter-spacing: -0.03em;
+  --section-letter-spacing: -0.02em;
+
+  --primary: #4b2413;
+  --secondary: #f59e0b;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-:root {
-  --primary: #4b2413;
-  --secondary: #f59e0b;
 }
 
 html {
@@ -14,10 +43,12 @@ html {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
   background: #fff9f3;
   color: #2b1b14;
-  line-height: 1.7;
+  line-height: var(--line-height);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
 }
 
 img {
@@ -29,6 +60,7 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  font-family: var(--body-font);
 }
 
 main {
@@ -39,16 +71,20 @@ main {
 .blog-badge,
 .blog-eyebrow,
 .section-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+   display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
-  margin-bottom: 16px;
-  text-align: center;
-  font-weight: 400;
+  font-family: var(--body-font);
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.span{
+  color: var(--secondary);
 }
 
 .blog-hero {
@@ -94,37 +130,25 @@ main {
   z-index: 2;
 }
 
-.blog-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--secondary);
-  margin-bottom: 16px;
-  text-align: center;
-  font-weight: 400;
-}
-
 .blog-crumbs,
 .blog-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  font-size: 0.92rem;
+  font-size: var(--meta-font-size);
   color: rgba(255, 255, 255, 0.78);
-  font-weight: 400;
+  font-weight: var(--meta-font-weight);
+  font-family: var(--body-font);
 }
 
 .blog-hero h1 {
   margin: 18px 0 14px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 3rem;
+  font-family: var(--heading-font);
+  font-size: var(--hero-font-size);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--hero-letter-spacing);
   max-width: 23ch;
-  font-weight: 400;
+  font-weight: var(--hero-font-weight);
 }
 
 .head {
@@ -133,15 +157,16 @@ main {
 
 .blog-hero__lead {
   max-width: 620px;
-  font-size: clamp(1rem, 1.3vw, 1.14rem);
+  font-size: var(--body-font-size);
   color: rgba(255, 255, 255, 0.88);
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
 }
 
 .blog-featured-visual {
   position: relative;
   margin-top: -86px;
-  padding: 0 24px 72px;
+  padding: 0 24px 64px;
   z-index: 3;
 }
 
@@ -161,23 +186,25 @@ main {
 }
 
 .blog-story-copy {
-  padding: 16px 24px 88px;
+  padding: 16px 24px 72px;
 }
 
 .blog-reading-wrap {
   max-width: 760px;
   margin: 0 auto;
-  font-size: 1.03rem;
-  font-weight: 400;
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
 }
 
 .blog-reading-wrap p {
   margin-bottom: 24px;
+  font-family: var(--body-font);
 }
 
 .blog-reading-wrap p:first-child::first-letter {
   float: left;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 4.2rem;
   line-height: 0.9;
   padding-right: 10px;
@@ -186,7 +213,7 @@ main {
 }
 
 .community-highlight {
-  margin: 0 auto 110px;
+  margin: 0 auto 88px;
   padding: 0 24px;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
@@ -204,20 +231,22 @@ main {
 }
 
 .community-highlight__content h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.06;
-  letter-spacing: -0.03em;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--section-letter-spacing);
   color: var(--primary);
   margin-bottom: 14px;
   max-width: 26ch;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .community-highlight__content p {
   color: #6b5a51;
   max-width: 62ch;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
 }
 
 .community-highlight__quote {
@@ -232,43 +261,47 @@ main {
 }
 
 .community-highlight__quote p {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 2.5rem;
   line-height: 1.35;
   color: var(--primary);
   margin-bottom: 14px;
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
 }
 
 .community-highlight__quote span {
   color: #6b5a51;
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-size: var(--small-font-size);
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
 }
 
 .community-moments {
-  padding: 110px 120px;
+  padding: 88px 120px;
   background: #fff9f3;
 }
 
 .community-header {
   max-width: 720px;
-  margin: 0 auto 60px;
+  margin: 0 auto 52px;
   text-align: center;
 }
 
 .community-header h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: normal;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
+  line-height: var(--heading-line-height);
   margin-bottom: 10px;
   color: var(--primary);
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
+  letter-spacing: var(--section-letter-spacing);
 }
 
 .community-header p {
   color: #715646;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
 }
 
 .section-tag {
@@ -352,28 +385,31 @@ main {
 }
 
 .similar-articles {
-  padding: 24px 110px;
+  padding: 16px 110px 0;
 }
 
 .similar-articles__head {
   max-width: 760px;
-  margin: 0 auto 44px;
+  margin: 0 auto 40px;
   text-align: center;
 }
 
 .similar-articles__head h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
   line-height: 1.08;
   margin-bottom: 14px;
   color: var(--primary);
-  font-weight: 400;
+  font-weight: var(--section-heading-font-weight);
+  letter-spacing: var(--section-letter-spacing);
 }
 
 .similar-articles__head p {
   color: #6b5a51;
   max-width: 108ch;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
 }
 
 .similar-articles__grid {
@@ -390,6 +426,7 @@ main {
   border: 1px solid rgba(75, 36, 19, 0.12);
   border-radius: 24px;
   overflow: hidden;
+  margin-bottom: 20px;
   box-shadow: 0 8px 24px rgba(75, 36, 19, 0.05);
   transition:
     transform 220ms ease,
@@ -419,11 +456,12 @@ main {
   letter-spacing: 0.12em;
   color: var(--secondary);
   margin-bottom: 14px;
-  font-weight: 400;
+  font-weight: var(--meta-font-weight);
+  font-family: var(--body-font);
 }
 
 .similar-card h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.35rem;
   line-height: 1.18;
   margin-bottom: 12px;
@@ -434,13 +472,17 @@ main {
 .similar-card p {
   color: #6b5a51;
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
 }
 
 .similar-card__link {
   display: inline-flex;
   color: var(--secondary);
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
 }
 
 body.dark-mode {
@@ -685,14 +727,14 @@ body.dark-mode ::selection {
   }
 
   .blog-hero h1 {
-    font-size: 2.3rem;
+    font-size: 3.5rem;
     line-height: 1.15;
     max-width: 100%;
   }
 
   .blog-hero__lead {
     max-width: 100%;
-    font-size: 15px;
+    font-size: 1rem;
   }
 
   .blog-featured-visual {
@@ -711,7 +753,7 @@ body.dark-mode ::selection {
 
   .blog-reading-wrap {
     max-width: 100%;
-    font-size: 15px;
+    font-size: 1rem;
   }
 
   .blog-reading-wrap p:first-child::first-letter {
@@ -747,7 +789,7 @@ body.dark-mode ::selection {
   }
 
   .community-header h2 {
-    font-size: 2rem;
+    font-size: var(--section-heading-font-size);
   }
 
   .community-gallery {
@@ -773,6 +815,10 @@ body.dark-mode ::selection {
 
   .similar-articles__head {
     margin-bottom: 35px;
+  }
+
+  .similar-articles__head h2 {
+    font-size: var(--section-heading-font-size);
   }
 
   .similar-articles__grid {
@@ -801,7 +847,7 @@ body.dark-mode ::selection {
   }
 
   .blog-hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     max-width: 100%;
   }
 
@@ -931,7 +977,7 @@ body.dark-mode ::selection {
   }
 
   .blog-hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     max-width: 18ch;
   }
 

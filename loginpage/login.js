@@ -1,24 +1,28 @@
 // ===============================
 // Password Toggle
 // ===============================
-
 const passwordInput = document.getElementById("password");
 const togglePassword = document.getElementById("togglePassword");
 
-if (togglePassword && passwordInput) {
+if (passwordInput && togglePassword) {
   const icon = togglePassword.querySelector("i");
 
   togglePassword.addEventListener("click", () => {
-    const isHidden = passwordInput.type === "password";
+    const isPassword = passwordInput.type === "password";
 
-    passwordInput.type = isHidden ? "text" : "password";
+    passwordInput.type = isPassword ? "text" : "password";
 
-    icon.classList.toggle("fa-eye");
-    icon.classList.toggle("fa-eye-slash");
+    if (icon) {
+      if (isPassword) {
+        icon.classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        icon.classList.replace("fa-eye-slash", "fa-eye");
+      }
+    }
 
     togglePassword.setAttribute(
       "aria-label",
-      isHidden ? "Hide Password" : "Show Password",
+      isPassword ? "Hide Password" : "Show Password",
     );
   });
 }
@@ -26,11 +30,11 @@ if (togglePassword && passwordInput) {
 // ===============================
 // Stats Counter
 // ===============================
-
 document.querySelectorAll("[data-count]").forEach((el) => {
   const target = Number(el.dataset.count);
 
-  let start = 0;
+  if (Number.isNaN(target)) return;
+
   const duration = 1600;
   const startTime = performance.now();
 
@@ -57,7 +61,6 @@ document.querySelectorAll("[data-count]").forEach((el) => {
 // ===============================
 // Dark Mode
 // ===============================
-
 const themeBtn = document.querySelector(
   '.utility-btn[aria-label="Toggle dark mode"]',
 );
@@ -65,50 +68,50 @@ const themeBtn = document.querySelector(
 if (themeBtn) {
   const icon = themeBtn.querySelector("i");
 
-  // Load saved theme
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
-    icon.classList.replace("fa-moon", "fa-sun");
+
+    if (icon) {
+      icon.classList.replace("fa-moon", "fa-sun");
+    }
   }
 
   themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
-    const dark = document.body.classList.contains("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
 
-    if (dark) {
-      icon.classList.replace("fa-moon", "fa-sun");
-      localStorage.setItem("theme", "dark");
-    } else {
-      icon.classList.replace("fa-sun", "fa-moon");
-      localStorage.setItem("theme", "light");
+    if (icon) {
+      if (isDark) {
+        icon.classList.replace("fa-moon", "fa-sun");
+      } else {
+        icon.classList.replace("fa-sun", "fa-moon");
+      }
     }
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 }
 
 // ===============================
 // RTL Toggle
 // ===============================
-
 const rtlBtn = document.querySelector('.utility-btn[aria-label="Toggle RTL"]');
 
 if (rtlBtn) {
-  if (localStorage.getItem("direction") === "rtl") {
-    document.documentElement.setAttribute("dir", "rtl");
-    rtlBtn.textContent = "LTR";
-  }
+  rtlBtn.innerHTML = '<i class="fa-solid fa-arrow-right-arrow-left"></i>';
+
+  const savedDirection =
+    localStorage.getItem("direction") === "rtl" ? "rtl" : "ltr";
+  document.documentElement.setAttribute("dir", savedDirection);
 
   rtlBtn.addEventListener("click", () => {
-    const rtl = document.documentElement.getAttribute("dir") === "rtl";
+    const currentDir = document.documentElement.getAttribute("dir");
+    const newDir = currentDir === "rtl" ? "ltr" : "rtl";
 
-    if (rtl) {
-      document.documentElement.setAttribute("dir", "ltr");
-      rtlBtn.textContent = "RTL";
-      localStorage.setItem("direction", "ltr");
-    } else {
-      document.documentElement.setAttribute("dir", "rtl");
-      rtlBtn.textContent = "LTR";
-      localStorage.setItem("direction", "rtl");
-    }
+    document.documentElement.setAttribute("dir", newDir);
+    localStorage.setItem("direction", newDir);
+
+    rtlBtn.innerHTML = '<i class="fa-solid fa-arrow-right-arrow-left"></i>';
   });
 }

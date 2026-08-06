@@ -1,3 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   TYPOGRAPHY SETTINGS
+========================== */
+:root {
+  --heading-font: "Retro Warmth";
+  --body-font: "Coqulet";
+
+  --hero-font-size: 3.5rem;
+  --section-heading-font-size: 2.5rem;
+  --body-font-size: 1rem;
+  --nav-font-size: 1rem;
+  --button-font-size: 1rem;
+  --small-font-size: 0.84rem;
+
+  --hero-font-weight: 700;
+  --section-heading-font-weight: 400;
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+
+  --line-height: 1.7;
+  --heading-line-height: 1.12;
+  --tracking-wide: 1.4px;
+
+  --primary: #4b2413;
+  --secondary: #f59e0b;
+  --white: #ffffff;
+  --text-dark: #2a1a12;
+  --text-light: #f5f5f5;
+  --bg-cream: #fff9f3;
+  --border-soft: rgba(75, 36, 19, 0.12);
+
+  --section-space-desktop: 96px;
+  --section-space-tablet: 88px;
+  --section-space-mobile: 72px;
+
+  --container-width: 1280px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 4px 16px rgba(75, 36, 19, 0.08);
+  --shadow-md: 0 10px 30px rgba(75, 36, 19, 0.12);
+
+  --transition: all 0.3s ease;
+}
+
+/* =========================================
+   RESET
+========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +61,23 @@ html {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
+  letter-spacing: 0.01em;
+  color: var(--text-dark);
   overflow-x: hidden;
-  background: #fff9f3;
+  background: var(--bg-cream);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+  font-family: var(--body-font);
+  transition: var(--transition);
 }
 
 img {
@@ -23,11 +85,146 @@ img {
   max-width: 100%;
 }
 
-:root {
-  --primary: #4b2413;
-  --secondary: #f59e0b;
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
 }
 
+button {
+  cursor: pointer;
+  background: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+a,
+button,
+input,
+textarea,
+select,
+label,
+small {
+  font-family: var(--body-font);
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+.group-bookings-hero-content h1 {
+  font-family: var(--heading-font);
+  font-size: var(--hero-font-size);
+  line-height: 1.04;
+  color: var(--white);
+  margin-bottom: 24px;
+  max-width: 25ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: var(--hero-font-weight);
+}
+
+.occasion-editorial-heading h2,
+.experience-header h2,
+.space-seating-cards-header h2,
+.booking-process-header h2 {
+  font-family: var(--heading-font);
+  font-size: var(--section-heading-font-size);
+  line-height: var(--heading-line-height);
+  color: var(--primary);
+  margin-bottom: 18px;
+  font-weight: var(--section-heading-font-weight);
+}
+
+.occasion-editorial-text h3,
+.experience-visual-content h3,
+.experience-highlight h3,
+.experience-copy h3,
+.space-seating-card h3,
+.booking-step h3 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+
+.group-bookings-hero-tag,
+.occasion-editorial-tag,
+.experience-tag,
+.space-seating-cards-tag,
+.booking-process-tag,
+.experience-mini-tag,
+.occasion-image-label,
+.occasion-meta,
+.experience-copy span {
+  font-family: var(--body-font);
+}
+
+.group-bookings-hero-tag,
+.occasion-editorial-tag,
+.experience-tag,
+.space-seating-cards-tag,
+.booking-process-tag {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--secondary);
+  font-size: var(--small-font-size);
+  font-weight: var(--body-font-weight);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.group-bookings-hero-content p,
+.occasion-editorial-heading p,
+.occasion-editorial-text p,
+.experience-header p,
+.experience-visual-content p,
+.experience-highlight p,
+.experience-copy p,
+.space-seating-cards-header p,
+.space-seating-card p,
+.booking-process-header p,
+.booking-step p {
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
+}
+
+.group-bookings-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 28px;
+  border-radius: 999px;
+  font-family: var(--body-font);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  transition: 0.35s ease;
+}
+
+.group-bookings-hero-content span {
+  color: var(--secondary);
+}
+
+/* =========================================
+   HERO
+========================================= */
 .group-bookings-hero {
   position: relative;
   width: 100%;
@@ -66,7 +263,7 @@ img {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--container-width);
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -77,44 +274,16 @@ img {
   max-width: 860px;
   margin-top: 60px;
 }
-
-.group-bookings-hero-tag {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: rgba(245, 158, 11, 0.14);
-  border: 1px solid rgba(245, 158, 11, 0.18);
-  color: #ffd48a;
-  font-size: 0.84rem;
-  font-weight: 400;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-
-.group-bookings-hero-content h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 3rem;
-  line-height: 1.04;
-  color: #ffffff;
-  margin-bottom: 24px;
-  max-width: 25ch;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 400;
-}
-
-.group-bookings-hero-content span {
+.span {
   color: var(--secondary);
 }
-
 .group-bookings-hero-content p {
-  font-size: 1.04rem;
+  font-size: var(--body-font-size);
   line-height: 1.92;
   color: rgba(255, 255, 255, 0.88);
   max-width: 64ch;
   margin: 0 auto 34px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .group-bookings-hero-actions {
@@ -124,20 +293,9 @@ img {
   gap: 14px;
 }
 
-.group-bookings-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 28px;
-  border-radius: 999px;
-  font-size: 0.96rem;
-  font-weight: 400;
-  transition: 0.35s ease;
-}
-
 .group-bookings-btn-primary {
   background: var(--secondary);
-  color: #ffffff;
+  color: var(--white);
   box-shadow: 0 14px 30px rgba(245, 158, 11, 0.28);
 }
 
@@ -148,7 +306,7 @@ img {
 
 .group-bookings-btn-secondary {
   background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(6px);
 }
@@ -159,48 +317,20 @@ img {
   border-color: rgba(255, 255, 255, 0.34);
 }
 
-/* DARK MODE */
-
-body.dark-mode .group-bookings-hero {
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(6, 4, 3, 0.9) 0%,
-      rgba(6, 4, 3, 0.78) 34%,
-      rgba(6, 4, 3, 0.56) 68%,
-      rgba(6, 4, 3, 0.34) 100%
-    ),
-    url("/images/banner6.jpg");
-}
-
-body.dark-mode .group-bookings-hero-tag {
-  background: rgba(245, 158, 11, 0.12);
-  border-color: rgba(245, 158, 11, 0.2);
-  color: #f7c15d;
-}
-
-body.dark-mode .group-bookings-hero-content p {
-  color: rgba(255, 255, 255, 0.84);
-}
-
-body.dark-mode .group-bookings-btn-primary {
-  color: #ffffff;
-}
-
-body.dark-mode .group-bookings-btn-secondary {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.14);
-}
-
-body.dark-mode .group-bookings-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+/* =========================================
+   SECTIONS
+========================================= */
+.occasion-editorial-section,
+.experience-section,
+.space-seating-cards-section,
+.booking-process-section {
+  position: relative;
+  padding: var(--section-space-desktop) 120px;
+  overflow: hidden;
 }
 
 .occasion-editorial-section {
-  position: relative;
-  padding: 110px 120px;
   background: #fff9f3;
-  overflow: hidden;
 }
 
 .occasion-editorial-section::before {
@@ -227,48 +357,32 @@ body.dark-mode .group-bookings-btn-secondary:hover {
   filter: blur(120px);
 }
 
-.occasion-editorial-container {
+.occasion-editorial-container,
+.experience-container,
+.space-seating-cards-container {
   position: relative;
   z-index: 2;
   max-width: 1240px;
   margin: 0 auto;
 }
 
-.occasion-editorial-heading {
+.occasion-editorial-heading,
+.experience-header,
+.space-seating-cards-header,
+.booking-process-header {
   max-width: 760px;
-  margin: 0 auto 76px;
+  margin: 0 auto 56px;
   text-align: center;
 }
 
-.occasion-editorial-tag {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: rgba(245, 158, 11, 0.12);
-  color: var(--secondary);
-  font-size: 0.84rem;
-  font-weight: 400;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-}
-
-.occasion-editorial-heading h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.12;
-  color: var(--primary);
-  margin-bottom: 18px;
-  font-weight: 400;
-}
-
-.occasion-editorial-heading p {
-  max-width: 62ch;
+.occasion-editorial-heading p,
+.experience-header p,
+.space-seating-cards-header p,
+.booking-process-header p {
+  max-width: 680px;
   margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.9;
   color: #666;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .occasion-editorial-list {
@@ -308,7 +422,7 @@ body.dark-mode .group-bookings-btn-secondary:hover {
   position: absolute;
   top: -10px;
   left: -6px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 5.5rem;
   line-height: 1;
   color: rgba(245, 158, 11, 0.12);
@@ -321,7 +435,7 @@ body.dark-mode .group-bookings-btn-secondary:hover {
   z-index: 2;
   display: inline-block;
   margin-bottom: 14px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.1rem;
   letter-spacing: 1px;
   color: var(--secondary);
@@ -335,18 +449,16 @@ body.dark-mode .group-bookings-btn-secondary:hover {
   line-height: 1.15;
   color: var(--primary);
   margin-bottom: 14px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-weight: 400;
 }
 
 .occasion-editorial-text p {
   position: relative;
   z-index: 2;
-  font-size: 1rem;
-  line-height: 1.9;
   color: #666;
   margin-bottom: 18px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .occasion-meta {
@@ -359,7 +471,7 @@ body.dark-mode .group-bookings-btn-secondary:hover {
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: #7b6a60;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .occasion-meta::before {
@@ -404,11 +516,11 @@ body.dark-mode .group-bookings-btn-secondary:hover {
   border-radius: 999px;
   background: rgba(23, 14, 10, 0.62);
   backdrop-filter: blur(10px);
-  color: #fff;
+  color: var(--white);
   font-size: 0.84rem;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .occasion-editorial-image::after {
@@ -434,50 +546,8 @@ body.dark-mode .group-bookings-btn-secondary:hover {
   z-index: -1;
 }
 
-/* DARK MODE */
-
-body.dark-mode .occasion-editorial-section {
-  background: #171717;
-}
-
-body.dark-mode .occasion-editorial-heading h2,
-body.dark-mode .occasion-editorial-text h3 {
-  color: #ffffff;
-}
-
-body.dark-mode .occasion-editorial-heading p,
-body.dark-mode .occasion-editorial-text p {
-  color: #cfcfcf;
-}
-
-body.dark-mode .occasion-editorial-list,
-body.dark-mode .occasion-editorial-row {
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-body.dark-mode .occasion-editorial-row:nth-child(even)::before {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-body.dark-mode .occasion-editorial-image {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
-}
-
-body.dark-mode .occasion-meta {
-  color: #b8a99d;
-}
-
-body.dark-mode .occasion-meta::before {
-  background: rgba(255, 255, 255, 0.18);
-}
-
 .experience-section {
-  position: relative;
-  padding: 110px 120px;
   background: #fff9f3;
-  overflow: hidden;
 }
 
 .experience-section::before {
@@ -502,50 +572,6 @@ body.dark-mode .occasion-meta::before {
   border-radius: 50%;
   background: rgba(75, 36, 19, 0.05);
   filter: blur(120px);
-}
-
-.experience-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.experience-header {
-  max-width: 760px;
-  margin: 0 auto 56px;
-  text-align: center;
-}
-
-.experience-tag {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: rgba(245, 158, 11, 0.12);
-  color: var(--secondary);
-  font-size: 0.84rem;
-  font-weight: 400;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-}
-
-.experience-header h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.12;
-  color: var(--primary);
-  margin-bottom: 18px;
-  font-weight: 400;
-}
-
-.experience-header p {
-  max-width: 680px;
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.9;
-  color: #666;
-  font-weight: 400;
 }
 
 .experience-layout {
@@ -600,18 +626,17 @@ body.dark-mode .occasion-meta::before {
   padding: 8px 14px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
-  color: #ffffff;
+  color: var(--white);
   font-size: 0.78rem;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .experience-visual-content h3 {
-  font-family: "Times New Roman", Times, serif;
   font-size: 1.9rem;
   line-height: 1.18;
-  color: #ffffff;
+  color: var(--white);
   margin-bottom: 10px;
   font-weight: 400;
 }
@@ -621,7 +646,7 @@ body.dark-mode .occasion-meta::before {
   font-size: 0.95rem;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.84);
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .experience-highlight {
@@ -643,7 +668,7 @@ body.dark-mode .occasion-meta::before {
   font-size: 0.96rem;
   line-height: 1.8;
   color: #6f625b;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .experience-content {
@@ -666,7 +691,7 @@ body.dark-mode .occasion-meta::before {
 }
 
 .experience-no {
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 3rem;
   line-height: 1;
   color: rgba(245, 158, 11, 0.92);
@@ -678,16 +703,17 @@ body.dark-mode .occasion-meta::before {
   line-height: 1.2;
   color: var(--primary);
   margin-bottom: 12px;
+  font-family: var(--heading-font);
   font-weight: 400;
 }
 
 .experience-copy p {
   max-width: 58ch;
-  font-size: 1rem;
+  font-size: var(--body-font-size);
   line-height: 1.9;
   color: #666;
   margin-bottom: 14px;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
 }
 
 .experience-copy span {
@@ -696,46 +722,11 @@ body.dark-mode .occasion-meta::before {
   letter-spacing: 0.7px;
   text-transform: uppercase;
   color: #8b776b;
-  font-weight: 400;
-}
-
-/* DARK MODE */
-
-body.dark-mode .experience-section {
-  background: #171717;
-}
-
-body.dark-mode .experience-header h2,
-body.dark-mode .experience-highlight h3,
-body.dark-mode .experience-copy h3 {
-  color: #ffffff;
-}
-
-body.dark-mode .experience-header p,
-body.dark-mode .experience-highlight p,
-body.dark-mode .experience-copy p {
-  color: #cfcfcf;
-}
-
-body.dark-mode .experience-highlight {
-  background: rgba(255, 255, 255, 0.03);
-  border-left-color: rgba(245, 158, 11, 0.4);
-}
-
-body.dark-mode .experience-item,
-body.dark-mode .experience-item:last-child {
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-body.dark-mode .experience-copy span {
-  color: #bcaea3;
+  font-weight: var(--body-font-weight);
 }
 
 .space-seating-cards-section {
-  position: relative;
-  padding: 110px 120px;
   background: #fffaf5;
-  overflow: hidden;
 }
 
 .space-seating-cards-section::before {
@@ -760,50 +751,6 @@ body.dark-mode .experience-copy span {
   border-radius: 50%;
   background: rgba(75, 36, 19, 0.05);
   filter: blur(120px);
-}
-
-.space-seating-cards-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.space-seating-cards-header {
-  max-width: 760px;
-  margin: 0 auto 56px;
-  text-align: center;
-}
-
-.space-seating-cards-tag {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: rgba(245, 158, 11, 0.12);
-  color: var(--secondary);
-  font-size: 0.84rem;
-  font-weight: 400;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-}
-
-.space-seating-cards-header h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  line-height: 1.12;
-  color: var(--primary);
-  margin-bottom: 18px;
-  font-weight: 400;
-}
-
-.space-seating-cards-header p {
-  max-width: 680px;
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.9;
-  color: #666;
-  font-weight: 400;
 }
 
 .space-seating-cards-grid {
@@ -838,7 +785,7 @@ body.dark-mode .experience-copy span {
   justify-content: center;
   background: rgba(245, 158, 11, 0.12);
   color: var(--secondary);
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   font-size: 1.25rem;
   font-weight: 400;
 }
@@ -852,10 +799,227 @@ body.dark-mode .experience-copy span {
 }
 
 .space-seating-card p {
-  font-size: 1rem;
+  font-size: var(--body-font-size);
   line-height: 1.88;
   color: #666;
+  font-weight: var(--body-font-weight);
+}
+
+.booking-process-section {
+  background: #ffffff;
+}
+
+.booking-process-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.booking-process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 56px;
+  align-items: stretch;
+}
+
+.booking-step {
+  position: relative;
+  padding: 34px 28px;
+  border-radius: 24px;
+  background: #fffaf5;
+  border: 1px solid rgba(75, 36, 19, 0.08);
+  transition: ease-in-out 0.4s;
+}
+
+.booking-step:hover {
+  transform: translateY(-10px);
+}
+
+.booking-step-no {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 158, 11, 0.14);
+  color: var(--secondary);
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
   font-weight: 400;
+}
+
+.booking-step h3 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.booking-step p {
+  font-size: 0.98rem;
+  line-height: 1.84;
+  color: #666;
+  font-weight: var(--body-font-weight);
+}
+
+.booking-step-arrow {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--secondary);
+  border: 1px solid rgba(75, 36, 19, 0.1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 400;
+  z-index: 3;
+  box-shadow: 0 8px 18px rgba(75, 36, 19, 0.08);
+}
+
+.booking-step:last-child .booking-step-arrow {
+  display: none;
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+body.dark-mode .group-bookings-hero {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(6, 4, 3, 0.9) 0%,
+      rgba(6, 4, 3, 0.78) 34%,
+      rgba(6, 4, 3, 0.56) 68%,
+      rgba(6, 4, 3, 0.34) 100%
+    ),
+    url("/images/banner6.jpg");
+}
+
+body.dark-mode .group-bookings-hero-tag,
+body.dark-mode .occasion-editorial-tag,
+body.dark-mode .experience-tag,
+body.dark-mode .space-seating-cards-tag,
+body.dark-mode .booking-process-tag {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.2);
+  color: #f7c15d;
+}
+
+body.dark-mode .group-bookings-hero-content p {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+body.dark-mode .group-bookings-btn-primary {
+  color: #ffffff;
+}
+
+body.dark-mode .group-bookings-btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+body.dark-mode .group-bookings-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .occasion-editorial-section,
+body.dark-mode .experience-section {
+  background: #171717;
+}
+
+body.dark-mode .occasion-editorial-section::before,
+body.dark-mode .experience-section::before,
+body.dark-mode .space-seating-cards-section::before,
+body.dark-mode .booking-process-section::before {
+  background: rgba(245, 158, 11, 0.08);
+}
+
+body.dark-mode .occasion-editorial-section::after,
+body.dark-mode .experience-section::after,
+body.dark-mode .space-seating-cards-section::after,
+body.dark-mode .booking-process-section::after {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+body.dark-mode .occasion-editorial-heading h2,
+body.dark-mode .experience-header h2,
+body.dark-mode .space-seating-cards-header h2,
+body.dark-mode .booking-process-header h2,
+body.dark-mode .occasion-editorial-text h3,
+body.dark-mode .experience-visual-content h3,
+body.dark-mode .experience-highlight h3,
+body.dark-mode .experience-copy h3,
+body.dark-mode .space-seating-card h3,
+body.dark-mode .booking-step h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .occasion-editorial-heading p,
+body.dark-mode .occasion-editorial-text p,
+body.dark-mode .experience-header p,
+body.dark-mode .experience-visual-content p,
+body.dark-mode .experience-highlight p,
+body.dark-mode .experience-copy p,
+body.dark-mode .space-seating-cards-header p,
+body.dark-mode .space-seating-card p,
+body.dark-mode .booking-process-header p,
+body.dark-mode .booking-step p {
+  color: #cfcfcf;
+}
+
+body.dark-mode .occasion-editorial-list,
+body.dark-mode .occasion-editorial-row,
+body.dark-mode .experience-item,
+body.dark-mode .experience-item:last-child {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .occasion-editorial-row:nth-child(even)::before {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+body.dark-mode .occasion-editorial-image,
+body.dark-mode .space-seating-card,
+body.dark-mode .booking-step {
+  background: #211c19;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .occasion-editorial-image {
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+}
+
+body.dark-mode .occasion-meta,
+body.dark-mode .experience-copy span {
+  color: #b8a99d;
+}
+
+body.dark-mode .occasion-meta::before {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+body.dark-mode .experience-highlight {
+  background: rgba(255, 255, 255, 0.03);
+  border-left-color: rgba(245, 158, 11, 0.4);
+}
+
+body.dark-mode .space-seating-card:hover,
+body.dark-mode .booking-step:hover {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+body.dark-mode .booking-step-arrow {
+  background: #2a241f;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
 
 /* DARK MODE */
@@ -942,6 +1106,7 @@ body.dark-mode .space-seating-card:hover {
 .booking-step {
   position: relative;
   padding: 34px 28px;
+  width: 250px;
   border-radius: 24px;
   background: #fffaf5;
   border: 1px solid rgba(75, 36, 19, 0.08);
@@ -970,9 +1135,10 @@ body.dark-mode .space-seating-card:hover {
 .booking-step h3 {
   font-size: 1.35rem;
   line-height: 1.2;
+
   color: var(--primary);
   margin-bottom: 12px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .booking-step p {
@@ -1032,7 +1198,9 @@ body.dark-mode .booking-step-arrow {
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
-
+/* =========================================
+   RESPONSIVE
+========================================= */
 /* Samsung Galaxy S8+ and similar phones */
 @media screen and (max-width: 480px) {
   .group-bookings-hero {
@@ -1073,7 +1241,7 @@ body.dark-mode .booking-step-arrow {
   .experience-section,
   .space-seating-cards-section,
   .booking-process-section {
-    padding: 72px 16px;
+    padding: var(--section-space-mobile) 16px;
   }
 
   .occasion-editorial-heading,
@@ -1231,7 +1399,7 @@ body.dark-mode .booking-step-arrow {
   .experience-section,
   .space-seating-cards-section,
   .booking-process-section {
-    padding: 88px 40px;
+    padding: var(--section-space-tablet) 40px;
   }
 
   .occasion-editorial-heading h2,
@@ -1314,7 +1482,7 @@ body.dark-mode .booking-step-arrow {
   .experience-section,
   .space-seating-cards-section,
   .booking-process-section {
-    padding: 96px 56px;
+    padding: var(--section-space-desktop) 56px;
   }
 
   .occasion-editorial-row,
