@@ -339,8 +339,7 @@ a {
   padding: 36px 30px;
   box-shadow: 0 24px 60px rgba(45, 20, 10, 0.18);
   position: sticky;
-  top: 110px;
-  margin-top: 50px;
+  top: 100px;
 }
 
 .hours-card h3 {

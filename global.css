@@ -253,7 +253,8 @@ header {
   position: absolute;
   top: 45px;
   left: 0;
-  width: 180px;
+  width: 140px;
+  height: 100px;
   background: #fff;
   list-style: none;
   border-radius: 12px;
@@ -275,7 +276,7 @@ header {
   display: flex;
   align-items: center;
   height: auto;
-  padding: 14px 20px;
+  padding: 14px 14px;
   line-height: 1.2;
   font-family: var(--body-font);
 }
@@ -302,6 +303,7 @@ header {
   background: #fff7ef;
   color: var(--primary);
   font-size: 16px;
+  border: 1px solid rgba(75, 36, 19, 0.42);
   transition: 0.35s;
 }
 
@@ -320,6 +322,7 @@ header {
   border-radius: 40px;
   background: var(--secondary);
   color: #fff;
+
   font-family: var(--body-font);
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);

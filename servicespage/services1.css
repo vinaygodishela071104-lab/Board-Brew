@@ -182,7 +182,7 @@ a {
   font-size: 0.9rem;
   font-family: var(--body-font);
 }
-.span{
+.span {
   color: var(--secondary);
 }
 /* =========================
@@ -1184,11 +1184,13 @@ body.dark-mode .seasonal-bottom-strip:hover {
 
 .pairing-item {
   position: relative;
+  margin-left: 30px;
 }
 
 .pairing-label {
   display: inline-block;
   margin-bottom: 10px;
+  margin-left: 45px;
   color: var(--secondary);
   font-size: 0.78rem;
   font-weight: 400;
