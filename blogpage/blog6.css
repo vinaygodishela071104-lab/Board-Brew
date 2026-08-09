@@ -512,12 +512,27 @@ h6 {
 
 .similar-card__link {
   display: inline-flex;
-  color: var(--secondary);
   font-family: var(--body-font);
-  font-size: var(--paragraph-font-size);
-  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+.similar-card__link span {
+  margin-left: 10px;
+}
+.similar-card__link:hover {
+  color: var(--secondary);
+}
+.time {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
+.time i {
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
 body.dark-mode {
   background: #171717;
   color: #f5f5f5;

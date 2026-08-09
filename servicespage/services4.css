@@ -313,7 +313,8 @@ small {
 
 .group-bookings-btn-secondary:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255);
+  color: #171717;
   border-color: rgba(255, 255, 255, 0.34);
 }
 
@@ -927,7 +928,7 @@ body.dark-mode .group-bookings-btn-secondary {
 }
 
 body.dark-mode .group-bookings-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255);
 }
 
 body.dark-mode .occasion-editorial-section,

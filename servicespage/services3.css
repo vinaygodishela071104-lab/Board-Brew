@@ -194,7 +194,8 @@ span {
 
 .cozy-spaces-btn-secondary:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255);
+  color: black;
   border-color: rgba(255, 255, 255, 0.32);
 }
 
@@ -229,7 +230,7 @@ body.dark-mode .cozy-spaces-btn-secondary {
 }
 
 body.dark-mode .cozy-spaces-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255);
 }
 
 .space-mosaic-section {
@@ -324,7 +325,7 @@ body.dark-mode .cozy-spaces-btn-secondary:hover {
   background: #1f1a17;
   box-shadow: 0 24px 58px rgba(75, 36, 19, 0.12);
 }
-.span{
+.span {
   color: var(--secondary);
 }
 

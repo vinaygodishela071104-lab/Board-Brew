@@ -158,7 +158,7 @@ a {
 .hero-btn--secondary {
   border: 1px solid rgba(75, 36, 19, 0.14);
   color: var(--primary);
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .hero-btn--secondary:hover {
@@ -329,7 +329,8 @@ body.dark-mode .hero-btn--secondary {
 }
 
 body.dark-mode .hero-btn--secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: white;
+  color: black;
   border-color: rgba(245, 179, 53, 0.26);
 }
 

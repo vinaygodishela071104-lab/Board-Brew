@@ -195,7 +195,8 @@ small {
 
 .boardgame-btn-secondary:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.16);
+  color: #121212;
+  background: rgba(255, 255, 255);
   border-color: rgba(255, 255, 255, 0.32);
 }
 
@@ -234,7 +235,7 @@ body.dark-mode .boardgame-btn-secondary {
 }
 
 body.dark-mode .boardgame-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255);
 }
 
 /* =========================
@@ -377,7 +378,7 @@ body.dark-mode .boardgame-btn-secondary:hover {
     );
   pointer-events: none;
 }
-.span{
+.span {
   color: var(--secondary);
 }
 
