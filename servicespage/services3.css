@@ -1097,7 +1097,7 @@ body.dark-mode .space-fit-copy p {
   }
 
   .cozy-spaces-hero-content h1 {
-    font-size: var(--hero-font-size);
+    font-size: 2.5rem;
     line-height: 1.12;
   }
 
