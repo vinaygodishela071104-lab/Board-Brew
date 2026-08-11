@@ -468,10 +468,12 @@ footer {
   font-family: var(--body-font);
 }
 
-.footer-col ul li a:hover,
-.footer-bottom-links a:hover {
+.footer-col ul li a:hover {
   color: var(--secondary);
   padding-left: 8px;
+}
+.footer-bottom-links a:hover {
+  color: var(--secondary);
 }
 .hours span {
   float: right;
@@ -570,7 +572,9 @@ footer {
 .top-btn:hover {
   transform: translateY(-5px);
 }
-
+.top-btn:hover i {
+  color: #0d1721;
+}
 /* Optional blog spacing helper */
 .blog-section {
   margin-bottom: 0;
