@@ -298,7 +298,7 @@
           </p>
 
           <div class="faq-list">
-            <details class="faq-item reveal reveal-up">
+            <details class="faq-item reveal reveal-up" name="faq" open>
               <summary>Do I need a reservation to visit?</summary>
               <p>
                 Walk-ins are always welcome, but we recommend booking in advance
@@ -306,7 +306,7 @@
               </p>
             </details>
 
-            <details class="faq-item reveal reveal-up">
+            <details class="faq-item reveal reveal-up" name="faq">
               <summary>Do you charge separately for board games?</summary>
               <p>
                 Some games are freely available with your visit, while premium
@@ -315,7 +315,7 @@
               </p>
             </details>
 
-            <details class="faq-item reveal reveal-up">
+            <details class="faq-item reveal reveal-up" name="faq">
               <summary>
                 Can I host a birthday or private gathering here?
               </summary>
@@ -325,7 +325,7 @@
               </p>
             </details>
 
-            <details class="faq-item reveal reveal-up">
+            <details class="faq-item reveal reveal-up" name="faq">
               <summary>
                 Is the café suitable for beginners who are new to board games?
               </summary>
@@ -335,7 +335,7 @@
               </p>
             </details>
 
-            <details class="faq-item reveal reveal-up">
+            <!-- <details class="faq-item reveal reveal-up" name="faq">
               <summary>
                 Do you offer vegetarian or special menu options?
               </summary>
@@ -343,7 +343,7 @@
                 Yes, we offer vegetarian choices and selected menu options for
                 different preferences. Ask our team when you visit or reserve.
               </p>
-            </details>
+            </details> -->
           </div>
         </div>
 
@@ -361,10 +361,12 @@
                 <i class="fa-solid fa-mug-hot"></i>
                 <span>Fresh brews & cozy bites</span>
               </div>
+
               <div class="cta-highlight">
                 <i class="fa-solid fa-chess-board"></i>
                 <span>Curated board game collection</span>
               </div>
+
               <div class="cta-highlight">
                 <i class="fa-solid fa-users"></i>
                 <span>Perfect for dates, friends & events</span>
@@ -381,6 +383,21 @@
         </div>
       </div>
     </section>
+    <script>
+      const faqItems = document.querySelectorAll(".faq-list .faq-item");
+
+      faqItems.forEach((item) => {
+        item.addEventListener("toggle", () => {
+          if (item.open) {
+            faqItems.forEach((otherItem) => {
+              if (otherItem !== item) {
+                otherItem.removeAttribute("open");
+              }
+            });
+          }
+        });
+      });
+    </script>
     <div id="footer"></div>
     <script src="/component.js" defer></script>
   </body>

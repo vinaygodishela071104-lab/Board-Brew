@@ -533,8 +533,12 @@ input {
   box-shadow: 0 16px 30px rgba(245, 158, 11, 0.24);
   cursor: pointer;
   margin-top: 0;
+  transition: 0.35s;
 }
-
+.signin-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(245, 158, 11, 0.35);
+}
 .divider {
   display: flex;
   align-items: center;

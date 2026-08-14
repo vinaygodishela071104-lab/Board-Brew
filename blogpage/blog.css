@@ -525,15 +525,14 @@ body.dark-mode .blog-editorial-badge span {
 }
 
 .featured-article-link:hover {
-  background: white;
   border: 1px solid rgba(0, 0, 0, 0.22);
-  color: #101010;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
 .featured-article-link:hover span {
   transform: translateX(4px);
-  color: #101010;
+  color: #ffffff;
 }
 
 body.dark-mode .featured-article-section {

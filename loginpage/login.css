@@ -550,8 +550,12 @@ strong {
   cursor: pointer;
   margin-top: 0;
   font-family: var(--body-font);
+  transition: 0.35s;
 }
-
+.signin-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(245, 158, 11, 0.35);
+}
 .divider {
   display: flex;
   align-items: center;

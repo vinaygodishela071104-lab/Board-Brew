@@ -725,7 +725,7 @@ select:focus {
   padding: 26px 24px;
   background: rgba(255, 255, 255, 0.72);
   border-radius: 22px;
-  border: 1px solid rgba(75, 36, 19, 0.08);
+  border: 1px solid rgba(75, 36, 19, 0.45);
   min-height: 170px;
   display: flex;
   flex-direction: column;
