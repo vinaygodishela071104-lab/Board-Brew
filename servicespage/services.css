@@ -245,10 +245,6 @@ body.dark-mode .services-hero-overlay {
   );
 }
 
-body.dark-mode .services-hero {
-  background-image: url("/images/table.avif");
-}
-
 body.dark-mode .services-hero-tag {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -673,7 +669,7 @@ body.dark-mode .service-card:hover .service-link {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   overflow: hidden;
-  height: 250px;
+  height: 210px;
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,

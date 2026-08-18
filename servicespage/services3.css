@@ -202,17 +202,6 @@ span {
 /* =========================
    DARK MODE
 ========================= */
-body.dark-mode .cozy-spaces-hero {
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(4, 3, 2, 0.9) 0%,
-      rgba(4, 3, 2, 0.76) 35%,
-      rgba(4, 3, 2, 0.56) 68%,
-      rgba(4, 3, 2, 0.36) 100%
-    ),
-    url("/images/cafeinterior.jpg");
-}
 
 body.dark-mode .cozy-spaces-hero-tag {
   background: rgba(245, 179, 53, 0.14);

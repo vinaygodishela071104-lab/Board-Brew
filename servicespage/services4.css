@@ -892,17 +892,6 @@ small {
 /* =========================================
    DARK MODE
 ========================================= */
-body.dark-mode .group-bookings-hero {
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(6, 4, 3, 0.9) 0%,
-      rgba(6, 4, 3, 0.78) 34%,
-      rgba(6, 4, 3, 0.56) 68%,
-      rgba(6, 4, 3, 0.34) 100%
-    ),
-    url("/images/banner6.jpg");
-}
 
 body.dark-mode .group-bookings-hero-tag,
 body.dark-mode .occasion-editorial-tag,
