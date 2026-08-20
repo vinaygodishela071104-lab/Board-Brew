@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
 
-/* ==========================
-   TYPOGRAPHY SETTINGS
-========================== */
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";

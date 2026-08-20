@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
 
-/* ==========================
-   TYPOGRAPHY SETTINGS
-========================== */
+
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";
@@ -47,9 +45,6 @@
   --transition: all 0.3s ease;
 }
 
-/* =========================================
-   RESET
-========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -123,9 +118,6 @@ small {
   font-family: var(--body-font);
 }
 
-/* =========================================
-   TYPOGRAPHY
-========================================= */
 .group-bookings-hero-content h1 {
   font-family: var(--heading-font);
   font-size: var(--hero-font-size);
@@ -222,9 +214,7 @@ small {
   color: var(--secondary);
 }
 
-/* =========================================
-   HERO
-========================================= */
+
 .group-bookings-hero {
   position: relative;
   width: 100%;
@@ -318,9 +308,7 @@ small {
   border-color: rgba(255, 255, 255, 0.34);
 }
 
-/* =========================================
-   SECTIONS
-========================================= */
+
 .occasion-editorial-section,
 .experience-section,
 .space-seating-cards-section,
@@ -889,9 +877,7 @@ small {
   display: none;
 }
 
-/* =========================================
-   DARK MODE
-========================================= */
+
 
 body.dark-mode .group-bookings-hero-tag,
 body.dark-mode .occasion-editorial-tag,
@@ -1012,7 +998,7 @@ body.dark-mode .booking-step-arrow {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
 
-/* DARK MODE */
+
 
 body.dark-mode .space-seating-cards-section {
   background: #171717;
@@ -1162,7 +1148,7 @@ body.dark-mode .space-seating-card:hover {
   display: none;
 }
 
-/* DARK MODE */
+
 
 body.dark-mode .booking-process-section {
   background: #171717;
@@ -1188,14 +1174,8 @@ body.dark-mode .booking-step-arrow {
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
-/* =========================================
-   RESPONSIVE
-========================================= */
-/* =========================================
-   MOBILE HERO FIX
-   Samsung Galaxy S8+ and phones
-   Maximum width: 480px
-========================================= */
+
+
 
 @media screen and (max-width: 480px) {
   .group-bookings-hero {
@@ -1256,8 +1236,7 @@ body.dark-mode .booking-step-arrow {
     text-align: center;
   }
 
-  /* Prevent decorative or positioned hero elements
-     from creating horizontal overflow */
+
 
   .group-bookings-hero *,
   .group-bookings-hero *::before,
@@ -1278,8 +1257,7 @@ body.dark-mode .booking-step-arrow {
     min-width: 0;
   }
 
-  /* If your hero contains decorative absolute elements,
-     keep them inside the hero area */
+ 
 
   .group-bookings-hero::before,
   .group-bookings-hero::after {
@@ -1287,9 +1265,6 @@ body.dark-mode .booking-step-arrow {
     pointer-events: none;
   }
 
-  /* =========================================
-     OTHER MOBILE SECTIONS
-  ========================================= */
 
   .occasion-editorial-section,
   .experience-section,
@@ -1322,7 +1297,7 @@ body.dark-mode .booking-step-arrow {
     overflow-wrap: break-word;
   }
 
-  /* Occasion Editorial */
+
 
   .occasion-editorial-row,
   .occasion-editorial-row:nth-child(2) {
@@ -1391,7 +1366,7 @@ body.dark-mode .booking-step-arrow {
     overflow-wrap: break-word;
   }
 
-  /* Experience */
+
 
   .experience-layout {
     display: grid;
@@ -1486,7 +1461,7 @@ body.dark-mode .booking-step-arrow {
     font-size: 1.28rem;
   }
 
-  /* Space and Seating Cards */
+
 
   .space-seating-cards-grid {
     display: grid;
@@ -1511,7 +1486,7 @@ body.dark-mode .booking-step-arrow {
     overflow-wrap: break-word;
   }
 
-  /* Booking Process */
+ 
 
   .booking-process-steps {
     display: grid;
@@ -1542,10 +1517,7 @@ body.dark-mode .booking-step-arrow {
   }
 }
 
-/* =========================================
-   EXTRA SMALL PHONES
-   Maximum width: 360px
-========================================= */
+
 
 @media screen and (max-width: 360px) {
   .group-bookings-hero {
@@ -1600,7 +1572,7 @@ body.dark-mode .booking-step-arrow {
     padding-left: 17px;
   }
 }
-/* iPad mini */
+
 @media screen and (min-width: 768px) and (max-width: 820px) {
   .group-bookings-hero {
     min-height: auto;
@@ -1690,7 +1662,7 @@ body.dark-mode .booking-step-arrow {
   }
 }
 
-/* iPad Pro 11 and similar large tablets */
+
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   .group-bookings-hero {
     padding: 140px 56px 96px;
@@ -1751,7 +1723,7 @@ body.dark-mode .booking-step-arrow {
   }
 }
 
-/* Nest Hub / landscape smart displays */
+
 @media screen and (width: 1024px) and (height: 600px) {
   .group-bookings-hero {
     min-height: 85vh;

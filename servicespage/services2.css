@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
 
-/* ==========================
-   TYPOGRAPHY SETTINGS
-========================== */
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";
@@ -25,9 +22,7 @@
   --section-space-mobile: 80px;
 }
 
-/* =========================
-   UNIVERSAL
-========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -69,9 +64,7 @@ small {
   font-family: var(--body-font);
 }
 
-/* =========================
-   HERO BANNER
-========================= */
+
 .boardgame-hero {
   position: relative;
   width: 100%;
@@ -200,9 +193,7 @@ small {
   border-color: rgba(255, 255, 255, 0.32);
 }
 
-/* =========================
-   DARK MODE
-========================= */
+
 body.dark-mode {
   background: #121212;
 }
@@ -226,9 +217,7 @@ body.dark-mode .boardgame-btn-secondary:hover {
   background: rgba(255, 255, 255);
 }
 
-/* =========================
-   LIBRARY OVERVIEW MOSAIC
-========================= */
+
 .library-overview-mosaic {
   padding: var(--section-space-desktop) 120px;
   background: #fffaf5;
@@ -459,9 +448,7 @@ body.dark-mode .boardgame-btn-secondary:hover {
   transform: scale(1.05);
 }
 
-/* =========================
-   DARK MODE
-========================= */
+
 body.dark-mode .library-overview-mosaic {
   background: #171717;
 }
@@ -501,10 +488,7 @@ body.dark-mode .library-mosaic-side:hover {
   box-shadow: none;
 }
 
-/* =========================
-   HOW TO CHOOSE A GAME
-   CURATED DECISION CANVAS
-========================= */
+
 .choose-game-canvas {
   padding: var(--section-space-desktop) 120px;
   background: #fffaf5;
@@ -651,21 +635,6 @@ body.dark-mode .library-mosaic-side:hover {
   color: #5f5f5f;
 }
 
-/* .choose-game-highlight-one {
-  top: 38px;
-  left: 32px;
-} */
-
-/* .choose-game-highlight-two {
-  bottom: 34px;
-  left: 344px;
-}
-
-.choose-game-highlight-three {
-  bottom: 34px;
-  left: 44px;
-} */
-
 .choose-game-editorial {
   display: flex;
   flex-direction: column;
@@ -797,9 +766,7 @@ body.dark-mode .library-mosaic-side:hover {
   box-shadow: 0 24px 60px rgba(75, 36, 19, 0.1);
 }
 
-/* =========================
-   DARK MODE
-========================= */
+
 body.dark-mode .choose-game-canvas {
   background: #171717;
 }
@@ -858,9 +825,6 @@ body.dark-mode .choose-note:hover {
   box-shadow: none;
 }
 
-/* =========================
-   CATEGORIES & COLLECTION
-========================= */
 .categories-collection-section {
   padding: var(--section-space-desktop) 120px;
   background: #fffaf5;
@@ -1075,9 +1039,7 @@ body.dark-mode .choose-note:hover {
   font-weight: 500;
 }
 
-/* =========================
-   DARK MODE
-========================= */
+
 body.dark-mode .categories-collection-section {
   background: #171717;
 }
@@ -1129,9 +1091,7 @@ body.dark-mode .collection-band-meta span {
   color: #f5b335;
 }
 
-/* =========================
-   WHO IT'S PERFECT FOR
-========================= */
+
 .perfect-for-section {
   padding: var(--section-space-desktop) 120px;
   background: #f8f3ed;
@@ -1363,9 +1323,7 @@ body.dark-mode .collection-band-meta span {
   transform: scale(1.05);
 }
 
-/* =========================
-   DARK MODE
-========================= */
+
 body.dark-mode .perfect-for-section {
   background: #171717;
 }
@@ -1405,10 +1363,7 @@ body.dark-mode .perfect-side:hover {
   box-shadow: none;
 }
 
-/* =========================
-   SAMSUNG GALAXY S8+ / PHONES
-   approx 360px viewport
-========================= */
+
 @media screen and (max-width: 480px) {
   .boardgame-hero {
     min-height: auto;
@@ -1555,10 +1510,7 @@ body.dark-mode .perfect-side:hover {
   }
 }
 
-/* =========================
-   IPAD MINI / SMALL TABLETS
-   around 744px viewport
-========================= */
+
 @media screen and (min-width: 768px) and (max-width: 820px) {
   .boardgame-hero {
     min-height: auto;
@@ -1644,10 +1596,7 @@ body.dark-mode .perfect-side:hover {
   }
 }
 
-/* =========================
-   IPAD PRO / LARGE TABLETS
-   around 1024px viewport
-========================= */
+
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   .boardgame-hero {
     padding: 130px 48px 85px;
@@ -1715,10 +1664,7 @@ body.dark-mode .perfect-side:hover {
   }
 }
 
-/* =========================
-   NEST HUB / SHORT LANDSCAPE DISPLAYS
-   width often desktop-like, height is the constraint
-========================= */
+
 @media screen and (width: 1024px) and (height: 600px) {
   .boardgame-hero {
     min-height: auto;

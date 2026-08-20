@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
 
-/* ==========================
-   TYPOGRAPHY SETTINGS
-========================== */
+
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";
@@ -97,7 +95,7 @@ img {
   background: url("/images/banner7.avif") center center / cover no-repeat;
 }
 
-/* dark overlay */
+
 .hero2::before {
   content: "";
   position: absolute;
@@ -111,7 +109,7 @@ img {
   z-index: 1;
 }
 
-/* soft extra tint for premium depth */
+
 .hero2::after {
   content: "";
   position: absolute;
@@ -1439,9 +1437,7 @@ body.dark-mode h4 {
 body.dark-mode p {
   color: #ffffff;
 }
-/* ===============================
-   TAGS / LABELS - DARK MODE
-================================= */
+
 
 body.dark-mode .section-tag,
 body.dark-mode .hero-tag,
@@ -1462,7 +1458,7 @@ body.dark-mode .drink-tag {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* Hover effect for clickable tags */
+
 body.dark-mode a.section-tag:hover,
 body.dark-mode a.hero-tag:hover,
 body.dark-mode a.inside-label:hover,
@@ -1572,9 +1568,7 @@ body.dark-mode::-webkit-scrollbar-thumb {
 body.dark-mode::-webkit-scrollbar-thumb:hover {
   background: #f59e0b;
 }
-/* ==========================
-   Dark Mode - Inside Section
-========================== */
+
 
 body.dark-mode .inside-item {
   background: #1b1b1b;
@@ -1636,9 +1630,7 @@ body {
 .feature-image img {
   max-width: 100%;
 }
-/* =========================================
-   COMMON SAFETY FIXES
-========================================= */
+
 .hero-left,
 .hero-right,
 .inside-visual,
@@ -1671,9 +1663,7 @@ body {
   min-width: 0;
 }
 
-/* =========================================
-   Samsung Galaxy S8+
-========================================= */
+
 @media screen and (max-width: 480px) {
   .hero2,
   .inside-board-brew,
@@ -1987,9 +1977,7 @@ body {
   }
 }
 
-/* =========================================
-   iPad Mini
-========================================= */
+
 @media screen and (min-width: 768px) and (max-width: 820px) {
   .hero2,
   .inside-board-brew,
@@ -2140,9 +2128,7 @@ body {
   }
 }
 
-/* =========================================
-   iPad Pro 11"
-========================================= */
+
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   .hero2,
   .inside-board-brew,
@@ -2273,9 +2259,7 @@ body {
   }
 }
 
-/* =========================================
-   Nest Hub
-========================================= */
+
 @media screen and (width: 1024px) and (height: 600px) {
   .hero2,
   .inside-board-brew,

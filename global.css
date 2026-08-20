@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
 
-/* ==========================
-   TYPOGRAPHY SETTINGS
-========================== */
+
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";
@@ -342,9 +340,7 @@ header {
   display: flex;
 }
 
-/*==============================
-            FOOTER
-==============================*/
+
 footer {
   background: #fff;
   padding: 52px 80px 25px;
@@ -575,32 +571,26 @@ footer {
 .top-btn:hover i {
   color: #0d1721;
 }
-/* Optional blog spacing helper */
+
 .blog-section {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/*=====================================
-            DARK MODE
-=====================================*/
+
 body.dark-mode {
   background: #1f1f1f;
   color: #f5f5f5;
 }
 
-/*==============================
-            HEADER
-==============================*/
+
 body.dark-mode header {
   background: #1f1f1f;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/*==============================
-            LOGO
-==============================*/
+
 body.dark-mode .board,
 body.dark-mode .brew {
   color: #ffffff;
@@ -615,9 +605,7 @@ body.dark-mode .tagline .line {
   background: var(--secondary);
 }
 
-/*==============================
-            NAVIGATION
-==============================*/
+
 body.dark-mode .nav-links a {
   color: #f5f5f5;
 }
@@ -633,9 +621,7 @@ body.dark-mode .nav-links a[aria-current="page"]::after {
   background: var(--secondary);
 }
 
-/*==============================
-            DROPDOWN
-==============================*/
+
 body.dark-mode .dropdown-menu {
   background: #1f1f1f;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -650,9 +636,7 @@ body.dark-mode .dropdown-menu li a:hover {
   color: var(--secondary);
 }
 
-/*==============================
-            BUTTONS
-==============================*/
+
 body.dark-mode .icon-btn {
   background: #2c2c2c;
   color: #ffffff;
@@ -672,9 +656,7 @@ body.dark-mode .login-btn:hover {
   box-shadow: 0 12px 20px rgba(245, 158, 11, 0.35);
 }
 
-/*==============================
-         MOBILE MENU
-==============================*/
+
 body.dark-mode .nav-links {
   background: #1f1f1f;
 }
@@ -692,9 +674,7 @@ body.dark-mode .mobile-login {
   background: #1f1f1f;
 }
 
-/*==============================
-            SCROLLBAR
-==============================*/
+
 body.dark-mode .nav-links::-webkit-scrollbar-thumb {
   background: var(--secondary);
 }
@@ -779,18 +759,14 @@ body.dark-mode .top-btn {
 body.dark-mode .top-btn:hover {
   background: var(--primary);
 }
-/* =========================
-   DESKTOP
-========================= */
+
 @media (min-width: 1025px) {
   .mobile-login {
     display: none !important;
   }
 }
 
-/* =========================
-   TABLET + MOBILE
-========================= */
+
 @media (max-width: 1024px) {
   body {
     padding-top: 100px;
@@ -963,9 +939,7 @@ body.dark-mode .top-btn:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
   }
 }
-/* =========================
-   MOBILE
-========================= */
+
 @media screen and (max-width: 480px) {
   body {
     padding-top: 90px;
@@ -1232,9 +1206,7 @@ body.dark-mode .top-btn:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
   }
 }
-/* =========================
-   iPad Mini
-========================= */
+
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   header {
     padding: 18px 40px;
@@ -1268,9 +1240,7 @@ body.dark-mode .top-btn:hover {
   }
 }
 
-/* =========================
-   iPad Pro
-========================= */
+
 @media screen and (min-width: 834px) and (max-width: 1024px) {
   header {
     padding: 20px 50px;
@@ -1298,9 +1268,7 @@ body.dark-mode .top-btn:hover {
   }
 }
 
-/* =========================
-   Nest Hub Max
-========================= */
+
 @media screen and (min-width: 1025px) and (max-width: 1280px) and (max-height: 800px) {
   header {
     padding: 18px 50px;
@@ -1319,9 +1287,7 @@ body.dark-mode .top-btn:hover {
     gap: 40px;
   }
 }
-/* ==========================
-   Reveal Animation
-========================== */
+
 
 .reveal {
   opacity: 0;

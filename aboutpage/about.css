@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
 
-/* ==========================
-   TYPOGRAPHY SETTINGS
-========================== */
+
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";
@@ -48,9 +46,6 @@
   --transition: all 0.3s ease;
 }
 
-/* =========================================
-   RESET
-========================================= */
 *,
 *::before,
 *::after {
@@ -104,9 +99,7 @@ button {
   background: none;
 }
 
-/* =========================================
-   TYPOGRAPHY
-========================================= */
+
 h1,
 h2,
 h3 {
@@ -161,9 +154,7 @@ h3 span {
   color: var(--secondary);
 }
 
-/* =========================================
-   LAYOUT
-========================================= */
+
 .container {
   width: min(100% - 32px, var(--container-width));
   margin-inline: auto;
@@ -184,11 +175,7 @@ section {
     padding: var(--section-space-mobile) 0;
   }
 }
-/*  */
 
-/* =========================================
-   FORMS
-========================================= */
 input,
 textarea,
 select {
@@ -213,9 +200,7 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
 }
 
-/* =========================================
-   CARDS / CONTENT BLOCKS
-========================================= */
+
 .card {
   background: var(--white);
   border: 1px solid var(--border-soft);
@@ -238,9 +223,7 @@ select:focus {
   color: rgba(42, 26, 18, 0.82);
 }
 
-/* =========================================
-   UTILITIES
-========================================= */
+
 .text-center {
   text-align: center;
 }
@@ -269,9 +252,6 @@ select:focus {
   border-radius: var(--radius-lg);
 }
 
-/* =========================================
-   RESPONSIVE TYPOGRAPHY
-========================================= */
 @media (max-width: 767px) {
   body {
     font-size: 0.98rem;
@@ -1388,9 +1368,7 @@ body.dark-mode .space-line span {
 body.dark-mode .space-line p {
   color: #c8c8c8;
 }
-/* ==========================
-   Dark Mode - Space Details
-========================== */
+
 
 body.dark-mode .space-details {
   background: linear-gradient(180deg, #1b130d 0%, #24180f 100%);
@@ -1540,9 +1518,7 @@ body.dark-mode .comeback-card p {
   color: #c8c8c8;
 }
 
-/*=========================================
-Samsung Galaxy S8+ (360px - 480px)
-=========================================*/
+
 @media screen and (max-width: 480px) {
   html,
   body {
@@ -1698,9 +1674,7 @@ Samsung Galaxy S8+ (360px - 480px)
   }
 }
 
-/*=========================================
-iPad Mini (768px - 820px)
-=========================================*/
+
 @media screen and (min-width: 768px) and (max-width: 820px) {
   .hero,
   .our-story-section,
@@ -1772,9 +1746,7 @@ iPad Mini (768px - 820px)
   }
 }
 
-/*=========================================
-iPad Pro (821px - 1024px)
-=========================================*/
+
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   .hero,
   .our-story-section,
@@ -1835,9 +1807,7 @@ iPad Pro (821px - 1024px)
   }
 }
 
-/*=========================================
-Nest Hub (1024px × 600px)
-=========================================*/
+
 @media screen and (width: 1024px) and (height: 600px) {
   .hero {
     min-height: 600px;
