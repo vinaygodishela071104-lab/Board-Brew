@@ -92,7 +92,7 @@ img {
   align-items: center;
   gap: 48px;
   overflow: hidden;
-  background: url("/images/banner7.avif") center center / cover no-repeat;
+  background: url("../images/banner7.avif") center center / cover no-repeat;
 }
 
 

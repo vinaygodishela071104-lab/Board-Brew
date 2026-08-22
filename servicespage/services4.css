@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
 
-
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";
@@ -214,7 +213,6 @@ small {
   color: var(--secondary);
 }
 
-
 .group-bookings-hero {
   position: relative;
   width: 100%;
@@ -232,7 +230,7 @@ small {
       rgba(17, 9, 4, 0.42) 68%,
       rgba(17, 9, 4, 0.26) 100%
     ),
-    url("/images/banner7.avif");
+    url("../images/banner7.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -307,7 +305,6 @@ small {
   color: #171717;
   border-color: rgba(255, 255, 255, 0.34);
 }
-
 
 .occasion-editorial-section,
 .experience-section,
@@ -877,8 +874,6 @@ small {
   display: none;
 }
 
-
-
 body.dark-mode .group-bookings-hero-tag,
 body.dark-mode .occasion-editorial-tag,
 body.dark-mode .experience-tag,
@@ -997,8 +992,6 @@ body.dark-mode .booking-step-arrow {
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
-
-
 
 body.dark-mode .space-seating-cards-section {
   background: #171717;
@@ -1148,8 +1141,6 @@ body.dark-mode .space-seating-card:hover {
   display: none;
 }
 
-
-
 body.dark-mode .booking-process-section {
   background: #171717;
 }
@@ -1174,8 +1165,6 @@ body.dark-mode .booking-step-arrow {
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
-
-
 
 @media screen and (max-width: 480px) {
   .group-bookings-hero {
@@ -1236,8 +1225,6 @@ body.dark-mode .booking-step-arrow {
     text-align: center;
   }
 
-
-
   .group-bookings-hero *,
   .group-bookings-hero *::before,
   .group-bookings-hero *::after {
@@ -1257,14 +1244,11 @@ body.dark-mode .booking-step-arrow {
     min-width: 0;
   }
 
- 
-
   .group-bookings-hero::before,
   .group-bookings-hero::after {
     max-width: none;
     pointer-events: none;
   }
-
 
   .occasion-editorial-section,
   .experience-section,
@@ -1296,8 +1280,6 @@ body.dark-mode .booking-step-arrow {
     line-height: 1.18;
     overflow-wrap: break-word;
   }
-
-
 
   .occasion-editorial-row,
   .occasion-editorial-row:nth-child(2) {
@@ -1365,8 +1347,6 @@ body.dark-mode .booking-step-arrow {
     font-size: 0.72rem;
     overflow-wrap: break-word;
   }
-
-
 
   .experience-layout {
     display: grid;
@@ -1461,8 +1441,6 @@ body.dark-mode .booking-step-arrow {
     font-size: 1.28rem;
   }
 
-
-
   .space-seating-cards-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -1485,8 +1463,6 @@ body.dark-mode .booking-step-arrow {
     max-width: 100%;
     overflow-wrap: break-word;
   }
-
- 
 
   .booking-process-steps {
     display: grid;
@@ -1516,8 +1492,6 @@ body.dark-mode .booking-step-arrow {
     display: none;
   }
 }
-
-
 
 @media screen and (max-width: 360px) {
   .group-bookings-hero {
@@ -1662,7 +1636,6 @@ body.dark-mode .booking-step-arrow {
   }
 }
 
-
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   .group-bookings-hero {
     padding: 140px 56px 96px;
@@ -1722,7 +1695,6 @@ body.dark-mode .booking-step-arrow {
     display: none;
   }
 }
-
 
 @media screen and (width: 1024px) and (height: 600px) {
   .group-bookings-hero {

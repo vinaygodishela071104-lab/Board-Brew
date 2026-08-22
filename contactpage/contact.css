@@ -80,11 +80,10 @@ a {
   text-decoration: none;
 }
 
-
 .contact-hero-section {
   position: relative;
   min-height: 100vh;
-  background: url("/images/banner5.png") center center / cover no-repeat;
+  background: url("../images/banner5.png") center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,7 +207,6 @@ a {
   color: #101010;
   transform: translateY(-3px);
 }
-
 
 .contact-info-section {
   padding: var(--section-space-desktop) 120px;
@@ -394,7 +392,6 @@ a {
   font-weight: var(--body-font-weight);
 }
 
-
 .reservation-section {
   padding: var(--section-space-desktop) 120px;
   background: #fdf7f0;
@@ -519,7 +516,6 @@ a {
   line-height: 1.45;
 }
 
-
 .form-group select {
   appearance: none;
   -webkit-appearance: none;
@@ -571,7 +567,6 @@ a {
   transform: translateY(-3px);
 }
 
-
 body.dark-mode .reservation-right {
   background: rgba(28, 23, 19, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -621,7 +616,6 @@ body.dark-mode .reservation-btn {
 body.dark-mode .reservation-btn:hover {
   background: linear-gradient(135deg, #d97706, #f59e0b);
 }
-
 
 .form-group input[type="date"],
 .form-group input[type="time"],
@@ -677,7 +671,6 @@ body.dark-mode .form-group input[type="datetime-local"] {
   background-size: 18px 18px;
 }
 
-
 @media screen and (max-width: 480px) {
   .reservation-right {
     padding: 20px 18px;
@@ -724,7 +717,6 @@ body.dark-mode .form-group input[type="datetime-local"] {
     padding: 12px 20px;
   }
 }
-
 
 .find-us-section {
   padding: var(--section-space-desktop) 120px;
@@ -855,7 +847,6 @@ body.dark-mode .form-group input[type="datetime-local"] {
   display: block;
   filter: grayscale(0.15) contrast(1.02);
 }
-
 
 .faq-cta-section {
   padding: var(--section-space-desktop) 120px;
@@ -1083,7 +1074,6 @@ body.dark-mode .form-group input[type="datetime-local"] {
   background: rgba(255, 255, 255, 0.16);
   transform: translateY(-3px);
 }
-
 
 body.dark-mode {
   background: #121212;
@@ -1391,7 +1381,6 @@ body.dark-mode .final-btn-secondary {
 body.dark-mode .final-btn-secondary:hover {
   background: rgba(255, 255, 255, 0.16);
 }
-
 
 @media screen and (max-width: 480px) {
   .contact-hero-section {

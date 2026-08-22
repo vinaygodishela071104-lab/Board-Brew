@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
 
-
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";
@@ -99,7 +98,6 @@ button {
   background: none;
 }
 
-
 h1,
 h2,
 h3 {
@@ -154,7 +152,6 @@ h3 span {
   color: var(--secondary);
 }
 
-
 .container {
   width: min(100% - 32px, var(--container-width));
   margin-inline: auto;
@@ -200,7 +197,6 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
 }
 
-
 .card {
   background: var(--white);
   border: 1px solid var(--border-soft);
@@ -222,7 +218,6 @@ select:focus {
 .card p {
   color: rgba(42, 26, 18, 0.82);
 }
-
 
 .text-center {
   text-align: center;
@@ -281,7 +276,7 @@ select:focus {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url("/images/hero-banner1.png");
+  background-image: url("../images/hero-banner1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1369,7 +1364,6 @@ body.dark-mode .space-line p {
   color: #c8c8c8;
 }
 
-
 body.dark-mode .space-details {
   background: linear-gradient(180deg, #1b130d 0%, #24180f 100%);
   border: 1px solid rgba(245, 158, 11, 0.08);
@@ -1517,7 +1511,6 @@ body.dark-mode .comeback-card h3 {
 body.dark-mode .comeback-card p {
   color: #c8c8c8;
 }
-
 
 @media screen and (max-width: 480px) {
   html,
@@ -1674,7 +1667,6 @@ body.dark-mode .comeback-card p {
   }
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 820px) {
   .hero,
   .our-story-section,
@@ -1746,7 +1738,6 @@ body.dark-mode .comeback-card p {
   }
 }
 
-
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   .hero,
   .our-story-section,
@@ -1806,7 +1797,6 @@ body.dark-mode .comeback-card p {
     font-weight: var(--section-heading-font-weight);
   }
 }
-
 
 @media screen and (width: 1024px) and (height: 600px) {
   .hero {

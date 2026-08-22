@@ -91,7 +91,7 @@ main {
   padding: 92px 24px 96px;
   background:
     linear-gradient(rgba(18, 10, 7, 0.58), rgba(18, 10, 7, 0.62)),
-    url("/images/banner2.png") center/cover no-repeat;
+    url("../images/banner2.png") center/cover no-repeat;
   color: #fff;
 }
 

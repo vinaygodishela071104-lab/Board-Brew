@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";
@@ -88,7 +87,7 @@ label {
   padding: 0 120px;
   display: flex;
   align-items: center;
-  background-image: url("/images/banner3.png");
+  background-image: url("../images/banner3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -225,8 +224,6 @@ label {
   color: var(--secondary);
   font-size: 14px;
 }
-
-
 
 body.dark-mode {
   background: #121212;
@@ -463,8 +460,6 @@ body.dark-mode .services-hero-points i {
 .service-card:hover .service-link::after {
   transform: translateX(4px);
 }
-
-
 
 body.dark-mode .our-services-section {
   background: #181818;
@@ -713,7 +708,6 @@ body.dark-mode .service-card:hover .service-link {
   font-family: var(--body-font);
 }
 
-
 body.dark-mode .how-it-works-section {
   background: #161616;
 }
@@ -900,8 +894,6 @@ body.dark-mode .timeline-card p {
   max-width: 430px;
   font-family: var(--body-font);
 }
-
-
 
 body.dark-mode .game-library-section {
   background: #171717;
@@ -1106,8 +1098,6 @@ body.dark-mode .library-line p {
 .private-bookings-image-wrap:hover .private-bookings-image {
   transform: scale(1.04);
 }
-
-
 
 body.dark-mode .private-bookings-section {
   background: #161616;
@@ -1391,8 +1381,6 @@ body.dark-mode .booking-btn-outline:hover {
   transform: scale(1.05);
 }
 
-
-
 body.dark-mode .season-community-section.alt-layout {
   background: #171717;
 }
@@ -1442,7 +1430,6 @@ body.dark-mode .editorial-side:hover {
   box-shadow: none;
 }
 
-
 .simple-cafe-cta {
   position: relative;
   margin: 0 120px 96px;
@@ -1450,7 +1437,7 @@ body.dark-mode .editorial-side:hover {
   border-radius: 34px;
   overflow: hidden;
 
-  background: url("/images/cta.jpg") center center / cover no-repeat;
+  background: url("../images/cta.jpg") center center / cover no-repeat;
 }
 
 .simple-cafe-cta-overlay {
@@ -1553,7 +1540,6 @@ body.dark-mode .editorial-side:hover {
   box-shadow: 0 18px 35px rgba(245, 179, 53, 0.28);
 }
 
-
 body.dark-mode .simple-cafe-cta-overlay {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.54));
 }
@@ -1562,7 +1548,6 @@ body.dark-mode .simple-cafe-cta-tag {
   background: rgba(255, 255, 255, 0.1);
   color: #ffe2a0;
 }
-
 
 @media screen and (max-width: 360px) {
   .services-hero {
@@ -1729,7 +1714,6 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 820px) {
   .services-hero {
     min-height: 85vh;
@@ -1810,7 +1794,6 @@ body.dark-mode .simple-cafe-cta-tag {
   }
 }
 
-
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   .services-hero {
     min-height: 90vh;
@@ -1883,7 +1866,6 @@ body.dark-mode .simple-cafe-cta-tag {
     font-weight: var(--section-heading-font-weight);
   }
 }
-
 
 @media screen and (width: 1024px) and (height: 600px) {
   .services-hero {

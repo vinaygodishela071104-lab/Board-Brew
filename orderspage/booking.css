@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Retro+Warmth:wght@400;500;600;700&family=Coqulet:wght@400;500;600;700&display=swap");
 
-
 :root {
   --heading-font: "Retro Warmth";
   --body-font: "Coqulet";
@@ -32,7 +31,6 @@
   --shadow: 0 18px 50px rgba(75, 36, 19, 0.08);
   --shadow-hover: 0 24px 70px rgba(75, 36, 19, 0.14);
 
-  
   --section-space-lg: 88px;
   --section-space-md: 40px;
   --section-space-sm: 20px;
@@ -115,7 +113,7 @@ textarea {
   position: relative;
   background:
     linear-gradient(rgba(18, 10, 7, 0.6), rgba(18, 10, 7, 0.64)),
-    url("/images/banner2.png") center/cover no-repeat;
+    url("../images/banner2.png") center/cover no-repeat;
   color: #fff;
 }
 
@@ -795,7 +793,6 @@ textarea {
   display: none;
 }
 
-
 body.dark-mode {
   --bg: #14100d;
   --card: #1c1713;
@@ -809,7 +806,6 @@ body.dark-mode {
   color: var(--text);
 }
 
-
 body.dark-mode .hero::after {
   background: linear-gradient(
     to bottom,
@@ -818,7 +814,6 @@ body.dark-mode .hero::after {
     var(--bg)
   );
 }
-
 
 body.dark-mode .menu-card,
 body.dark-mode .order__card,
@@ -830,8 +825,6 @@ body.dark-mode .summary-panel {
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: var(--shadow);
 }
-
-
 
 body.dark-mode h1,
 body.dark-mode h2,
@@ -846,7 +839,6 @@ body.dark-mode .pickup-point strong {
   color: #ffffff;
 }
 
-
 body.dark-mode p,
 body.dark-mode span,
 body.dark-mode li,
@@ -856,8 +848,6 @@ body.dark-mode .total-row,
 body.dark-mode .pickup-point p {
   color: var(--muted);
 }
-
-
 
 body.dark-mode .menu-item {
   background: #26201b;
@@ -885,8 +875,6 @@ body.dark-mode .menu-item__media {
   background: #2d2722;
 }
 
-
-
 body.dark-mode .qty {
   background: #26201b;
   border-color: rgba(255, 255, 255, 0.08);
@@ -905,8 +893,6 @@ body.dark-mode .qty button:hover {
   background: var(--secondary);
   color: #fff;
 }
-
-
 
 body.dark-mode .field input,
 body.dark-mode .field textarea,
@@ -928,8 +914,6 @@ body.dark-mode .field select:focus {
   box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.18);
 }
 
-
-
 body.dark-mode .check-item {
   background: #26201b;
   border-color: rgba(255, 255, 255, 0.08);
@@ -939,8 +923,6 @@ body.dark-mode .check-item {
 body.dark-mode .check-item input {
   accent-color: var(--secondary);
 }
-
-
 
 body.dark-mode .summary-list li {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
@@ -955,8 +937,6 @@ body.dark-mode .total-row strong {
   color: #fff;
 }
 
-
-
 body.dark-mode .pickup-point {
   background: #26201b;
   border-color: rgba(255, 255, 255, 0.08);
@@ -966,7 +946,6 @@ body.dark-mode .pickup-point span {
   background: #312821;
   color: var(--secondary);
 }
-
 
 body.dark-mode .btn-primary {
   background: linear-gradient(135deg, #f59e0b, #ffb534);
@@ -985,14 +964,10 @@ body.dark-mode .btn-outline:hover {
   color: #fff;
 }
 
-
-
 body.dark-mode .menu-card__head,
 body.dark-mode .summary-panel {
   border-color: rgba(255, 255, 255, 0.08);
 }
-
-
 
 body.dark-mode ::-webkit-scrollbar {
   width: 10px;
@@ -1256,7 +1231,6 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   }
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 820px) {
   :root {
     --hero-font-size: 2.9rem;
@@ -1357,7 +1331,6 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   }
 }
 
-
 @media screen and (min-width: 821px) and (max-width: 1024px) {
   :root {
     --hero-font-size: 3.1rem;
@@ -1447,7 +1420,6 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     min-height: 48px;
   }
 }
-
 
 @media screen and (width: 1024px) and (height: 600px) {
   :root {
